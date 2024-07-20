@@ -158,8 +158,10 @@ section>div {
 #destaques {
     position: relative;
     width: 100%;
-    overflow-x: hidden;
+    max-width: 100dvw;
+    overflow: hidden;
     margin-top: 60px;
+    padding-bottom: 100px;
 }
 
 #destTitleWrapper {
@@ -195,15 +197,17 @@ section>div {
     overflow: hidden;
     border-radius: 75px 75px 0 0;
     filter: drop-shadow(hsl(from var(--escuro) h s l / 60%) 0 7px 5px);
-
+}
+.destCard, .destCard>img{
+    transition: all 500ms;
 }
 
-.cardActive {
+.destCard:hover {
     width: 420px;
     height: 600px    ;
 }
 
-#destCards .cardActive>img {
+.destCard:hover img {
     width: 420px;
     height: 420px;
 }
@@ -225,7 +229,7 @@ section>div {
     position: absolute;
     width: 100vw;
     max-width: 100vw;
-    height: 260px;
+    height: 360px;
     bottom: -85px;
     background: transparent linear-gradient(0deg, var(--escuro), hsl( from #04353C h s 20%));
     z-index: -1;
@@ -233,7 +237,7 @@ section>div {
 }
 
 #hrPicote {
-    width: 100dvw;
+    max-width: 100dvw;
     height: 30px;
     --svg: url("images/picote.svg");
     -webkit-mask-image: var(--svg);
