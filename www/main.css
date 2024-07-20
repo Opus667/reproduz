@@ -1,0 +1,242 @@
+:root {
+    --preto: #212420;
+    --branco: hsl(169, 49%, 82%);
+    --claro: #40D0C9;
+    --escuro: #04353C;
+    --destaque: #449241;
+    --secundaria: #30AF7E;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    width: 100vw;
+    max-width: 100%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    text-align: center;
+    font-size: 48px;
+    color: var(--escuro);
+    background-color: var(--branco);
+}
+
+main{
+    display: block;
+}
+
+section>div {
+    max-width: 1600px;
+    /* min-height: 100dvh; */
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.altFont{
+    font-family: "Croissant One", serif;
+    font-weight: 400;
+    font-style: normal;  
+}
+
+#home{
+    background: transparent linear-gradient(180deg, hsl( from var(--escuro) h s l / 0%), hsl( from var(--escuro) h s l / 50%));
+}
+
+#home>div {
+    height: 100dvh;
+}
+
+#homeIntro{
+    filter: drop-shadow(hsl(from var(--escuro) h s l / 40%) 0 7px 5px);
+}
+
+#logoRepro{
+    max-width: 1000px;
+    width: 90dvw;
+    aspect-ratio: 1124/271;
+    --svg: url("images/repro_logo.svg");
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    background: transparent linear-gradient(0deg, var(--escuro), hsl( from var(--escuro) h s 20%));
+}
+
+#reproComVis{
+    max-width: 1000px;
+    width: 90dvw;
+    aspect-ratio: 300/29;
+    margin-top: 4dvw;
+    --svg: url("images/com_vis.svg");
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    background: transparent linear-gradient(0deg, var(--preto), hsl( from var(--escuro) h s 10%));
+}
+
+#homeTitle {
+    font-size: 100px;
+}
+
+#homeTitle p{
+    display: flex;
+    position: relative;
+    line-height: 1.5em;
+}
+
+#homeTitle1{float: left;left: 4dvw;}
+#homeTitle2{float: right;right: 4dvw;}
+
+#homeVideos {
+    width: 80dvw;
+    flex-direction: row;
+    margin-inline: auto;
+    filter: drop-shadow(hsl(from var(--escuro) h s l / 40%) 0 7px 5px);
+}
+
+@media (max-width: 480px) {
+    #logoRepro{
+        aspect-ratio: 184/150;
+        --svg: url("images/repro_logo_mob.svg");
+        }
+    
+    #reproComVis{
+        aspect-ratio: 300/84;
+        --svg: url("images/com_vis_mob.svg");
+    }
+}
+
+#quemSomos {
+    position: relative;
+    color: var(--branco);
+    background-color: var(--destaque);
+    z-index: 0;
+}
+
+#quemSomos #quemWrapper {
+    padding-block: 5dvh 10dvh;
+}
+
+#quemWrapper::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 110%;
+    background-color: var(--destaque);
+    transform: skewY(-7deg);
+    z-index: -1;
+}
+
+#quemWrapper p {
+    align-self: flex-start;
+    text-align: justify;
+}
+
+#quemWrapper #quemTitle {
+    font-size: 1.7em;
+    position: relative;
+    right: -4dvw;
+}
+
+#quemText {
+    font-size: 0.85em;
+    text-indent: 10dvw;
+}
+
+#destaques {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+    margin-top: 60px;
+}
+
+#destTitleWrapper {
+    display: block;
+    text-align: right;
+}
+
+#destTitle {
+    display: inline-block;
+    font-size: 1.7em;
+    position: relative;
+    right: 4dvw;
+}
+
+#destCards {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    max-width: 6000px;
+    width: max-content;
+    height: 600px;
+    padding-left: calc(100vw / 2 - 1600px / 2);
+    margin-top: 40px;
+    align-items: flex-end;
+}
+
+.destCard {
+    width: 380px;
+    height: 540px;
+    color: var(--claro);
+    border: solid var(--secundaria) 4px;
+    overflow: hidden;
+    border-radius: 75px 75px 0 0;
+    filter: drop-shadow(hsl(from var(--escuro) h s l / 60%) 0 7px 5px);
+
+}
+
+.cardActive {
+    width: 420px;
+    height: 600px    ;
+}
+
+#destCards .cardActive>img {
+    width: 420px;
+    height: 420px;
+}
+
+.destCard>img {
+    width: 380px;
+    height: 360px;
+    object-fit: cover;
+}
+
+.destText {
+    height: 180px;
+    padding-top: 10px;
+    padding-left: 20px;
+    text-align: left;
+}
+
+#destSpacer {
+    position: absolute;
+    width: 100vw;
+    max-width: 100vw;
+    height: 260px;
+    bottom: -85px;
+    background: transparent linear-gradient(0deg, var(--escuro), hsl( from #04353C h s 20%));
+    z-index: -1;
+    filter: drop-shadow(hsl(from var(--escuro) h s l / 90%) 0 7px 5px);
+}
+
+#hrPicote {
+    width: 100dvw;
+    height: 30px;
+    --svg: url("images/picote.svg");
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    background-color: var(--escuro);
+}
