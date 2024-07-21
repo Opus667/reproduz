@@ -328,3 +328,39 @@ section>div {
     height: 100%;
     object-fit: cover;
 }
+
+#clientes{
+    max-width: 100vw;
+    overflow: hidden;
+    color: var(--secundaria);
+    background: linear-gradient(180deg, hsl(from var(--secundaria) h s 30%), var(--preto)25%);
+    padding-block: 7dvh;
+}
+
+#clientesTitleWrapper{
+    align-items: end;
+}
+
+#clientesList{
+    max-width: 1200px;
+    list-style: none;
+    padding-left: 0;
+    padding-top: 7dvh;
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+
+
+#hrV{
+    filter: drop-shadow(hsl(from var(--escuro) h s l / 40%) 0 7px 5px);
+}
+
+#hrvClip {
+    position: relative;
+    top: -2px;
+    max-width: 100dvw;
+    height: 75px;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    background-color: var(--preto);
+}
