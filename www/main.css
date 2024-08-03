@@ -5,8 +5,8 @@
     --escuro: #04353C;
     --destaque: #449241;
     --secundaria: #30AF7E;
-    --respiro: 75px;
-    --respiro_intrn: 75px;
+    --respiro: 10dvh;
+    --respiro_intrn: 10dvh;
     --margens: 5dvw;
 }
 
@@ -23,7 +23,7 @@ html{
 
 body {
     margin: 0;
-    width: 100vw;
+    width: 100dvw;
     max-width: 100%;
     font-family: "Roboto", sans-serif;
     font-weight: 100;
@@ -64,7 +64,7 @@ section>div {
 }
 
 #home>div {
-    height: 100dvh;
+    height: 90dvh;
 }
 
 #homeIntro{
@@ -189,7 +189,7 @@ section>div {
     max-width: 6000px;
     width: max-content;
     height: 600px;
-    padding-left: calc(100vw / 2 - 1600px / 2);
+    padding-left: calc(100dvw / 2 - 1600px / 2);
     margin-top: 40px;
     align-items: flex-end;
 }
@@ -232,8 +232,8 @@ section>div {
 
 #destSpacer {
     position: absolute;
-    width: 100vw;
-    max-width: 100vw;
+    width: 100dvw;
+    max-width: 100dvw;
     height: 360px;
     bottom: -85px;
     background: transparent linear-gradient(0deg, var(--escuro), hsl( from #04353C h s 20%));
@@ -333,7 +333,7 @@ section>div {
 }
 
 #clientes{
-    max-width: 100vw;
+    max-width: 100dvw;
     overflow: hidden;
     color: var(--secundaria);
     background: linear-gradient(180deg, hsl(from var(--secundaria) h s 30%), var(--preto)5%);
@@ -356,7 +356,7 @@ section>div {
 
 #services {
     /* position: relative;
-    max-width: 100vw;
+    max-width: 100dvw;
     overflow: hidden;
     padding-bottom: 7dvh; */
     background-color: var(--claro);
@@ -368,15 +368,17 @@ section>div {
     filter: drop-shadow(hsl(from var(--escuro) h s l / 0.5) 0 7px 5px);
 }
 
-#hrvClip {
+#hrvClip {position: relative;
     width: 100%;
     max-width: 100dvw;
-    height: 75px;
-    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    height: 200px;
+    top: -50px;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 50%);
     background-color: var(--preto);
 }
 
 #services>div {
+    display: block;
     align-items: start;
     text-align: left;
     vertical-align: middle;
@@ -384,7 +386,7 @@ section>div {
     margin-top: var(--respiro_intrn);
 }
 #servTitle {
-    margin-top: 50px;
+    margin-top: -50px;
 }
 
 #services #servMenu {
@@ -476,13 +478,85 @@ div#decoSplitServ {
     max-width: 100dvw;
     width: 100%;
     height: 300px;
-    top: -2px;
-    clip-path: polygon(0 0, 100% 0, 100% 20%, 50% 100%, 0 20%);
+    top: -75px;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 50%);
     background: linear-gradient( var(--claro) 10%, hsl(from var(--preto) h s l / 0.5) 200%);
 }
 
 #contato {
     background-color: var(--preto);
     color: var(--claro);
-    padding-top: calc(var(--respiro) + 350px);
+    padding-top: calc(var(--respiro) + 250px);
+}
+
+#contato>* {
+    margin-block: var(--respiro_intrn);
+}
+
+#cnttChamada {
+    align-items: end;
+    text-align: right;
+}
+
+#cnttFone {
+    position: relative;
+    width: fit-content;
+    font-size: 1.6em;
+}
+
+#cnttFone::before {
+    content: '';
+    position: absolute;
+    aspect-ratio: 1;
+    left: 0;
+    transform: translateX(calc(-100% - 10px));
+    background-image: url('images/cntt_zap.gif');
+    background-size: cover;
+    height: 60%;
+}
+
+#cnttChamada2 {
+    align-items: start;
+    text-align: left;
+}
+
+#cnttLocal {
+    font-weight: 500;
+    font-style: normal;
+}
+
+#cnttMapa{
+    display: block;
+    position: relative;
+    max-width: 100%;
+    height: 70dvh;
+    background-image: url(images/mapa.webp);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 0;
+}
+
+#cnttMapa a {
+    display: block;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    translate: -50% -40px;
+    text-decoration: none;
+    padding: 20px;
+    color: var(--claro);
+    border-radius: 30px;
+    background-color: var(--preto);
+}
+
+#cnttMapa a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    translate: -50% 0;
+    border: 0 solid transparent;
+    border-width: 40px 40px 0 40px;
+    border-top-color: var(--preto);
 }
