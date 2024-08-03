@@ -5,6 +5,9 @@
     --escuro: #04353C;
     --destaque: #449241;
     --secundaria: #30AF7E;
+    --respiro: 75px;
+    --respiro_intrn: 75px;
+    --margens: 5dvw;
 }
 
 * {
@@ -46,7 +49,7 @@ section>div {
     align-items: center;
 }
 
-.altFont{
+.fancy{
     font-family: "Croissant One", serif;
     font-weight: 400;
     font-style: normal;  
@@ -352,14 +355,16 @@ section>div {
 }
 
 #services {
-    position: relative;
+    /* position: relative;
     max-width: 100vw;
     overflow: hidden;
+    padding-bottom: 7dvh; */
     background-color: var(--claro);
-    padding-bottom: 7dvh;
 }
 
 #hrV{
+    max-width: 100dvw;
+    margin: 0 !important;
     filter: drop-shadow(hsl(from var(--escuro) h s l / 0.5) 0 7px 5px);
 }
 
@@ -371,16 +376,113 @@ section>div {
     background-color: var(--preto);
 }
 
-#services>div{
+#services>div {
     align-items: start;
-    padding-left: 5dvw;
+    text-align: left;
+    vertical-align: middle;
+    margin-left: var(--margens);
+    margin-top: var(--respiro_intrn);
 }
 #servTitle {
     margin-top: 50px;
 }
 
 #services #servMenu {
+    display: block;
+    position: relative;
     width: fit-content;
-    margin-left: 10dvw;
-    text-align: left;
+    margin-left: calc(var(--margens)*2);
+    line-height: 70px;
+    filter: drop-shadow(hsl(from var(--escuro) h s l / 0.5) 0 7px 5px);
+}
+
+#servMenu a, #servSel {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    font-style: normal;
+    padding: 10px 25px;
+    color: var(--branco);
+    background-color: var(--secundaria);
+}
+
+#servSel {
+    padding-left: 100px;
+    border-radius: 45px 45px 0 45px;
+}
+#servSel::before {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: '';
+    background-image: url('images/serv_arrow.svg');
+    background-size: 90px 90px;
+    height: 90px;
+    width: 90px;
+}
+
+
+#servList {
+    position: absolute;
+    width: 100%;
+    list-style: none;
+    margin-top: 20px;
+    /* padding: 10px 20px; */
+}
+
+#servList li:first-child a {
+    border-radius: 45px 0 0 0;
+}
+
+#servList li:last-child a {
+    border-radius: 0 0 0 45px;
+}
+
+#servMenu a:hover {
+    font-weight: 500;
+    background-color: var(--preto);
+}
+
+div#servDisplay{
+    width: 100%;
+    max-width: 100dvw;
+    height: 80dvh;
+    margin: 0;
+    background-image: url("images/serv_instal.webp");
+    background-position: center;
+    background-size: cover;
+}
+
+div#servTXT {
+    margin-left: calc(var(--margens)*2);
+    margin-right: var(--margens);
+    padding-bottom: var(--respiro_intrn);
+}
+
+div#decoServBake {
+    display: block;
+    position: relative;
+    max-width: 100dvw;
+    width: 100%;
+    margin: 0;
+    filter: drop-shadow( #000 0 50px 16px);
+}
+
+div#decoSplitServ {
+    /* filter: drop-shadow(inset hsl(from var(--preto) h s l / 1) 40px 7px 15px); */
+    display: block;
+    position: absolute;
+    max-width: 100dvw;
+    width: 100%;
+    height: 300px;
+    top: -2px;
+    clip-path: polygon(0 0, 100% 0, 100% 20%, 50% 100%, 0 20%);
+    background: linear-gradient( var(--claro) 10%, hsl(from var(--preto) h s l / 0.5) 200%);
+}
+
+#contato {
+    background-color: var(--preto);
+    color: var(--claro);
+    padding-top: calc(var(--respiro) + 350px);
 }
