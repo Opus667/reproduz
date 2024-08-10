@@ -241,7 +241,7 @@ section>div {
     filter: drop-shadow(hsl(from var(--escuro) h s l / 90%) 0 7px 5px);
 }
 
-#hrPicote {
+#decoPicote {
     max-width: 100dvw;
     height: 30px;
     --svg: url("images/picote.svg");
