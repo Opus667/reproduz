@@ -349,13 +349,30 @@ section {
 
 @media (min-width: 620px) {
     #prodShow {
+        width: calc(100vw - var(--margens));
         max-width: var(--max_largura);
         margin-inline: auto;
-        flex-direction: row;
-        padding-block: 0;
         margin-block: var(--respiro_inner);
+        flex-direction: row;
     }
-}
+
+    #prodInfo {
+        position: relative;
+        width: calc(100vw - var(--margens)* 2);
+        padding-inline: calc(var(--margens) / 2);
+        margin-top: 0;
+        text-align: left;
+        background-color: hsl(from var(--secundaria) h s l / 0.5);
+    }
+
+    #prodIMG {
+        font-size: 0;
+    }
+    
+    #prodInfo>p {
+        margin-block: calc(var(--respiro_inner) / 4);
+    }
+}}
 
 
 
