@@ -320,7 +320,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     align-items:center;
-    justify-content: space-between;
+    justify-content: center;
     padding-top: var(--respiro_inner);
 }
 
@@ -332,6 +332,11 @@ section {
     transition: all 500ms;
     display: inline-block;
     font-size: calc(var(--size) * 0.25rem + 2.5vw);
+}
+@media (max-width: 1000px){
+    #prodsList a{
+        font-size: calc(var(--size) * 0.15rem + 5.5vw);
+    }
 }
 
 #prodsList a:hover {
@@ -610,6 +615,7 @@ div#decoSplitServ {
 #cnttLocal {
     font-weight: 500;
     font-style: normal;
+    text-align: center;
 }
 
 #cnttMapa{
