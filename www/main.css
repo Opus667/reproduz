@@ -94,11 +94,23 @@ section {
     background: transparent linear-gradient(0deg, var(--escuro), hsl( from var(--escuro) h s 20%));
 }
 
+@keyframes intro {
+    from{
+        transform: translateY(-10vh);
+        opacity: 0;
+    } to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 #logoRepro{
     aspect-ratio: 184/150;
     --svg: url("images/repro_logo_mob.svg");
     -webkit-mask-image: var(--svg);
     mask-image: var(--svg);
+    animation-name: intro;
+    animation-duration: 1s;
 }
 
 #reproComVis{
@@ -107,6 +119,10 @@ section {
     --svg: url("images/com_vis_mob.svg");
     -webkit-mask-image: var(--svg);
     mask-image: var(--svg);
+    /* opacity: 0; */
+    animation-name: intro;
+    /* animation-delay: 500ms; */
+    animation-duration: 2500ms;
 }
 
 #homeTitle p{
@@ -122,6 +138,10 @@ section {
 #homeTitle1{float: left;text-align:left;}
 #homeTitle2{float: right;text-align:right;}
 
+
+#homeTitle1.anima{animation: intro; animation-duration: 1s;}
+#homeTitle2.anima{animation: intro; animation-duration: 1.75s;}
+
 #homeVideos {
     display: flex;
     width: calc(100vw - var(--margens)*2);
@@ -133,7 +153,16 @@ section {
 
 .homeVideo {
     max-width: 30vw;
+    transform: translateY(25vh);
 }
+
+@keyframes homeVideo1 {100%{transform: translateY(-300vh);}}
+@keyframes homeVideo2 {100%{transform: translateY(-100vh);}}
+@keyframes homeVideo3 {100%{transform: translateY(-700vh);}}
+
+#homeVideos>div:nth-child(1){animation: homeVideo1 linear;animation-timeline: scroll(root block);}
+#homeVideos>div:nth-child(2){animation: homeVideo2 linear;animation-timeline: scroll(root block);}
+#homeVideos>div:nth-child(3){animation: homeVideo3 linear;animation-timeline: scroll(root block);}
 
 @media (min-width: 620px) {
     .hideMob{display:inline-block}
@@ -311,10 +340,10 @@ section {
 #prodsList a[data-weight="8"] { --size: 8; }
 #prodsList a[data-weight="9"] { --size: 9; }
 
-#prodsList a {
-  /* --size: 4; */
-  /* font-size: clamp(2.375rem, 1.25rem + 5.625vw, 6.875rem); */
-}
+/* #prodsList a {
+  --size: 4;
+  font-size: clamp(2.375rem, 1.25rem + 5.625vw, 6.875rem);
+} */
 
 #prodShow {
     display: flex;
@@ -431,7 +460,7 @@ section {
     display: block;
     align-items: start;
     text-align: left;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     margin-left: var(--margens);
     margin-top: var(--respiro_inner);
 }
