@@ -104,13 +104,20 @@ section {
     }
 }
 
+@keyframes fadeIN {
+    from{
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
 #logoRepro{
     aspect-ratio: 184/150;
     --svg: url("images/repro_logo_mob.svg");
     -webkit-mask-image: var(--svg);
     mask-image: var(--svg);
-    animation-name: intro;
-    animation-duration: 1s;
+    animation: intro 1s;
 }
 
 #reproComVis{
@@ -119,11 +126,10 @@ section {
     --svg: url("images/com_vis_mob.svg");
     -webkit-mask-image: var(--svg);
     mask-image: var(--svg);
-    /* opacity: 0; */
-    animation-name: intro;
-    /* animation-delay: 500ms; */
-    animation-duration: 2500ms;
+    animation: intro 2.5s;
 }
+
+#homeTitle{position: relative;z-index: 1;}
 
 #homeTitle p{
     display: inline-block;
@@ -156,9 +162,9 @@ section {
     transform: translateY(25vh);
 }
 
-@keyframes homeVideo1 {100%{transform: translateY(-300vh);}}
-@keyframes homeVideo2 {100%{transform: translateY(-100vh);}}
-@keyframes homeVideo3 {100%{transform: translateY(-700vh);}}
+@keyframes homeVideo1 {100%{transform: translateY(-800vh);}}
+@keyframes homeVideo2 {100%{transform: translateY(-200vh);}}
+@keyframes homeVideo3 {100%{transform: translateY(-450vh);}}
 
 #homeVideos>div:nth-child(1){animation: homeVideo1 linear;animation-timeline: scroll(root block);}
 #homeVideos>div:nth-child(2){animation: homeVideo2 linear;animation-timeline: scroll(root block);}
@@ -203,6 +209,7 @@ section {
     position: relative;
 }
 
+#quemTitle.anima{animation: fadeIN 1s }
 
 #quemText {
     margin-top: var(--respiro_inner);
@@ -210,6 +217,8 @@ section {
     text-align: justify;
     text-indent: calc(var(--margens) * 1.5);
 }
+
+#quemText.anima{animation: fadeIN 2s }
 
 #destWrapper {
     position: relative;
