@@ -29,7 +29,7 @@ body {
     text-align: left;
     font-size: 20px;
     color: var(--escuro);
-    background-color: var(--branco);
+    background-color: hsl(from var(--branco) h s l / 0.25);
 
     font-size: clamp(1.75rem, 1.4688rem + 1.4063vw, 2.875rem);
 }
@@ -67,7 +67,7 @@ section {
 
 #home{
     /* background: linear-gradient(hsl( from var(--escuro) h s l / 0), hsl( from var(--escuro) h s l / 0.75)); */
-    background: linear-gradient(hsl( from var(--claro) h s l / 1), hsl( from var(--claro) h s calc(l - 30)));
+    background: linear-gradient(hsl( from var(--branco) h s 85%), hsl( from var(--claro) h s 75%));
 }
 
 #home>div {
@@ -83,7 +83,7 @@ section {
 }
 
 #homeIntro{
-    filter: drop-shadow(hsl(from var(--escuro) h s l / 0.5) 0 7px 5px);
+    filter: drop-shadow(hsl(from var(--preto) h s l / 0.75) 0 7px 10px); 
 }
 
 #homeIntro>div>div {
@@ -91,7 +91,7 @@ section {
     width: 90vw;
     mask-repeat: no-repeat;
     mask-position: center;
-    background: transparent linear-gradient(0deg, var(--escuro), hsl( from var(--escuro) h s 20%));
+    background: transparent linear-gradient(180deg, var(--escuro), hsl( from var(--destaque) h s 40%));
 }
 
 @keyframes intro {
@@ -131,22 +131,18 @@ section {
 
 #homeTitle{position: relative;z-index: 1;}
 
-
-#homeTitle .homeWrap {
+#homeTitle p{
+    display: inline-block;
+    position: relative;
     max-width: var(--max_largura);
     width: calc(100vw - var(--margens)*2);
-    margin-inline: auto;
-}
-
-#homeTitle p{
-    background-color: #2b938d;
     font-size: clamp(2.375rem, 1.25rem + 5.625vw, 6.875rem);
     line-height: 1.5em;
     overflow-wrap: anywhere;
 }
 
-#homeTitle1{margin-inline-end: auto;}
-#homeTitle2{margin-inline-start: auto;}
+#homeTitle1{float: left;text-align:left;}
+#homeTitle2{float: right;text-align:right;}
 
 
 #homeTitle1.anima{animation: intro; animation-duration: 1s;}
