@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reproduz - ComVis</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main2.css">
+    <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.69/build/spline-viewer.js"></script> -->
+    <script src="script.js"></script>
+    
 </head>
 <body>
     <main>
@@ -17,18 +22,29 @@
             <img src="img/solucoes.png" alt="Soluções Criativas">
         </section>
         <section id="dstqs">
-            <div id="dstqs_title">Principais Produtos e Destaques</div>
-            <div id="dstqs_grid">
-                <div id="dstq_01"></div>
-                <div id="dstq_02"></div>
-                <div id="dstq_03"></div>
-                <div id="dstq_04"></div>
-                <div id="dstq_05"></div>
-                <div id="dstq_06"></div>
-                <div id="dstq_07"></div>
-                <div id="dstq_08"></div>
+            <div id="dstqs_wrap">
+                <div id="dstqs_title">Principais Produtos <br>&amp; Serviços</div>
+                <div id="dstqs_grid">
+                    <div id="dstq_01"><spline-viewer url="https://prod.spline.design/U7q2Fb131CWXtJK2/scene.splinecode" events-target="global"></spline-viewer></div>
+                    <div id="dstq_02"><spline-viewer url="https://prod.spline.design/szpdbaJhH0k0nroS/scene.splinecode" events-target="global"></spline-viewer></div>
+                    <div id="dstq_03"><spline-viewer url="https://prod.spline.design/szpdbaJhH0k0nroS/scene.splinecode" events-target="global"></spline-viewer></div>
+                    <div id="dstq_04"><spline-viewer url="https://prod.spline.design/szpdbaJhH0k0nroS/scene.splinecode" events-target="global"></spline-viewer></div>
+                    <div id="dstq_05"><spline-viewer url="https://prod.spline.design/szpdbaJhH0k0nroS/scene.splinecode" events-target="global"></spline-viewer></div>
+                    <div id="dstq_06"><spline-viewer url="https://prod.spline.design/szpdbaJhH0k0nroS/scene.splinecode" events-target="global"></spline-viewer></div>
+                    <div id="dstq_07"><spline-viewer url="https://prod.spline.design/szpdbaJhH0k0nroS/scene.splinecode" events-target="global"></spline-viewer></div>
+                    <div id="dstq_08"><spline-viewer url="https://prod.spline.design/szpdbaJhH0k0nroS/scene.splinecode" events-target="global"></spline-viewer></div>
+                    <div id="dstqs_js_1">
+                        <div id="app">
+                            <canvas id="canvas3d"></canvas>
+                        </div>
+                    </div>
+                    <div id="dstqs_js_2">
+                        <spline-viewer url="3d/trophy.splinecode"></spline-viewer>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 </body>
+<!-- <script src="main.js"></script> -->
 </html>
