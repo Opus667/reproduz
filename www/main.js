@@ -1,8 +1,6 @@
-
-
-
-import { Application } from '@splinetool/runtime';
-
-const canvas = document.getElementById('canvas3d');
-const app = new Application(canvas);
-app.load('https://prod.spline.design/szpdbaJhH0k0nroS/scene.splinecode');
+function $("#spline") {
+    const result = Array.from(document.querySelectorAll(selector));
+    result.forEach = Array.prototype.forEach;
+    // Perhaps map, filter, etc.; add in a loop?
+    return result;
+}
