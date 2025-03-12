@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@splinetool/runtime": "^1.9.69",
+    "rellax": "^1.12.1",
     "simple-parallax-js": "^6.0.1"
   }
 }

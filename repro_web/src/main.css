@@ -108,9 +108,9 @@ section {
     bottom: 5%;
 }
 
-#breakWrap>div {
+/* #breakWrap>div {
     top: 75%;
-}
+} */
 
 #breakWrap div:nth-child(1){right: 25%;}
 #breakWrap div:nth-child(2){right: 50%;}

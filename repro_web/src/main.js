@@ -1,10 +1,16 @@
 import { Application } from '@splinetool/runtime';
 import SimpleParallax from "simple-parallax-js/vanilla";
 
+
 export const dstqs = ["homage","signs","tags","sticker","trophy","laser","cnc","uv"];
 let i = 0;
 export const spliner  =[0];
 export const canvas  =[0];
+
+var rellax = new Rellax('.rellax', {
+    breakpoints:[576, 768, 1201]
+  });
+
 
 // document.getElementById('parallax_01', () => {
 // 	this = SimpleParallax();
@@ -19,11 +25,11 @@ export const canvas  =[0];
 	// document.getElamentById('parallax_03').SimpleParallax(this.element);
 
 // let para01.SimpleParallax(document.getElementById('parallax_01'));
-	// let para01 = Application(document.getElementById("parallax_03").SimpleParallax(para01));
-	const para01 = new SimpleParallax(document.getElementById("parallax_02"), {orientation:'up', scale: 1.3, customWrapper:"breakWrap"});
-	const para02 = new SimpleParallax(document.getElementById("parallax_01"), {orientation:'up', scale: 1.75, customWrapper:"breakWrap"});
-	const para03 = new SimpleParallax(document.getElementById("parallax_03"), {orientation:'up', scale: 1.2, customWrapper:"breakWrap"});
-	const para04 = new SimpleParallax(document.getElementById("parallax_04"), {orientation:'up', scale: 1.5, customWrapper:"breakWrap"});
+	// // let para01 = Application(document.getElementById("parallax_03").SimpleParallax(para01));
+	// const para01 = new SimpleParallax(document.getElementById("parallax_02"), {orientation:'up', scale: 1.3, customWrapper:"breakWrap"});
+	// const para02 = new SimpleParallax(document.getElementById("parallax_01"), {orientation:'up', scale: 1.75, customWrapper:"breakWrap"});
+	// const para03 = new SimpleParallax(document.getElementById("parallax_03"), {orientation:'up', scale: 1.2, customWrapper:"breakWrap"});
+	// const para04 = new SimpleParallax(document.getElementById("parallax_04"), {orientation:'up', scale: 1.5, customWrapper:"breakWrap"});
 	
 	
 	

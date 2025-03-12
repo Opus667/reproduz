@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+
   </head>
       <title>Reproduz - ComVis</title>
       <link rel="stylesheet" href="/src/style.css">
@@ -21,11 +23,12 @@
             <img src="img/quem.png" alt="quem somos">
           </section>
           <section id="break_section">
-            <div id="breakWrap">
-              <img id="parallax_03" src="img/break/para_03.png" alt="Soluções Criativas" class="parallax">
-              <img id="parallax_02" src="img/break/para_02.png" alt="Soluções Criativas" class="parallax">
-              <img id="parallax_04" src="img/break/para_04.png" alt="Soluções Criativas" class="parallax">
-              <img id="parallax_01" src="img/break/para_01.png" alt="Soluções Criativas" class="parallax">
+            <div id="root"></div>
+            <div id="breakWrap" class="rellax">
+              <div class="paralll rellax" data-rellax-speed="1"><img id="parallax_03" src="img/break/para_03.png" alt="Soluções Criativas"></div>
+              <div class="paralll rellax" data-rellax-speed="0"><img id="parallax_02" src="img/break/para_02.png" alt="Soluções Criativas"></div>
+              <div class="paralll rellax" data-rellax-speed="-5"><img id="parallax_04" src="img/break/para_04.png" alt="Soluções Criativas"></div>
+              <div class="paralll rellax" data-rellax-speed="-3"><img id="parallax_01" src="img/break/para_01.png" alt="Soluções Criativas"></div>
             </div>
           </section>
           <section id="dstqs">
@@ -85,6 +88,19 @@
           </section>
         </main>
     <script type="module" src="/src/main.js"></script>
+    <script>
+      // Start Rellax
+      var rellax = new Rellax('.rellax', {
+    speed: -2,
+    center: false,
+    wrapper: "#breakWrap",
+    round: true,
+    vertical: true,
+    horizontal: false
+  });    
+      // Destroy and create again parallax with previous settings
+      rellax.refresh();
+    </script>
     </body>
 </html>
 
