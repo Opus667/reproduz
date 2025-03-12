@@ -55,14 +55,67 @@ section {
 #quem {
     display: flex;
     justify-content: center;
-    background-color: #2c3b02;
+    background: linear-gradient(#313131, #121212);
 }
 
-#solu {
-    display: flex;
-    justify-content: center;
-    background-color: #e3f6ab;
+#quem::before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -4dvw;
+    border: solid transparent;
+    border-width: 0 0 4dvw 100dvw;
+    border-bottom-color: #313131;
 }
+#quem::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -4dvw;
+    border: solid transparent;
+    border-width: 4dvw 100vw 0 0;
+    border-top-color: #121212;
+    z-index: 1;
+}
+
+#break_section {
+    width: 100vw;
+    height: 120dvh;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background-color: #7d1233;
+}
+
+#breakWrap {
+    max-width: 1200px;
+    min-height: 50dvh;
+    position: relative;
+    margin-inline: auto;
+    /* display: flex;
+    justify-content: center;
+    background-color: #e3f6ab; */
+}
+#breakWrap>div {
+    position: absolute;
+    width: 25%;
+    height: fit-content;
+    display: flex;
+    overflow: visible !important;
+    justify-content: center;
+    bottom: 5%;
+}
+
+#breakWrap>div {
+    top: 75%;
+}
+
+#breakWrap div:nth-child(1){right: 25%;}
+#breakWrap div:nth-child(2){right: 50%;}
+#breakWrap div:nth-child(3){right: 0%;}
+#breakWrap div:nth-child(4){right: 75%;}
 
 #dstqs{
     width: 100%;

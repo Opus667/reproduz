@@ -9,9 +9,10 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^6.1.1"
+    "vite": "^6.2.1"
   },
   "dependencies": {
-    "@splinetool/runtime": "^1.9.69"
+    "@splinetool/runtime": "^1.9.69",
+    "simple-parallax-js": "^6.0.1"
   }
 }
