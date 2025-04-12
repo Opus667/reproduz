@@ -7,100 +7,107 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
-
+    
   </head>
-      <title>Reproduz - ComVis</title>
-      <link rel="stylesheet" href="/src/style.css">
-      <link rel="stylesheet" href="/src/main.css">
-      <!-- <script src="/src/main.js"></script> -->
-    <body>
-        <main>
-          <section id="hero">
-            <br>
-          </section>
-          <section id="quem">
-            <img src="img/quem.png" alt="quem somos">
-          </section>
-          <section id="break_section">
-            <div id="root"></div>
-            <div id="breakWrap" class="rellax">
-              <div class="paralll rellax" data-rellax-speed="1"><img id="parallax_03" src="img/break/para_03.png" alt="Soluções Criativas"></div>
-              <div class="paralll rellax" data-rellax-speed="0"><img id="parallax_02" src="img/break/para_02.png" alt="Soluções Criativas"></div>
-              <div class="paralll rellax" data-rellax-speed="-5"><img id="parallax_04" src="img/break/para_04.png" alt="Soluções Criativas"></div>
-              <div class="paralll rellax" data-rellax-speed="-3"><img id="parallax_01" src="img/break/para_01.png" alt="Soluções Criativas"></div>
-            </div>
-          </section>
-          <section id="dstqs">
-            <div id="dstqs_wrap">
-              <div id="dstqs_title">Principais Produtos <br>&amp; Serviços</div>
-              <div id="dstqs_grid">
-                <div id="dstqs_01">
-                  <canvas id="homage3d">
-                  </canvas>
-                  <h1>Destaques</h1>
-                  <div>nononononoonononoononon</div>
-                </div>
-                <div id="dstqs_02">
-                  <canvas id="trophy3d">
-                  </canvas>
-                  <h1>Destaques</h1>
-                  <div>nononononoonononoononon</div>
-                </div>
-                <div id="dstqs_03">
-                  <canvas id="signs3d">
-                  </canvas>
-                  <h1>Destaques</h1>
-                  <div>nononononoonononoononon</div>
-                </div>
-                <div id="dstqs_04">
-                  <canvas id="tags3d">
-                  </canvas>
-                  <h1>Destaques</h1>
-                  <div>nononononoonononoononon</div>
-                </div>
-                <div id="dstqs_05">
-                  <canvas id="sticker3d">
-                  </canvas>
-                  <h1>Destaques</h1>
-                  <div>nononononoonononoononon</div>
-                </div>
-                <div id="dstqs_06">
-                  <canvas id="laser3d">
-                  </canvas>
-                  <h1>Destaques</h1>
-                  <div>nononononoonononoononon</div>
-                </div>
-                <div id="dstqs_07">
-                  <canvas id="cnc3d">
-                  </canvas>
-                  <h1>Destaques</h1>
-                  <div>nononononoonononoononon</div>
-                </div>
-                <div id="dstqs_08">
-                  <canvas id="uv3d">
-                  </canvas>
-                  <h1>Destaques</h1>
-                  <div>nononononoonononoononon</div>
-                </div>
+  <title>Reproduz - ComVis</title>
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="stylesheet" href="/src/main.css">
+  <!-- <script src="/src/main.js"></script> -->
+  <body>
+    <main>
+      <section id="hero">
+        <br>
+      </section>
+      <section id="quem">
+        <img src="img/quem.png" alt="quem somos">
+      </section>
+      <section id="break_section">
+        <div id="break_shadow"></div>
+        <div id="breakWrap" class="breakWrap">
+          <div class="paralll rellax" data-rellax-speed="4" ><img id="parallax_03" src="img/break/para_03.png" alt="Soluções Criativas"></div>
+          <div class="paralll rellax" data-rellax-speed="8" ><img id="parallax_02" src="img/break/para_02.png" alt="Soluções Criativas"></div>
+          <div class="paralll rellax" data-rellax-speed="2" ><img id="parallax_04" src="img/break/para_04.png" alt="Soluções Criativas"></div>
+          <div class="paralll rellax" data-rellax-speed="3" ><img id="parallax_01" src="img/break/para_01.png" alt="Soluções Criativas"></div>
+        </div>
+      </section>
+      <section id="dstqs">
+        <div id="dstqs_wrap">
+          <div id="dstqs_title">Principais Produtos <br>&amp; Serviços</div>
+          <div id="dstqs_grid">
+            <div id="dstqs_homage">
+              <canvas id="homage3d">
+              </canvas>
+              <div class="dstqs_card">
+                <h3>Destaques</h3>
+                <div>nononononoonononoononon</div>
               </div>
             </div>
-          </section>
-        </main>
+            <div id="dstqs_trophy">
+              <canvas id="trophy3d">
+              </canvas>
+              <div class="dstqs_card">
+                <h3>Destaques</h3>
+                <div>nononononoonononoononon</div>
+              </div>
+            </div>
+            <div id="dstqs_signs">
+              <canvas id="signs3d">
+              </canvas>
+              <div class="dstqs_card">
+                <h3>Destaques</h3>
+                <div>nononononoonononoononon</div>
+              </div>
+            </div>
+            <div id="dstqs_tags">
+              <canvas id="tags3d">
+              </canvas>
+              <div class="dstqs_card">
+                <h3>Destaques</h3>
+                <div>nononononoonononoononon</div>
+              </div>
+            </div>
+            <div id="dstqs_stickers">
+              <canvas id="sticker3d">
+              </canvas>
+              <div class="dstqs_card">
+                <h3>Destaques</h3>
+                <div>nononononoonononoononon</div>
+              </div>
+            </div>
+            <div id="dstqs_laser">
+              <canvas id="laser3d">
+              </canvas>
+              <div class="dstqs_card">
+                <h3>Destaques</h3>
+                <div>nononononoonononoononon</div>
+              </div>
+            </div>
+            <div id="dstqs_cnc">
+              <canvas id="cnc3d">
+              </canvas>
+              <div class="dstqs_card">
+                <h3>Destaques</h3>
+                <div>nononononoonononoononon</div>
+              </div>
+            </div>
+            <div id="dstqs_uv">
+              <canvas id="uv3d">
+              </canvas>
+              <div class="dstqs_card">
+                <h3>Destaques</h3>
+                <div>nononononoonononoononon</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="blank"></section>
+      <section id="blank"></section>
+      <section id="blank"></section>
+      <section id="blank"></section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
     <script type="module" src="/src/main.js"></script>
-    <script>
-      // Start Rellax
-      var rellax = new Rellax('.rellax', {
-    speed: -2,
-    center: false,
-    wrapper: "#breakWrap",
-    round: true,
-    vertical: true,
-    horizontal: false
-  });    
-      // Destroy and create again parallax with previous settings
-      rellax.refresh();
-    </script>
     </body>
 </html>
 

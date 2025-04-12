@@ -8,8 +8,11 @@ export const spliner  =[0];
 export const canvas  =[0];
 
 var rellax = new Rellax('.rellax', {
-    breakpoints:[576, 768, 1201]
-  });
+    breakpoints:[576, 768, 1201],
+	center:true
+});
+
+
 
 
 // document.getElementById('parallax_01', () => {

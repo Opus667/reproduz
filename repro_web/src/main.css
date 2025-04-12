@@ -63,7 +63,7 @@ section {
     width: 0;
     height: 0;
     position: absolute;
-    top: -4dvw;
+    top: calc(-4dvw + 5px);
     border: solid transparent;
     border-width: 0 0 4dvw 100dvw;
     border-bottom-color: #313131;
@@ -73,7 +73,7 @@ section {
     width: 0;
     height: 0;
     position: absolute;
-    bottom: -4dvw;
+    bottom: calc(-4dvw + 5px);
     border: solid transparent;
     border-width: 4dvw 100vw 0 0;
     border-top-color: #121212;
@@ -82,16 +82,29 @@ section {
 
 #break_section {
     width: 100vw;
-    height: 120dvh;
-    position: relative;
-    display: block;
+    height: 60dvh;
+    /* display: inline-flex; */
     overflow: hidden;
-    background-color: #7d1233;
+    background-color: #96c600;
+}
+
+#break_shadow {
+    width: 100vw;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    background-image: url(/img/break/dither.png);
+}
+
+.break_shadow {
+    transform: scaleX(-1);
 }
 
 #breakWrap {
     max-width: 1200px;
     min-height: 50dvh;
+    max-height: 100dvh;
+    height: 100%;
     position: relative;
     margin-inline: auto;
     /* display: flex;
@@ -178,4 +191,8 @@ canvas {
     margin: 0;
     padding: 0;
     
+}
+
+#blank {
+    height: 500dvh;
 }
