@@ -96,12 +96,8 @@ section {
     background-image: url(/img/break/dither.png);
 }
 
-.break_shadow {
-    transform: scaleX(-1);
-}
-
 #breakWrap {
-    max-width: 1200px;
+    max-width: 1800px;
     min-height: 50dvh;
     max-height: 100dvh;
     height: 100%;
@@ -141,7 +137,7 @@ section {
 
 #dstqs_wrap {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1800px;
     margin-inline: auto;
 }
 
