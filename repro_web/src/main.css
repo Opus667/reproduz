@@ -1,3 +1,14 @@
+:root {
+    font-family: "Roboto", sans-serif;
+    line-height: 1;
+    font-weight: 300;
+      
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,14 +22,10 @@ html{
 
 body {
     font-family: "Roboto", sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     /* font-style: italic ; */
     text-align: left;
     font-size: 20px;
-    /* color: var(--escuro); */
-    /* background-color: var(--branco); */
-
-    font-size: clamp(1.75rem, 1.4688rem + 1.4063vw, 2.875rem);
 }
 
 a{

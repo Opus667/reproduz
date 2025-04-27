@@ -6,106 +6,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap" rel="stylesheet">
   </head>
   <title>Reproduz - ComVis</title>
-  <link rel="stylesheet" href="/src/style.css">
   <link rel="stylesheet" href="/src/main.css">
-  <!-- <script src="/src/main.js"></script> -->
+  <script src="/src/main.js"></script>
   <body>
     <main>
-      <section id="hero">
-        <br>
-      </section>
-      <section id="quem">
-        <img src="img/quem.png" alt="quem somos">
-      </section>
-      <section id="break_section">
-        <div id="break_shadow"></div>
-        <div id="breakWrap" class="breakWrap">
-          <div class="paralll rellax" data-rellax-speed="4" ><img id="parallax_03" src="img/break/para_03.png" alt="Soluções Criativas"></div>
-          <div class="paralll rellax" data-rellax-speed="8" ><img id="parallax_02" src="img/break/para_02.png" alt="Soluções Criativas"></div>
-          <div class="paralll rellax" data-rellax-speed="2" ><img id="parallax_04" src="img/break/para_04.png" alt="Soluções Criativas"></div>
-          <div class="paralll rellax" data-rellax-speed="3" ><img id="parallax_01" src="img/break/para_01.png" alt="Soluções Criativas"></div>
+      <section id="intro">
+        <div id="intro_title">
+          <h1 id="repro">
+            <img src="/img/reproduz.svg" alt="Reproduz - Comunicação visual">
+          </h1>
+        </div>
+        <div id="intro_main">
+          <h2>Reproduzindo Ideias</h2>
+          <p>
+            Com mais de 40 anos de trajetória, a Reproduz é referência em homenagens, tagueamento e sinalização. Mais do que comunicação visual, entregamos propósito, emoção e identidade. Nosso trabalho vai além da estética:
+            criamos soluções que comunicam, conectam e valorizam histórias. Tudo com criatividade, qualidade e atenção a cada detalhe.
+          </p>
+        </div>
+        <div id="intro_break">
+          <img src="/img/intro_break.svg" alt="">
         </div>
       </section>
-      <section id="dstqs">
-        <div id="dstqs_wrap">
-          <div id="dstqs_title">Principais Produtos <br>&amp; Serviços</div>
-          <div id="dstqs_grid">
-            <div id="dstqs_homage">
-              <canvas id="homage3d">
-              </canvas>
-              <div class="dstqs_card">
-                <h3>Destaques</h3>
-                <div>nononononoonononoononon</div>
-              </div>
+      <section id="creative">
+        <div id="cr_txt">
+          <h2>Soluções Criativas</h2>
+          <p>
+            Na Reproduz, oferecemos mais do que soluções visuais — entregamos experiências completas. Unimos criatividade, funcionalidade e inovação para desenvolver materiais que comunicam com clareza e emocionam. Seja em homenagens, sinalização ou projetos personalizados, fornecemos não só o visual, mas também significado, impacto e presença.
+          </p>
+        </div>
+        <div id="cr_3d">
+          <canvas id="creative_3d">
+          </canvas>
+        </div>
+      </section>
+      <section id="break">
+        <div id="break_top"></div>
+        <div id="break_section">
+          <h2>
+            Por trás de cada projeto,<br>
+            mãos que fazem a diferença
+          </h2>
+        </div>
+        <div id="break_bottom"></div>
+      </section>
+      <section id="destaques">
+        <div id="dest_tittle">
+          <h2>Os nossos destaques</h2>
+          <p>
+            Ao longo de nossa trajetória, acumulamos soluções que representam nossa expertise e versatilidade.
+            Confira alguns dos principais focos do nosso trabalho
+            Cada um com o compromisso de entregar valor, impacto e qualidade.
+          </p>
+        </div>
+        <div id="dest_wrap">
+          <div class="dest" id="hmng">
+            <h3>Placas de Homenagens</h3>
+            <p>
+              Criada para valorizar momentos especiais, a placa de homenagem é personalizada e ideal para reconhecer conquistas, marcos e pessoas com elegância e significado.
+            </p>
+          </div>
+          <div class="dest" id="trof">
+            <h3>Troféus</h3>
+            <p>
+              Mais do que um prêmio, o troféu simboliza reconhecimento, superação e conquista. Com design personalizado e acabamento de qualidade, ele celebra momentos únicos de forma marcante e memorável.
+            </p>
+          </div>
+          <div class="dest" id="sign">
+            <h3>Sinalização</h3>
+            <p>
+              Funcionalidade e clareza em cada detalhe. As placas de sinalização organizam espaços, orientam o público e reforçam a identidade visual com eficiência, durabilidade e acabamento profissional.
+            </p>
+          </div>
+          <div class="dest" id="tag">
+            <h3>Tagueamento</h3>
+            <p>
+              Organização e identificação com eficiência. Oferecemos soluções de tagueamento personalizadas para produtos, equipamentos e processos, unindo funcionalidade, durabilidade e acabamento de qualidade.            </p>
+          </div>
+          <div class="dest" id="sticker">
+            <h3>Adesivos</h3>
+            <p>
+              Versatilidade e impacto em qualquer formato. Produzimos adesivos personalizados, de centímetros a metros, com alta qualidade de impressão. Ideais para comunicação visual, decoração, identificação e campanhas promocionais.
+            </p>
+          </div>
+          </div>
+          <div class="dest" id="print">
+            <h3>Impressões</h3>
+            <p>
+              Alta qualidade em cada detalhe. Realizamos impressões digitais com cores vibrantes e precisão, em diversos materiais, para atender a projetos promocionais, comunicação visual e personalizações de todos os tamanhos.
+            </p>
+          </div>
+          <div class="dest" id="laser">
+            <h3>Laser</h3>
+            <p>
+              Precisão e acabamento impecável. Oferecemos serviços de corte e gravação a laser em diversos materiais, garantindo detalhes finos, personalização e alta qualidade em cada projeto.
+          </div>
+          <div class="dest" id="cnc">
+            <h3>Router CNC</h3>
+            <p>
+              Utilizando tecnologia de ponta, realizamos cortes e gravações de alta precisão em diversos materiais. Ideal para peças personalizadas, sinalização e projetos que exigem qualidade, detalhamento e acabamento profissional.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="proj_gal">
+        <div id="break_gal"></div>
+        <div id="proj_gal_tittle">
+          <h3>Nossos projetos em ação</h3>
+          <p>
+            Veja como transformamos ideias em soluções criativas e impactantes.
+          </p>
+        </div>
+        <div id="proj_gal_wrap">
+          ???
+        </div>
+      </section>
+      <section id="Contato">
+        <div id="break_contato"></div>
+        <div id="contato_tittle">
+          <h3>Entre em contato</h3>
+          <p>
+            Estamos prontos para transformar suas ideias em soluções criativas. <br>
+            Fale com a nossa equipe e descubra tudo o que podemos fazer por você!
+          </p>
+        </div>
+        <div id="contato_cards">
+          <div id="ctt_phones">
+            <div id="ctt_phones_txt">
+              <p>
+                +55 15 3418.3806 <br>
+                +55 15 98127-6594
+              </p>
             </div>
-            <div id="dstqs_trophy">
-              <canvas id="trophy3d">
-              </canvas>
-              <div class="dstqs_card">
-                <h3>Destaques</h3>
-                <div>nononononoonononoononon</div>
-              </div>
+            <div id="ctt_phones_buttons">
+              <div class="ctt_button" id="ctt_phone"></div>
+              <div class="ctt_button" id="ctt_zap"></div>
             </div>
-            <div id="dstqs_signs">
-              <canvas id="signs3d">
-              </canvas>
-              <div class="dstqs_card">
-                <h3>Destaques</h3>
-                <div>nononononoonononoononon</div>
-              </div>
+          </div>
+          <div id="ctt_email">
+            <div id="ctt_email_txt">
+              <p>
+                contato@reproduz.com.br
+              </p>
             </div>
-            <div id="dstqs_tags">
-              <canvas id="tags3d">
-              </canvas>
-              <div class="dstqs_card">
-                <h3>Destaques</h3>
-                <div>nononononoonononoononon</div>
-              </div>
+            <div id="ctt_email_button">
+              <div class="ctt_button" id="ctt_mail"></div>
             </div>
-            <div id="dstqs_stickers">
-              <canvas id="sticker3d">
-              </canvas>
-              <div class="dstqs_card">
-                <h3>Destaques</h3>
-                <div>nononononoonononoononon</div>
-              </div>
+          </div>
+          <div id="ctt_address">
+            <div id="ctt_address_txt">
+              <p>
+                Rua Benedito Ferreira telles, 625<br>
+                Jardim Simus -Sorocaba - SP
+              </p>
             </div>
-            <div id="dstqs_laser">
-              <canvas id="laser3d">
-              </canvas>
-              <div class="dstqs_card">
-                <h3>Destaques</h3>
-                <div>nononononoonononoononon</div>
-              </div>
-            </div>
-            <div id="dstqs_cnc">
-              <canvas id="cnc3d">
-              </canvas>
-              <div class="dstqs_card">
-                <h3>Destaques</h3>
-                <div>nononononoonononoononon</div>
-              </div>
-            </div>
-            <div id="dstqs_uv">
-              <canvas id="uv3d">
-              </canvas>
-              <div class="dstqs_card">
-                <h3>Destaques</h3>
-                <div>nononononoonononoononon</div>
-              </div>
+            <div id="ctt_address_button">
+              <div class="ctt_button" id="ctt_local"></div>
             </div>
           </div>
         </div>
       </section>
-      <section id="blank"></section>
-      <section id="blank"></section>
-      <section id="blank"></section>
-      <section id="blank"></section>
     </main>
+    <footer>made by Pépa</footer>
     <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
     <script type="module" src="/src/main.js"></script>
     </body>
