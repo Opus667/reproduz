@@ -104,7 +104,8 @@ h2::first-letter{
 }
 
 #intro {
-    max-height: 100dvh;
+    min-height: 100dvh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
