@@ -4,7 +4,7 @@
     --shade: 76, 62%, 41%;
     --dull: 76, 82%, 46%;
     --pop: 76, 91%, 50%;
-    --clear: 76, 100%, 70%;
+    --washed: 76, 100%, 70%;
     --bright: 76, 78%, 81%;
 
     /* --Medidas-- */
@@ -150,15 +150,51 @@ h2::first-letter{
     text-align: right;
 }
 
-#intro button {
+.intro_cta {
     /* float: right; */
     text-align: right;
     font-family: "Anton", sans-serif;
     font-size: 4rem;
     text-transform: uppercase;
-    padding: 0.5rem 4rem;
-
+    padding: 0 0.75em;
+    margin-inline: 0.2em;
+    border-radius: 10px;
+    border: solid red 6px;
+    transition-property: transform, box-shadow;
+    transition-duration: 500ms;
+    
 }
+.intro_cta:hover {
+    transform: translateX(-10px) translateY(-10px);
+}
+
+#cta_destqs {
+    background-color: hsl( var(--bright));
+    border-color: hsl( var(--shade));
+}
+
+#cta_destqs:hover {
+    border-color: hsl( var(--shade));
+    box-shadow:
+        hsl( var(--shade)) 9px 9px,
+        hsl( var(--shade)) 5px 5px,
+        hsl( var(--shade)) 1px 1px;
+}
+
+#cta_ctt {
+    background-color: hsl( var(--dark));
+    color: hsl( var(--pop));
+    border-color: hsl( var(--shade));
+}
+
+#cta_ctt:hover {
+    border-color: hsl( var(--shade));
+    box-shadow:
+        hsl( var(--shade)) 9px 9px,
+        hsl( var(--shade)) 5px 5px,
+        hsl( var(--shade)) 1px 1px;
+}
+
 
 #intro_break {
     max-width: 100dvw;
