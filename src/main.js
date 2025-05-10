@@ -4,4 +4,4 @@ import { Application } from '@splinetool/runtime';
 
 const canvas = document.getElementById('creative_3d');
 const spline = new Application(canvas);
-spline.load('/img/creative.splinecode');
+spline.load('/3d/creative.splinecode');
