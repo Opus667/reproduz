@@ -1,5 +1,5 @@
 import { Application } from '@splinetool/runtime';
-import SimpleParallax from "simple-parallax-js/vanilla";
+// import SimpleParallax from "simple-parallax-js/vanilla";
 
 
 export const dstqs = ["homage","signs","tags","sticker","trophy","laser","cnc","uv"];
