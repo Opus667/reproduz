@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200"  preserveAspectRatio="none">
+    <path d="M0 187.31L600 86.64V200H0v-12.69z" style="isolation:isolate" fill="#b6f50a" fill-rule="evenodd" opacity=".3"/>
+    <path d="M0 116.27l161.33-57.35L600 124.94v75.07H0v-83.73z" style="isolation:isolate" fill="#b6f50a" fill-rule="evenodd" opacity=".3"/>
+    <path d="M0 195.97L600 0v200H0v-4.03z" style="isolation:isolate" fill="#b6f50a" fill-rule="evenodd" opacity=".3"/><path d="M0 168.08l600 24.43V200H0v-31.92z" fill="#a5d615" fill-rule="evenodd"/>
+</svg>
