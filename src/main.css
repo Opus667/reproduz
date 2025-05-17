@@ -223,13 +223,15 @@ section {
 #cr_3d {flex: 1;}
 
 #cr_3d canvas {
-    /* background-color: aqua; */
     min-width: 30dvw;
     height: auto !important;
     aspect-ratio: 1/1;
     margin: 0;
     padding: 0;    
 }
+
+@media screen and (max-width: 600px) {#cr_3d{display: none;}}
+
 
 #break {
     padding-block: 0;
@@ -298,7 +300,7 @@ section {
 
 .dest {
     position: relative;
-    min-width: calc( var(--largura) * 0.3);
+    min-width: calc( var(--largura) * 0.2);
     width: 30%;
     max-width: 80dvw;
     height: 40dvh;
