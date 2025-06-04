@@ -1,7 +1,9 @@
-import { Application } from '@splinetool/runtime';
-// import SimpleParallax from "simple-parallax-js/vanilla";
+// import { Application } from '@splinetool/runtime';
+// // import SimpleParallax from "simple-parallax-js/vanilla";
 
 
-const canvas = document.getElementById('creative_3d');
-const spline = new Application(canvas);
-spline.load('/3d/creative.splinecode');
+// const canvas = document.getElementById('creative_3d');
+// const spline = new Application(canvas);
+// spline.load('/3d/creative.splinecode');
+
+import "@lottiefiles/lottie-player";

@@ -12,6 +12,7 @@
     "vite": "^6.2.1"
   },
   "dependencies": {
+    "@lottiefiles/lottie-player": "^2.0.12",
     "@splinetool/runtime": "^1.9.69"
   }
 }

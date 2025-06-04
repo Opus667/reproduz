@@ -29,6 +29,7 @@
 
 html{
     scroll-behavior: smooth;
+    font-size: clamp(1.25rem, 1.01vw + 0.989rem, 2.125rem);
 }
 
 
@@ -36,8 +37,7 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     text-align: left;
-    font-size: clamp(1.25rem, 1.01vw + 0.989rem, 2.125rem);
-    line-height: clamp(1.875rem, 1.025vw + 1.61rem, 2.763rem);
+    line-height:normal;
 }
 
 main{
@@ -55,8 +55,8 @@ h2, h3, #break {
     font-weight: 400;
     font-style: normal;
     text-transform: uppercase;
-    font-size: clamp(3.75rem, 6.494vw + 2.07rem, 9.375rem);
-    line-height: clamp(5.625rem, 7.576vw + 3.665rem, 12.188rem);
+    font-size: 3.5rem;
+    line-height:normal;
 }
 
 h2::first-letter, h3::first-letter{
@@ -149,12 +149,12 @@ section {
     text-align: right;
 }
 @media screen and (max-width: 600px) {#intro_cta{text-align: center;}}
-@media screen and (max-width: 600px) {#intro_cta button{font-size: 2.5em; margin-top: 4dvh;}}
+@media screen and (max-width: 600px) {#intro_cta button{font-size: 2em; margin-top: 4dvh;}}
 
 .intro_cta {
     text-align: right;
     font-family: "Anton", sans-serif;
-    font-size: 4rem;
+    font-size: 1.6rem;
     text-transform: uppercase;
     padding: 0 0.75em;
     margin-inline: 0.2em;
@@ -236,7 +236,7 @@ section {
 #cr_txt {flex: 2;}
 #cr_3d {flex: 1;}
 
-#cr_3d canvas {
+#cr_3d lottie-player {
     min-width: 30dvw;
     height: auto !important;
     aspect-ratio: 1/1;
