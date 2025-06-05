@@ -1,5 +1,5 @@
 {
-  "name": "Reproduz_WebSite",
+  "name": "repro_cv",
   "private": true,
   "version": "0.0.1",
   "type": "commonjs",
@@ -12,7 +12,6 @@
     "vite": "^6.2.1"
   },
   "dependencies": {
-    "@lottiefiles/lottie-player": "^2.0.12",
-    "@splinetool/runtime": "^1.9.69"
+    "@lottielab/lottie-player": "^1.1.3"
   }
 }

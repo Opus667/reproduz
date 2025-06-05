@@ -6,4 +6,5 @@
 // const spline = new Application(canvas);
 // spline.load('/3d/creative.splinecode');
 
-import "@lottiefiles/lottie-player";
+import '@lottielab/lottie-player/web';
+// or: import '@lottielab/lottie-player';
