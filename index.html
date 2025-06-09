@@ -37,7 +37,7 @@
           <button id="cta_destqs" class="intro_cta">DESTAQUES</button>
           <button id="cta_ctt" class="intro_cta">CONTATO</button>
         </div>
-        <span id="intro_break" class="intro_svg"><img src="/img/mouse.gif" alt="Role a página para continuar" id="intro_rato"></span>
+        <span id="intro_break" class="break"><img src="/img/mouse.gif" alt="Role a página para continuar" id="intro_rato"></span>
       </section>
       <section id="creative">
         <div id="cr_wrap" class="alinha_flex">
@@ -54,21 +54,28 @@
           <div id="cr_3d">
             <!-- <canvas id="creative_3d" /> -->
 
-<lottie-player src="/lottie/criativas.json" speed="0.75" autoplay loop>
-</lottie-player>
+
+<dotlottie-player
+  autoplay
+  loop
+  speed="0.75"
+  src="/lottie/criativas.lottie"
+  style="min-width: 256px; width: 100%; height: 100%;"
+>
+</dotlottie-player>
 
           </div>
         </div>
       </section>
-      <section id="break">
-        <span id="break_top"></span>
-        <div id="break_section" class="alinha_flex">
-          <h3 id="break_txt">
+      <section id="maos">
+        <span id="maos_break_top" class="break"></span>
+        <div id="maos_section" class="alinha_flex">
+          <h3 id="maos_txt">
             Por trás de cada projeto,<br>
             mãos que fazem a diferença
           </h3>
         </div>
-        <span id="break_bottom"></span>
+        <span id="maos_break_bottom" class="break"></span>
       </section>
       <section id="destaques">
         <div id="dest_tittle" class="alinha_flex">
@@ -92,7 +99,18 @@
               Mais do que um prêmio, o troféu simboliza reconhecimento, superação e conquista. Com design personalizado e acabamento de qualidade, ele celebra momentos únicos de forma marcante e memorável.
             </p>
           </div>
-          <div class="dest" id="dest_blank">blank</div>
+          <div class="dest" id="dest_blank">
+            
+            <dotlottie-player
+  autoplay
+  loop
+  speed="0.75"
+  src="/lottie/criativas.json"
+  style="width: 100%; height: 100%;"
+>
+</dotlottie-player>
+
+          </div>
           <div class="dest" id="sign">
             <h3>Sinalização</h3>
             <p>
@@ -132,7 +150,7 @@
           </div>
         </section>
         <section id="proj_gal">
-          <div id="break_gal"></div>
+          <div id="break_gal" class="break"></div>
           <div id="proj_gal_tittle" class="alinha_flex flex_vert">
             <h3>Nossos projetos em ação</h3>
             <p><span class="margem"></span>
@@ -142,7 +160,7 @@
           <div id="proj_gal_wrap" class="alinha_flex">
             ???
           </div>
-          <div id="break_gal_bottom"></div>
+          <div id="break_gal_bottom" class="break"></div>
         </section>
         <section id="contato">
           <div id="contato_tittle">
