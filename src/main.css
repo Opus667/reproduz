@@ -38,6 +38,7 @@ body {
     font-weight: 300;
     text-align: left;
     line-height:normal;
+    scroll-behavior: smooth;
 }
 
 main{
@@ -116,11 +117,9 @@ section {
     justify-content: space-between;
     padding-block: 0;
     color: hsl( var(--pop));
-    background: radial-gradient(circle, #0000, #0003) hsl( var(--dark));
+    background: radial-gradient(circle, #0000, #0005) hsl( var(--dark));
     background-size: cover;
 }
-@media screen and (max-width: 600px) {#intro {height: 100dvh; overflow-y: auto;}}
-
 #intro p{padding-block: 0;}
 #intro>div{flex: 0;}
 
@@ -156,7 +155,6 @@ section {
     padding-inline: var(--margem);
     text-align: right;
 }
-@media screen and (max-width: 600px) {#intro_cta{text-align: center;}}
 @media screen and (max-width: 600px) {#intro_cta button{font-size: 2em; margin-top: 4dvh;}}
 
 .intro_cta {
@@ -174,7 +172,7 @@ section {
 }
 
 #intro_cta{padding-bottom: 15dvh;}
-@media screen and (max-width: 600px) {#intro_cta{padding-bottom: 20dvh;}}
+@media screen and (max-width: 600px) {#intro_cta{padding-bottom: 5dvh; text-align: center;}}
 
 
 .intro_cta:hover {
@@ -210,6 +208,8 @@ section {
 
 
 #intro_break {
+    width: 100%;
+    position: sticky;
     bottom: 0;
     background-image: url('/img/break_intro.svg');
 }
