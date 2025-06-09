@@ -288,6 +288,11 @@ section {
     align-items: flex-end;
 }
 
+#dest_tittle>* {
+    display: flex;
+    justify-content: flex-end;
+}
+
 #dest_tittle p {
     width: 85%;
     text-align: right;
