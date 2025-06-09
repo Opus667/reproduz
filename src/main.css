@@ -75,7 +75,7 @@ p {
 
 section {
     min-height: 100%;
-    padding-block: 10dvh;
+    padding-block: 10vh;
 }
 
 .margem {
@@ -101,7 +101,7 @@ section {
 
 .break {
     max-width: 100dvw;
-    min-height: 15dvh;
+    min-height: 15vh;
     position: relative;
     margin: 0;
     display: block;
@@ -110,7 +110,7 @@ section {
 }
 
 #intro {
-    min-height: 100dvh;
+    min-height: 100vh;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -124,15 +124,15 @@ section {
 #intro>div{flex: 0;}
 
 #intro_title {
-    max-height: 25dvh;
-    height: 100dvh;
+    max-height: 25vh;
+    height: 100vh;
 }
 
 #repro img {
     height: 100vh;
-    max-height: 10dvh;
+    max-height: 10vh;
     max-width: 80dvw;
-    margin-block: 2.5dvh;
+    margin-block: 2.5vh;
     margin-right: auto;
 }
 
@@ -155,7 +155,7 @@ section {
     padding-inline: var(--margem);
     text-align: right;
 }
-@media screen and (max-width: 600px) {#intro_cta button{font-size: 2em; margin-top: 4dvh;}}
+@media screen and (max-width: 600px) {#intro_cta button{font-size: 2em; margin-top: 4vh;}}
 
 .intro_cta {
     text-align: right;
@@ -171,8 +171,8 @@ section {
     
 }
 
-#intro_cta{padding-bottom: 15dvh;}
-@media screen and (max-width: 600px) {#intro_cta{padding-bottom: 5dvh; text-align: center;}}
+#intro_cta{padding-bottom: 15vh;}
+@media screen and (max-width: 600px) {#intro_cta{padding-bottom: 5vh; text-align: center;}}
 
 
 .intro_cta:hover {
@@ -249,7 +249,7 @@ section {
 
 #maos {
     padding-block: 0;
-    height: 110dvh;
+    height: 110vh;
     color: hsl( var(--pop));
     background-image: url(/img/maos.jpg);
     background-size: cover;
@@ -302,7 +302,7 @@ section {
     min-width: calc( var(--largura) * 0.2);
     width: 30%;
     max-width: 80dvw;
-    height: 40dvh;
+    height: 40vh;
     margin: 2% 1%;
     padding: 0.75em;
     overflow: hidden;
@@ -350,7 +350,7 @@ section {
 }
 
 #proj_gal_tittle {
-    padding-top: 10dvh;
+    padding-top: 10vh;
     align-items:flex-start;
 }
 
@@ -361,7 +361,7 @@ section {
     border: hsl( var(--pop)) solid 2px;
     border-radius: 20px;
     background-image: url(/img/gal_holder.jpg);
-    margin-bottom: 10dvh;
+    margin-bottom: 10vh;
 }
 
 #break_gal_bottom {
