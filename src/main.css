@@ -29,7 +29,8 @@
 
 html{
     scroll-behavior: smooth;
-    font-size: clamp(1.25rem, 1.01vw + 0.989rem, 2.125rem);
+    font-size: clamp(1.125rem, 0.433vw + 1.013rem, 1.5rem);
+    line-height: clamp(1.688rem, 0.303vw + 1.609rem, 1.95rem);
 }
 
 
