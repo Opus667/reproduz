@@ -213,6 +213,7 @@ section {
     bottom: 0;
     transform: translateY(1px);
     background-image: url('/img/break_intro.svg');
+    background-repeat: no-repeat;
 }
 
 
