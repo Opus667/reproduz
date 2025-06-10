@@ -14,11 +14,12 @@
   /* font-family: "Roboto", sans-serif;
     font-weight: 300; */
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    interpolate-size: allow-keywords;
+  }
 
 * {
   box-sizing: border-box;
@@ -333,6 +334,11 @@ section {
   justify-content: flex-end;
 }
 
+#dest_tittle h2 {
+    width: 100%;
+    text-align: right;
+}
+
 #dest_tittle p {
   width: 85%;
   text-align: right;
@@ -366,18 +372,19 @@ section {
   cursor: pointer;
 }
 #dest_wrap .active{
-  height: 80vh;
-  width: 70vw;
+  height: 70vh;
+  /* width: 70vw; */
   max-width: calc(var(--largura)/ 0.7);
   box-shadow: hsl(var(--dark)) 10px 10px;
   border-width: 5px;
+  transition-duration: 2s;
 }
 
 @media screen and (max-width: 1400px) {
   .dest {
     width: 45%;
   }
-
+  
   #dest_blank {
     display: none;
   }
@@ -416,11 +423,20 @@ section {
 }
 
 .lottie_wrapper {
-    height: 60%;
+  height: 30vh;
 }
 
 .dest_item p {
-  display: none;
+  /* display: none; */
+  height: 0%;
+  overflow: hidden;
+  transition: all;
+  transition-duration: 1.5s;
+  padding-block: 0;
+}
+#dest_wrap .active p{
+  display: block;
+  height: fit-content;
 }
 
 .dest_mais{
