@@ -7,3 +7,31 @@
 // spline.load('/3d/creative.splinecode');
 
 import '@aarsteinmedia/dotlottie-player-light'
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Select all the .card elements    
+    const destaques = document.querySelectorAll('.dest');
+    // Add event listeners to each card    
+    destaques.forEach(function (destaque) {
+        destaque.addEventListener('mouseenter', function () {
+            // Find the dotlottie-player element within the current card            
+            const lottiePlayer = destaque.querySelector('dotlottie-player');
+            // Play the Lottie animation 
+            lottiePlayer.stop();
+            lottiePlayer.play();
+        });
+        destaque.addEventListener("click", function () {
+            destaques.forEach(function (destaque) {
+                destaque.classList.remove("active");
+            });
+            destaque.classList.add("active");
+            destaque.scrollIntoView({ behavior: "smooth", block: "start", inline: "center" });
+        });
+        //   destaque.addEventListener('mouseleave', function() {            
+        //     // Find the dotlottie-player element within the current card            
+        //     const lottiePlayer = destaque.querySelector('dotlottie-player');            
+        //     // Stop the Lottie animation            
+        //     lottiePlayer.stop();        
+        //   });    
+    });
+});

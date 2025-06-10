@@ -196,6 +196,7 @@ section {
   border: solid red 6px;
   transition-property: transform, box-shadow;
   transition-duration: 500ms;
+  cursor: pointer;
 }
 
 #intro_cta {
@@ -355,6 +356,21 @@ section {
   overflow: hidden;
   border: hsl(var(--dark)) solid 2px;
   border-radius: 30px;
+  transition: all 0.75s;
+}
+
+.dest:hover{
+  height: 50vh;
+  box-shadow: hsl(var(--dark)) 10px 10px;
+  border-width: 5px;
+  cursor: pointer;
+}
+#dest_wrap .active{
+  height: 80vh;
+  width: 70vw;
+  max-width: calc(var(--largura)/ 0.7);
+  box-shadow: hsl(var(--dark)) 10px 10px;
+  border-width: 5px;
 }
 
 @media screen and (max-width: 1400px) {
@@ -400,14 +416,23 @@ section {
 }
 
 .lottie_wrapper {
-    height: 70%;
+    height: 60%;
 }
 
 .dest_item p {
   display: none;
 }
 
-.dest::before {
+.dest_mais{
+  width: 70%;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 0.75em;
+  margin-inline: auto;
+  border-top: solid hsl(var(--dark)) 1px;
+}
+
+/* .dest::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -415,7 +440,7 @@ section {
   bottom: 0;
   right: 0;
   background: linear-gradient(hsl(var(--washed), 0%), hsl(var(--washed)));
-}
+} */
 
 #break_gal {
   background-image: url("/img/break_gal.svg");
