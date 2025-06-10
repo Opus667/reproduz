@@ -25,7 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 destaque.classList.remove("active");
             });
             destaque.classList.add("active");
-            destaque.scrollIntoView({ behavior: "smooth", block: "start", inline: "center" });
+            destaque.setTimeOut(destaque.scrollIntoView( "smooth", "start", "center"), 2000);
+
+
         });
         //   destaque.addEventListener('mouseleave', function() {            
         //     // Find the dotlottie-player element within the current card            
