@@ -1,6 +1,22 @@
 import "itemslide"
 import "@aarsteinmedia/dotlottie-player-light";
 
+let itemslide;
+let sliderIndex
+
+window.addEventListener("load", () => {
+  var element = document.querySelector("#scrolling ul");
+  itemslide = new Itemslide(element, {});
+  element.addEventListener("carouselChangeActiveIndex", function () {
+    sliderIndex = itemslide.getActiveIndex();
+    console.log(sliderIndex);
+    console.log(document.querySelectorAll(".destSwipe")[sliderIndex].querySelector("dotlottie-player"));
+    let swipeLottie = document.querySelectorAll(".destSwipe")[sliderIndex].querySelector("dotlottie-player");
+      swipeLottie.stop();
+      swipeLottie.play();
+});
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   let destaqueItem;
   // Select all the .card elements
@@ -13,8 +29,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     document.getElementById("destScroll").setAttribute("id","scrolling");
     document.getElementById("dest_wrap").setAttribute("id","destScrollWrap");
-    destaques = null;
+    
+    // destaques = null;
   };
+  // Function to be executed
+  
+  // document.getElementById("scrolling").carouselChangePos{console.log("swipe");};
+  //   console.log("swipe");
+  // };
+  
+  
   // Add event listeners to each card
   destaques.forEach(function (destaque) {
     destaque.addEventListener("mouseenter", function () {
@@ -43,21 +67,13 @@ document.addEventListener("DOMContentLoaded", function () {
   destaquesMain.addEventListener("click", function (event) {
     const parente = event.target.parentElement.getAttribute("id");
     console.log(event.target.getAttribute("id"));
-    if (parente == "destaques" ||
-        parente == "dest_tittle"||
-        event.target.getAttribute("id") == "destaques"||
-        event.target.getAttribute("id") == "dest_blank" ) {
+    if (parente == "destaques" || parente == "dest_tittle"|| event.target.getAttribute("id") == "destaques"|| event.target.getAttribute("id") == "dest_blank" ) {
       destaques.forEach(function (destaque) {
-      destaque.classList.remove("active");
-      destaqueItem = null;
-    });
+        destaque.classList.remove("active");
+        destaqueItem = null;
+      });
     };
   });
+  console.log(itemslide.carouselChangePos);
 });
 
-var itemslide;
-
-window.addEventListener("load", () => {
-    var element = document.querySelector("#scrolling ul");
-    itemslide = new Itemslide(element, {});
-});

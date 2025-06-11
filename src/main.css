@@ -400,14 +400,14 @@ section {
   height: 100%;
 }
 
-.dest h3 {
+.dest h3, .destSwipe h3 {
   font-size: 1.2em;
   line-height: normal;
   text-align: right;
   position: relative;
 }
 
-.dest h3::after {
+.dest h3::after, .destSwipe h3::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -423,7 +423,7 @@ section {
   height: 30vh;
 }
 
-.dest_item p {
+.dest_item p, .destSwipe p {
   /* display: none; */
   height: 0%;
   overflow: hidden;
