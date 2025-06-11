@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
         destaqueItem = null;
       };
       setTimeout(() => {
-        destaque.scrollIntoView({block: "center", behavior: "smooth" });
+        destaque.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
       }, 750);
     });
   });
