@@ -200,9 +200,6 @@ section {
   cursor: pointer;
 }
 
-#intro_cta {
-  padding-bottom: 15vh;
-}
 
 @media screen and (max-width: 600px) {
   #intro_cta {
@@ -399,6 +396,8 @@ section {
   flex-direction: column;
   height: 100%;
 }
+
+
 
 .dest h3, .destSwipe h3 {
   font-size: 1.2em;
