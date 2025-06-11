@@ -9,12 +9,11 @@ window.addEventListener("load", () => {
   itemslide = new Itemslide(element, {});
   element.addEventListener("carouselChangeActiveIndex", function () {
     sliderIndex = itemslide.getActiveIndex();
-    console.log(sliderIndex);
-    console.log(document.querySelectorAll(".destSwipe")[sliderIndex].querySelector("dotlottie-player"));
     let swipeLottie = document.querySelectorAll(".destSwipe")[sliderIndex].querySelector("dotlottie-player");
       swipeLottie.stop();
       swipeLottie.play();
-});
+  });
+  element.disableClickToSlide  = true;
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -32,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // destaques = null;
   };
+  destaques = null;
+  destaques = document.querySelectorAll(".dest");
   // Function to be executed
   
   // document.getElementById("scrolling").carouselChangePos{console.log("swipe");};
@@ -58,9 +59,10 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         destaqueItem = null;
       };
-      setTimeout(() => {
-        destaque.scrollIntoView({behavior: "smooth", block: "center", inline: "middle"});
-      }, 750);
+      console.log(destaque.getAttribute("id"));
+      // setTimeout(() => {
+      //   destaque.scrollIntoView({behavior: "smooth", block: "center", inline: "middle"});
+      // }, 750);
     });
   });
   const destaquesMain = document.getElementById("destaques");
