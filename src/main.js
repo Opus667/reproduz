@@ -6,14 +6,15 @@ let sliderIndex
 
 window.addEventListener("load", () => {
   var element = document.querySelector("#scrolling ul");
-  itemslide = new Itemslide(element, {});
+  itemslide = new Itemslide(element, {
+    disableClickToSlide : true
+  });
   element.addEventListener("carouselChangeActiveIndex", function () {
     sliderIndex = itemslide.getActiveIndex();
     let swipeLottie = document.querySelectorAll(".destSwipe")[sliderIndex].querySelector("dotlottie-player");
       swipeLottie.stop();
       swipeLottie.play();
   });
-  element.disableClickToSlide  = true;
 });
 
 document.addEventListener("DOMContentLoaded", function () {
