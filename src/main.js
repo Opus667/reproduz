@@ -4,7 +4,7 @@ import "@aarsteinmedia/dotlottie-player-light";
 document.addEventListener("DOMContentLoaded", function () {
   let destaqueItem;
   // Select all the .card elements
-  const destaques = document.querySelectorAll(".dest");
+  let destaques = document.querySelectorAll(".dest");
   if (window.matchMedia("(max-width: 600px)").matches) {
     document.getElementById("dest_blank").remove();
     destaques.forEach(function (destaque){
@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
       destaque.classList.add("destSwipe");
     });
     document.getElementById("destScroll").setAttribute("id","scrolling");
+    document.getElementById("dest_wrap").setAttribute("id","destScrollWrap");
+    destaques = null;
   };
   // Add event listeners to each card
   destaques.forEach(function (destaque) {
@@ -34,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
       };
       setTimeout(() => {
         destaque.scrollIntoView({block: "center", behavior: "smooth" });
-        console.log("teste2")
       }, 750);
     });
   });
