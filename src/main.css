@@ -130,7 +130,7 @@ section {
   padding-block: 0;
   color: hsl(var(--pop));
   background: radial-gradient(circle, hsl(var(--dark), 0.75), #000e),
-    url("/img/intro/impressao.png");
+    url("/img/intro/impressao.jpg");
   background-size: cover;
 }
 
@@ -383,7 +383,7 @@ section {
   cursor: pointer;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1200px) {
   .dest {
     width: 35%;
   }
@@ -429,7 +429,7 @@ section {
   padding: 0%;
 }
 .dest.active .lottie_wrapper {
-  max-height: 50%;
+  max-height: 45%;
 }
 
 .dest_item p,
