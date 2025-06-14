@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
   destaquesMain.addEventListener("click", function (event) {
     const parente = event.target.parentElement.getAttribute("id");
     console.log(event.target.getAttribute("id"));
-    if (parente == "destaques" || parente == "dest_tittle"|| event.target.getAttribute("id") == "destaques"|| event.target.getAttribute("id") == "dest_blank" ) {
+    if (parente == "destaques" || parente == "dest_tittle"|| event.target.getAttribute("id") == "destaques"|| event.target.getAttribute("id") == "dest_blank" || event.target.getAttribute("id") == "dest_wrap") {
       destaques.forEach(function (destaque) {
         destaque.classList.remove("active");
         destaqueItem = null;

@@ -14,12 +14,12 @@
   /* font-family: "Roboto", sans-serif;
     font-weight: 300; */
 
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    interpolate-size: allow-keywords;
-  }
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  interpolate-size: allow-keywords;
+}
 
 * {
   box-sizing: border-box;
@@ -94,7 +94,7 @@ section {
 }
 
 @media screen and (max-width: 600px) {
-  section>* {
+  section > * {
     padding-inline: 5dvw;
   }
 }
@@ -129,7 +129,8 @@ section {
   justify-content: space-between;
   padding-block: 0;
   color: hsl(var(--pop));
-  background: radial-gradient(circle, #0000, #0005) hsl(var(--dark));
+  background: radial-gradient(circle, hsl(var(--dark), 0.75), #000e),
+    url("/img/intro/impressao.png");
   background-size: cover;
 }
 
@@ -137,7 +138,7 @@ section {
   padding-block: 0;
 }
 
-#intro>div {
+#intro > div {
   flex: 0;
 }
 
@@ -200,7 +201,6 @@ section {
   cursor: pointer;
 }
 
-
 @media screen and (max-width: 600px) {
   #intro_cta {
     padding-bottom: 5vh;
@@ -253,10 +253,13 @@ section {
 }
 
 #creative {
-  background: linear-gradient(hsl(var(--pop)) 0%,
+  background: linear-gradient(
+      hsl(var(--pop)) 0%,
       hsl(var(--washed)) 20%,
       hsl(var(--washed)) 80%,
-      hsl(var(--pop))) 100% hsl(var(--pop));
+      hsl(var(--pop))
+    )
+    100% hsl(var(--pop));
   color: hsl(var(--dark));
 }
 
@@ -326,14 +329,14 @@ section {
   align-items: flex-end;
 }
 
-#dest_tittle>* {
+#dest_tittle > * {
   display: flex;
   justify-content: flex-end;
 }
 
 #dest_tittle h2 {
-    width: 100%;
-    text-align: right;
+  width: 100%;
+  text-align: right;
 }
 
 #dest_tittle p {
@@ -355,7 +358,7 @@ section {
   max-width: 80dvw;
   height: 40vh;
   margin: 2% 1%;
-  padding: 0.75em;
+  padding: 0.25rem 0.75rem;
   overflow: hidden;
   border: hsl(var(--dark)) solid 2px;
   border-radius: 30px;
@@ -363,7 +366,7 @@ section {
   list-style-type: none;
 }
 
-#dest_blank{
+#dest_blank {
   position: relative;
   /* min-width: calc( var(--largura) * 0.2); */
   width: 30%;
@@ -373,7 +376,7 @@ section {
   list-style-type: none;
 }
 
-.dest:hover{
+.dest:hover {
   height: 50vh;
   box-shadow: hsl(var(--dark)) 10px 10px;
   border-width: 5px;
@@ -382,9 +385,9 @@ section {
 
 @media screen and (max-width: 1400px) {
   .dest {
-    width: 45%;
+    width: 35%;
   }
-  
+
   #dest_blank {
     display: none;
   }
@@ -396,112 +399,133 @@ section {
   flex-direction: column;
   height: 100%;
 }
-
-
-
-.dest h3, .destSwipe h3 {
+.dest_item > * {
+    flex-basis: content;
+}
+.dest h3,
+.destSwipe h3 {
   font-size: 1.2em;
   line-height: normal;
   text-align: right;
   position: relative;
 }
 
-.dest h3::after, .destSwipe h3::after {
+.dest h3::after,
+.destSwipe h3::after {
   content: "";
   position: absolute;
   bottom: 0;
   right: -0.75em;
   display: inline-block;
   width: 80%;
-  border-bottom: hsl(var(--dark)) solid 2px;
+  border-bottom: hsl(var(--dark)) solid 3px;
   margin: 0;
   padding: 0;
 }
 
 .lottie_wrapper {
-  height: 30vh;
+  height: 50%;
+  /* max-height: 50%; */
+  padding: 0%;
+}
+.dest.active .lottie_wrapper {
+  max-height: 50%;
 }
 
-.dest_item p, .destSwipe p {
-  /* display: none; */
-  height: 0%;
+.dest_item p,
+.destSwipe p {
+  max-height: 0%;
   overflow: hidden;
   transition: all;
   transition-duration: 1.5s;
   padding-block: 0;
+  margin-block: 0;
 }
-#destScroll .active{
+#destScroll .active {
   height: 80vh;
-  /* width: 70vw; */
-  max-width: calc(var(--largura)/ 0.7);
+  max-width: calc(var(--largura) / 0.7);
   box-shadow: hsl(var(--dark)) 10px 10px;
   border-width: 5px;
   transition-duration: 2s;
 }
-#destScroll .active p, .destSwipe p{
+#destScroll .active p,
+.destSwipe p {
   display: block;
+  max-height: fit-content;
   height: fit-content;
+  padding-bottom: 10px;
 }
-
-.dest_mais{
+.dest_mais {
   width: 70%;
+  display: flex;
+  flex-direction: column;
   text-transform: uppercase;
   text-align: center;
   padding: 0 0.75em;
   margin-inline: auto;
-  border-top: solid hsl(var(--dark)) 1px;
+  border-top: solid hsl(var(--dark)) 3px;
+}
+
+#destScroll .dest_mais a{
+  vertical-align: bottom;
+}
+
+#destScroll .active .dest_mais span, #destScroll .dest_mais a{
+  height: 0;
+  overflow: hidden;
+  transition: all 0.75s;
+}
+
+#destScroll .active .dest_mais a, #destScroll .dest_mais span{
+  height: fit-content;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 600px) {
-#scrolling {
-		height: 90vh;
-		width: 100vw;
+  #scrolling {
+    height: 90vh;
+    width: 100vw;
     position: relative;
-		overflow: hidden;
+    overflow: hidden;
     padding: 0;
-	}
-  
-	#scrolling ul {
+  }
+  #scrolling ul {
+    -webkit-user-select: none;
     user-select: none;
-		height: 90%;
-		margin: 0;
-		margin-top: 3%;
-		padding: 0;
-		list-style-type: none;
-		transform-style: preserve-3d;
-	}
-
-	#scrolling ul li {
+    height: 90%;
+    margin: 3% 0 0;
+    padding: 0;
+    list-style-type: none;
+    transform-style: preserve-3d;
+  }
+  #scrolling ul li {
     height: 100%;
-    min-width: 86VW;
-		float: left;
-		cursor: pointer;
-		transform: scale(0.95);
+    min-width: 86vw;
+    float: left;
+    cursor: pointer;
+    transform: scale(0.95);
     padding: 0.75em;
     border: hsl(var(--dark)) solid 2px;
     border-radius: 30px;
     list-style-type: none;
-	}
+  }
+  #scrolling ul .itemslide-active {
+    transform: scale(1);
+  }
 
-	#scrolling ul .itemslide-active {
-		transform: scale(1);
-	}
+  .dest_item span {
+    display: none;
+  }
+  .dest_item a {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+}
+#break_gal {
+  background-image: url("/img/break_gal.svg");
 }
 
-/* .dest::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 5em;
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(hsl(var(--washed), 0%), hsl(var(--washed)));
-  } */
-  
-  #break_gal {
-    background-image: url("/img/break_gal.svg");
-  }
-  
 #proj_gal {
   padding-block: 0;
   background: hsl(var(--dark));
