@@ -2,6 +2,19 @@
 <html lang="pr-BR">
 
 <head>
+  <meta name="description" content="Reproduz Comunicação Visual - Placas, Troféus, Impressões, Sinalização e mais.">
+  <meta property="og:title" content="Reproduz - Comunicação Visual">
+  <meta property="og:description" content="Transformamos ideias em soluções visuais criativas. Veja nossos destaques!">
+  <meta property="og:image" content="/src/assets/img/og-image.jpg">
+  <meta property="og:url" content="https://reproduz.com.br">
+  <meta name="twitter:card" content="summary_large_image">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){{dataLayer.push(arguments);}}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
   <meta charset="UTF-8" />
   <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,17 +23,19 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap"
     rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/lightgallery-bundle.css" />
+
 </head>
 <title>Reproduz - ComVis</title>
-<link rel="stylesheet" href="/src/main.css">
-
+<link rel="stylesheet" href="/src/styles/main.css">
+<link rel="stylesheet" href="photoswipe/dist/photoswipe.css">
 <body>
   <main>
     <section id="intro">
       <div id="intro_title" class="alinha_flex">
         <span class="margem"></span>
         <h1 id="repro">
-          <img src="/img/reproduz.svg" alt="Reproduz - Comunicação visual">
+          <img src="/src/assets/img/reproduz.svg" alt="Reproduz - Comunicação visual">
         </h1>
       </div>
       <div id="intro_main" class="alinha_flex">
@@ -43,7 +58,7 @@
         <button id="cta_destqs" class="intro_cta" onclick="location.href='#destaques'">DESTAQUES</button>
         <button id="cta_ctt" class="intro_cta" onclick="location.href='#contato'">CONTATO</button>
       </div>
-      <span id="intro_break" class="break"><img src="/img/mouse.gif" alt="Role a página para continuar"
+      <span id="intro_break" class="break"><img src="/src/assets/img/mouse.gif" alt="Role a página para continuar"
           id="intro_rato"></span>
     </section>
     <section id="creative">
@@ -62,7 +77,7 @@
           </div>
         </div>
         <div id="cr_lottie">
-          <dotlottie-player autoplay loop speed="0.75" src="/lottie/Ideias.lottie"
+          <dotlottie-player autoplay loop speed="0.75" src="/src/assets/lottie/Ideias.lottie"
             style="min-width: 256px; width: 100%; height: 100%;">
           </dotlottie-player>
         </div>
@@ -95,7 +110,7 @@
             <div class="dest_item">
               <h3>Placas de Homenagens</h3>
               <div class="lottie_wrapper">
-                <dotlottie-player autoplay speed="0.75" delay="10000" src="/lottie/Homenagem.lottie"/>
+                <dotlottie-player autoplay speed="0.75" delay="10000" src="/src/assets/lottie/Homenagem.lottie"/>
               </div>
               <p>
                 Criada para valorizar momentos especiais, a placa de homenagem é personalizada e ideal para reconhecer
@@ -108,7 +123,7 @@
             <div class="dest_item">
               <h3>Troféus</h3>
               <div class="lottie_wrapper">
-                <dotlottie-player autoplay speed="0.75" src="/lottie/Trofeus.lottie"/>
+                <dotlottie-player autoplay speed="0.75" src="/src/assets/lottie/Trofeus.lottie"/>
               </div>
               <p>
                 Mais do que um prêmio, o troféu simboliza reconhecimento, superação e conquista. Com design personalizado e
@@ -122,7 +137,7 @@
             <div class="dest_item">
               <h3>Sinalização</h3>
               <div class="lottie_wrapper">
-                <dotlottie-player autoplay speed="0.75" src="/lottie/Sign.lottie"/>
+                <dotlottie-player autoplay speed="0.75" src="/src/assets/lottie/Sign.lottie"/>
               </div>
               <p>
                 Funcionalidade e clareza em cada detalhe. As placas de sinalização organizam espaços, orientam o público e
@@ -135,7 +150,7 @@
             <div class="dest_item">
               <h3>Tagueamento</h3>
               <div class="lottie_wrapper">
-                <dotlottie-player autoplay speed="0.75" src="/lottie/Tag.lottie"/>
+                <dotlottie-player autoplay speed="0.75" src="/src/assets/lottie/Tag.lottie"/>
               </div>
               <p>
                 Organização e identificação com eficiência. Oferecemos soluções de tagueamento personalizadas para produtos,
@@ -148,7 +163,7 @@
             <div class="dest_item">
               <h3>Adesivos</h3>
               <div class="lottie_wrapper">
-                <dotlottie-player autoplay speed="0.75" src="/lottie/Adesivos.lottie"/>
+                <dotlottie-player autoplay speed="0.75" src="/src/assets/lottie/Adesivos.lottie"/>
               </div>
               <p>
                 Versatilidade e impacto em qualquer formato. Produzimos adesivos personalizados, de centímetros a metros,
@@ -162,7 +177,7 @@
             <div class="dest_item">
               <h3>Impressões</h3>
               <div class="lottie_wrapper">
-                <dotlottie-player autoplay speed="0.75" src="/lottie/Impressao.lottie"/>
+                <dotlottie-player autoplay speed="0.75" src="/src/assets/lottie/Impressao.lottie"/>
               </div>
               <p>
                 Alta qualidade em cada detalhe. Realizamos impressões digitais com cores vibrantes e precisão, em diversos
@@ -175,7 +190,7 @@
             <div class="dest_item">
               <h3>Laser</h3>
               <div class="lottie_wrapper">
-                <dotlottie-player autoplay speed="0.75" src="/lottie/Homenagem.lottie"/>
+                <dotlottie-player autoplay speed="0.75" src="/src/assets/lottie/Homenagem.lottie"/>
               </div>
               <p>
                 Precisão e acabamento impecável. Oferecemos serviços de corte e gravação a laser em diversos materiais,
@@ -188,7 +203,7 @@
             <div class="dest_item">
               <h3>Router CNC</h3>
               <div class="lottie_wrapper">
-                <dotlottie-player autoplay speed="0.75" src="/lottie/Homenagem.lottie"/>
+                <dotlottie-player autoplay speed="0.75" src="/src/assets/lottie/Homenagem.lottie"/>
               </div>
               <p>
                 Utilizando tecnologia de ponta, realizamos cortes e gravações de alta precisão em diversos materiais. Ideal
@@ -210,9 +225,73 @@
           Veja como transformamos ideias em soluções criativas e impactantes.
         </p>
       </div>
-      <div id="proj_gal_wrap" class="alinha_flex">
-        ???
-      </div>
+      <!-- <div id="projetos-galeria"> -->
+        <masonry-layout cols="4" gap="20" debounce="500" id="projetos-galeria">
+          <a data-pswp-width="1600" data-pswp-height="2400" class="gallery-item" href="https://images.unsplash.com/photo-1608481337062-4093bf3ed404?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1600&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@therawhunter' >Massimiliano Morosinotto </a></h4><p> Location - <a href='https://unsplash.com/s/photos/tre-cime-di-lavaredo%2C-italia'>Tre Cime di Lavaredo, Italia</a>This is the Way</p>">
+            <img loading="lazy" class="img-responsive" src="https://images.unsplash.com/photo-1608481337062-4093bf3ed404?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=316&q=80" />
+          </a>
+          <a data-pswp-width="1600" data-pswp-height="2400" class="gallery-item" href="https://images.unsplash.com/photo-1605973029521-8154da591bd7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1600&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@thesaboo' >Sascha Bosshard </a></h4><p> Location - <a href='https://unsplash.com/s/photos/pizol%2C-mels%2C-schweiz'>Pizol, Mels, Schweiz</a></p>">
+            <img loading="lazy" class="img-responsive" src="https://images.unsplash.com/photo-1605973029521-8154da591bd7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=316&q=80" />
+          </a>
+          <a data-pswp-width="1600" data-pswp-height="2398" class="gallery-item" href="https://images.unsplash.com/photo-1526281216101-e55f00f0db7a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1600&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@yusufevli' >Yusuf Evli </a></h4><p> Foggy Road</p>">
+            <img loading="lazy" class="img-responsive" src="https://images.unsplash.com/photo-1526281216101-e55f00f0db7a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=316&q=80" />
+          </a>
+          <a data-pswp-width="1600" data-pswp-height="1067" class="gallery-item" href="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@flovayn' >Jay Mantri</a></h4><p>  Misty shroud over a forest</p>">
+            <img loading="lazy" class="img-responsive" src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=316&q=80" />
+          </a>
+          <a data-pswp-width="1600" data-pswp-height="1067" class="gallery-item" href="https://images.unsplash.com/photo-1505820013142-f86a3439c5b2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1600&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@flovayn' >Florian van Duyn</a></h4><p>Location - <a href='Bled, Slovenia'>Bled, Slovenia</a> </p>">
+            <img loading="lazy" class="img-responsive" src="https://images.unsplash.com/photo-1505820013142-f86a3439c5b2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=316&q=80" />
+          </a>
+          <a data-pswp-width="1600" data-pswp-height="1126" class="gallery-item" href="https://images.unsplash.com/photo-1477322524744-0eece9e79640?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@juanster' >Juan Davila</a></h4><p>Location - <a href='Bled, Slovenia'>Bled, Slovenia</a> Wooded lake island </p>">
+            <img loading="lazy" class="img-responsive" src="https://images.unsplash.com/photo-1477322524744-0eece9e79640?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=316&q=80" />
+          </a>
+          <a data-pswp-width="1600" data-pswp-height="1063" class="gallery-item" href="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@davidmarcu' >David Marcu</a></h4><p>Location - <a href='https://unsplash.com/s/photos/ciuca%C8%99-peak%2C-romania'>Ciucaș Peak, Romania</a> Alone in the unspoilt wilderness </p>">
+            <img loading="lazy" class="img-responsive" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=316&q=80" />
+          </a>
+          <a data-pswp-width="1600" data-pswp-height="1144" class="gallery-item" href="https://images.unsplash.com/photo-1476842384041-a57a4f124e2e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1600&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@aaronburden' >Aaron Burden</a></h4><p>Location - <a href='https://unsplash.com/s/photos/grayling%2C-michigan%2C-united-states'>Grayling, Michigan, United States</a> Colorful trees near a lake. <a href='https://unsplash.com/photos/00QWN1J0g48'>Link</a> </p>">
+            <img loading="lazy" class="img-responsive" src="https://images.unsplash.com/photo-1476842384041-a57a4f124e2e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=316&q=80" />
+          </a>
+          <a data-pswp-width="1600" data-pswp-height="1067" class="gallery-item" href="https://images.unsplash.com/photo-1465311530779-5241f5a29892?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@kalenemsley' >Kalen Emsley</a></h4><p>Location - <a href='https://unsplash.com/s/photos/yukon-territory%2C-canada'>Yukon Territory, Canada</a> No captions. <a href='https://unsplash.com/photos/eHpYD4U5830'>Link</a> </p>">
+            <img loading="lazy" class="img-responsive" src="https://images.unsplash.com/photo-1465311530779-5241f5a29892?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=316&q=80" />
+          </a>
+          <a data-pswp-width="1600" data-pswp-height="1067" class="gallery-item" href="https://images.unsplash.com/photo-1461301214746-1e109215d6d3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@kace' >Kace Rodriguez</a></h4><p>Location - <a href='https://unsplash.com/s/photos/pfeiffer-beach%2C-united-states'>Pfeiffer Beach, United States</a> Pfeiffer Beach at Dusk. <a href='https://unsplash.com/photos/eHpYD4U5830'>Link</a> </p>">
+            <img loading="lazy" class="img-responsive" src="https://images.unsplash.com/photo-1461301214746-1e109215d6d3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=316&q=80" />
+          </a>
+          <a data-pswp-width="1600" data-pswp-height="2400" class="gallery-item" href="https://images.unsplash.com/photo-1610448721566-47369c768e70?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@patwhelen' >Pat Whelen</a></h4><p>Location - <a href='https://unsplash.com/s/photos/portsea-vic%2C-australia'>Portsea VIC, Australia</a> No caption <a href='https://unsplash.com/photos/EKLXDQ-dDRg'>Link</a> </p>">
+            <img loading="lazy" class="img-responsive" src="https://images.unsplash.com/photo-1610448721566-47369c768e70?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=316&q=80" />
+          </a>
+          <a data-pswp-width="1600" data-pswp-height="1067" class="gallery-item" href="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1600&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@derekthomson' >Derek Thomson</a></h4><p>Location - <a href='https://unsplash.com/s/photos/mcway-falls%2C-united-states'>McWay Falls, United States</a> No caption <a href='https://unsplash.com/photos/TWoL-QCZubY'>Link</a> </p>">
+            <img loading="lazy" class="img-responsive" src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=316&q=80" />
+          </a>
+          <a data-pswp-width="1600" data-pswp-height="2400" class="gallery-item" href="https://images.unsplash.com/photo-1539678050869-2b97c7c359fd?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1600&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@michaljaneck' >Michal Janek</a></h4><p>Location - <a href='https://unsplash.com/s/photos/big-sur%2C-united-states'>Big Sur, United States</a> Coast  </p>">
+            <img loading="lazy" class="img-responsive" src="https://images.unsplash.com/photo-1539678050869-2b97c7c359fd?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=316&q=80" />
+          </a>
+          <a data-pswp-width="1600" data-pswp-height="2400" class="gallery-item" href="https://images.unsplash.com/photo-1446630073557-fca43d580fbe?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@papillon' >Iris Papillon</a></h4><p>Location - <a href='https://unsplash.com/s/photos/big-sur%2C-united-states'>Big Sur, United States</a> Big Sur drive  </p>">
+            <img loading="lazy" class="img-responsive" src="https://images.unsplash.com/photo-1446630073557-fca43d580fbe?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=316&q=80" />
+          </a>
+          <a data-pswp-width="1600" data-pswp-height="1065" class="gallery-item" href="https://images.unsplash.com/photo-1596370743446-6a7ef43a36f9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@piyushh_dubeyy' >piyush dubey</a></h4><p>Published on August 2, 2020</p>">
+            <img loading="lazy" class="img-responsive" src="https://images.unsplash.com/photo-1596370743446-6a7ef43a36f9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=316&q=80" />
+          </a>
+          <a data-pswp-width="1600" data-pswp-height="2134" class="gallery-item" href="https://images.unsplash.com/photo-1464852045489-bccb7d17fe39?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@fynn_it' >fynn</a></h4><p>Location - <a href='https://unsplash.com/s/photos/big-sur%2C-united-states'>Big Sur, United States</a> Wasserauen, Appenzell Innerrhoden, Schweiz  </p>">
+            <img loading="lazy" class="img-responsive" src="https://images.unsplash.com/photo-1464852045489-bccb7d17fe39?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=316&q=80" />
+          </a>
+          <a data-pswp-width="1600" data-pswp-height="1060" class="gallery-item" href="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@danielleone' >Daniel Leone</a></h4><p>Location - <a href='https://unsplash.com/s/photos/poon-hill%2C-ghode-pani%2C-nepal'>Poon Hill, Ghode Pani, Nepal</a> Taken from the top of Poon Hill before sun rise </p>">
+            <img loading="lazy" class="img-responsive" src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=316&q=80" />
+          </a>
+          <a data-pswp-width="1600" data-pswp-height="1037" class="gallery-item" href="https://images.unsplash.com/photo-1510011560141-62c7e8fc7908?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@bboba' >Boba Jovanovic</a></h4><p>Location - <a href='https://unsplash.com/s/photos/bay-of-kotor'>Bay of Kotor</a> Boka kotorska bay </p>">
+            <img loading="lazy" class="img-responsive" src="https://images.unsplash.com/photo-1510011560141-62c7e8fc7908?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=316&q=80" />
+          </a>
+          <a data-pswp-width="1600" data-pswp-height="899" class="gallery-item" href="https://images.unsplash.com/photo-1586276393635-5ecd8a851acc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@svsdesigns' >Surendra Vikram Singh</a></h4><p>Location - <a href='https://unsplash.com/s/photos/lachung%2C-sikkim%2C-india'>Lachung, Sikkim, India</a> Cloud covered mountain </p>">
+            <img loading="lazy" class="img-responsive" src="https://images.unsplash.com/photo-1586276393635-5ecd8a851acc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=316&q=80" />
+          </a>
+          <a data-pswp-width="1600" data-pswp-height="1067" class="gallery-item" href="https://images.unsplash.com/photo-1471931452361-f5ff1faa15ad?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2252&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@camadams' >Cam Adams</a></h4><p>Location - <a href='https://unsplash.com/s/photos/banff%2C-canada'>Banff, Canada</a> Lake along jagged mountains</p>">
+            <img loading="lazy" class="img-responsive" src="https://images.unsplash.com/photo-1471931452361-f5ff1faa15ad?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=316&q=80" />
+          </a>
+          <a data-pswp-width="1536" data-pswp-height="2304" class="gallery-item" href="https://images.unsplash.com/photo-1508766206392-8bd5cf550d1c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1536&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@rea_le' >Andrea Ledda</a></h4><p>Location - <a href='https://unsplash.com/s/photos/lago-goillet%2C-italy'>Lago Goillet, Italy</a>  Goillet Lake at 2561 meters above Breuil-Cervinia</p>">
+            <img loading="lazy" class="img-responsive" src="https://images.unsplash.com/photo-1508766206392-8bd5cf550d1c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=316&q=80" />
+          </a>
+        </masonry-layout>
+        <!-- </div> -->
       <div id="break_gal_bottom" class="break"></div>
     </section>
     <section id="contato">
@@ -261,7 +340,7 @@
     </section>
   </main>
   <footer>made by Pépa</footer>
-  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/scripts/main.js"></script>
 </body>
 
 </html>

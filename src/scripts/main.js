@@ -1,8 +1,19 @@
 import "itemslide"
 import "@aarsteinmedia/dotlottie-player-light";
+import "@appnest/masonry-layout";
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import 'photoswipe/style.css';
 
 let itemslide;
 let sliderIndex
+
+const lightbox = new PhotoSwipeLightbox({
+  gallery: '#projetos-galeria',
+  children: 'a',
+  pswpModule: () => import('photoswipe')
+});
+lightbox.init();
+
 
 window.addEventListener("load", () => {
   var element = document.querySelector("#scrolling ul");
@@ -45,10 +56,24 @@ document.addEventListener("DOMContentLoaded", function () {
   destaques.forEach(function (destaque) {
     destaque.addEventListener("mouseenter", function () {
       // Find the dotlottie-player element within the current card
-      const lottiePlayer = destaque.querySelector("dotlottie-player");
+      let destaquePlayer = destaque.querySelector("dotlottie-player");
       // Play the Lottie animation
-      lottiePlayer.stop();
-      lottiePlayer.play();
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              console.log(destaquePlayer);
+              destaquePlayer.stop();
+              destaquePlayer.play();
+              observer.disconnect();
+              
+            }
+          });
+        });
+        observer.observe(destaquePlayer);
+      } else {
+        destaquePlayer.play();
+      }
     });
     destaque.addEventListener("click", function () {
       destaques.forEach(function (destaque) {
@@ -79,4 +104,3 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   console.log(itemslide.carouselChangePos);
 });
-

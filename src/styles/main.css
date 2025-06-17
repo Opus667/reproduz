@@ -130,7 +130,7 @@ section {
   padding-block: 0;
   color: hsl(var(--pop));
   background: radial-gradient(circle, hsl(var(--dark), 0.75), #000e),
-    url("/img/intro/impressao.jpg");
+    url("/src/assets/img/intro/impressao.jpg");
   background-size: cover;
 }
 
@@ -240,7 +240,7 @@ section {
   position: sticky;
   bottom: 0;
   transform: translateY(1px);
-  background-image: url("/img/break_intro.svg");
+  background-image: url("/src/assets/img/break_intro.svg");
   background-repeat: no-repeat;
 }
 
@@ -289,7 +289,7 @@ section {
   padding-block: 0;
   height: 110vh;
   color: hsl(var(--pop));
-  background-image: url(/img/maos.jpg);
+  background-image: url(/src/assets/img/maos.jpg);
   background-size: cover;
   background-attachment: fixed;
   display: flex;
@@ -311,12 +311,12 @@ section {
 
 #maos_break_top {
   top: 0;
-  background-image: url("/img/break_top.svg");
+  background-image: url("/src/assets/img/break_top.svg");
 }
 
 #maos_break_bottom {
   bottom: 0px;
-  background-image: url("/img/break_bottom.svg");
+  background-image: url("/src/assets/img/break_bottom.svg");
 }
 
 #destaques {
@@ -429,7 +429,7 @@ section {
   padding: 0%;
 }
 .dest.active .lottie_wrapper {
-  max-height: 45%;
+  max-height: 40%;
 }
 
 .dest_item p,
@@ -437,7 +437,7 @@ section {
   max-height: 0%;
   overflow: hidden;
   transition: all;
-  transition-duration: 1.5s;
+  transition-duration: 0.75s;
   padding-block: 0;
   margin-block: 0;
 }
@@ -523,7 +523,7 @@ section {
 
 }
 #break_gal {
-  background-image: url("/img/break_gal.svg");
+  background-image: url("/src/assets/img/break_gal.svg");
 }
 
 #proj_gal {
@@ -538,17 +538,35 @@ section {
 }
 
 #proj_gal_wrap {
-  height: calc(var(--margem) * 0.75);
-  aspect-ratio: 1/1;
-  border: hsl(var(--pop)) solid 2px;
-  border-radius: 20px;
-  background-image: url(/img/gal_holder.jpg);
+  width: calc(var(--margem) * 0.75);
   margin-bottom: 10vh;
 }
 
+/* #projetos-galeria {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-height: 2000px;
+  justify-content: start;
+  gap: 10px;
+  
+} */
+masonry-layout .homenagem {
+  display: none;
+}
+
+masonry-layout img {
+  width: 100%;
+}
+
+/* masonry-layout a {
+  max-width: 90dvw;
+  width: 23%;
+} */
+
 #break_gal_bottom {
   bottom: 0;
-  background-image: url("/img/break_gal_bottom.svg");
+  background-image: url("/src/assets/img/break_gal_bottom.svg");
 }
 
 #contato {

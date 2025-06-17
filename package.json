@@ -1,7 +1,7 @@
 {
   "name": "repro_cv",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.5.1",
   "type": "commonjs",
   "scripts": {
     "dev": "vite",
@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@aarsteinmedia/dotlottie-player-light": "^5.2.26",
-    "itemslide": "^2.0.1"
+    "@appnest/masonry-layout": "^2.2.3",
+    "itemslide": "^2.0.1",
+    "photoswipe": "^5.4.4"
   }
 }
