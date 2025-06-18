@@ -12,8 +12,8 @@
     "vite": "^6.2.1"
   },
   "dependencies": {
-    "@aarsteinmedia/dotlottie-player-light": "^5.2.26",
     "@appnest/masonry-layout": "^2.2.3",
+    "@lottiefiles/lottie-player": "^2.0.12",
     "itemslide": "^2.0.1",
     "photoswipe": "^5.4.4"
   }

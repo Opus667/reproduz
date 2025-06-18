@@ -551,6 +551,10 @@ section {
   gap: 10px;
   
 } */
+
+#projetos-gallery {
+  align-items: flex-start;
+}
 masonry-layout .homenagem {
   display: none;
 }

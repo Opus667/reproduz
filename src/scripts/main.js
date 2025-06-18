@@ -1,5 +1,5 @@
 import "itemslide"
-import "@aarsteinmedia/dotlottie-player-light";
+import "@lottiefiles/lottie-player";
 import "@appnest/masonry-layout";
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
@@ -22,7 +22,7 @@ window.addEventListener("load", () => {
   });
   element.addEventListener("carouselChangeActiveIndex", function () {
     sliderIndex = itemslide.getActiveIndex();
-    let swipeLottie = document.querySelectorAll(".destSwipe")[sliderIndex].querySelector("dotlottie-player");
+    let swipeLottie = document.querySelectorAll(".destSwipe")[sliderIndex].querySelector("lottie-player");
       swipeLottie.stop();
       swipeLottie.play();
   });
@@ -55,8 +55,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add event listeners to each card
   destaques.forEach(function (destaque) {
     destaque.addEventListener("mouseenter", function () {
-      // Find the dotlottie-player element within the current card
-      let destaquePlayer = destaque.querySelector("dotlottie-player");
+      // Find the lottie-player element within the current card
+      let destaquePlayer = destaque.querySelector("lottie-player");
       // Play the Lottie animation
       if ('IntersectionObserver' in window) {
         const observer = new IntersectionObserver((entries) => {
