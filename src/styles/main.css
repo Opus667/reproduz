@@ -755,6 +755,8 @@ a:hover.gallery-item img {
   padding: 5px 15px;
 }
 
+@media screen and (max-width: 600px) {.imgAI:hover:after {transform: translateY(calc(-100% - 35px));}}
+
 /* === #BREAK_GAL_BOTTOM === */
 #break_gal_bottom {
   background-image: url("/src/assets/img/break_gal_bottom.svg");
