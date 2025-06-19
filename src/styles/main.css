@@ -684,8 +684,8 @@ a:hover.gallery-item {
 
 /* === A:HOVER.GALLERY-ITEM IMG === */
 a:hover.gallery-item img {
-  border-radius: 19px;
-  box-shadow: hsl(var(--dark), 1) 10px 10px 10px 10px;
+    border-radius: 19px 10px 10px 10px;
+    box-shadow: hsl(var(--dark), 1) 20px 20px 25px 3px;
 }
 
 /* === @MEDIA SCREEN AND (MAX-WIDTH: 600PX) === */
@@ -717,6 +717,42 @@ a:hover.gallery-item img {
 .pswp__dynamic-caption--mobile {
   background: rgba(0, 0, 0, 0.5);
   padding: 10px 15px;
+}
+
+.imgAI {
+    display: block;
+    height: 24px;
+    margin-top: 30px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 14px;
+    aspect-ratio: 1 / 1;
+    font-weight: 900;
+    color: hsl(var(--washed));
+    background-color: hsl(var(--dark));
+    border: hsl(var(--washed)) solid 1px;
+    border-radius: 50px;
+}
+
+.imgAI::after {
+  display: block;
+  content: "Foto ilustrativa, \Aretocada com auxílio \A de Inteligência Artificial";
+  white-space: pre;
+  position: absolute;
+  width: 0%;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  text-align: left;
+  background-color: hsl(var(--dark));
+  border: hsl(var(--washed)) solid 1px;  transition: all 1s;
+}
+
+.imgAI:hover:after {
+  width: 52%;
+  height: auto;
+  padding: 5px 15px;
 }
 
 /* === #BREAK_GAL_BOTTOM === */
