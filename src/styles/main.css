@@ -684,8 +684,8 @@ a:hover.gallery-item {
 
 /* === A:HOVER.GALLERY-ITEM IMG === */
 a:hover.gallery-item img {
-    border-radius: 19px 10px 10px 10px;
-    box-shadow: hsl(var(--dark), 1) 20px 20px 25px 3px;
+  border-radius: 19px 10px 10px 10px;
+  box-shadow: hsl(var(--dark), 1) 20px 20px 25px 3px;
 }
 
 /* === @MEDIA SCREEN AND (MAX-WIDTH: 600PX) === */
@@ -719,22 +719,34 @@ a:hover.gallery-item img {
   padding: 10px 15px;
 }
 
-.imgAI {
-    display: block;
-    height: 24px;
-    margin-top: 30px;
-    line-height: 24px;
-    text-align: center;
-    font-size: 14px;
-    aspect-ratio: 1 / 1;
-    font-weight: 900;
-    color: hsl(var(--washed));
-    background-color: hsl(var(--dark));
-    border: hsl(var(--washed)) solid 1px;
-    border-radius: 50px;
+.imgAI,
+.imgFR,
+.imgJIMMY {
+  display: block;
+  height: 24px;
+  margin-top: 30px;
+  line-height: 24px;
+  text-align: center;
+  font-size: 14px;
+  aspect-ratio: 1 / 1;
+  font-weight: 900;
+  color: hsl(var(--washed));
+  background-color: hsl(var(--dark));
+  border: hsl(var(--washed)) solid 1px;
+  border-radius: 50px;
 }
 
-.imgAI::after {
+.imgJIMMY {
+  aspect-ratio: 1 / 1;
+  width: fit-content;
+  height: auto;
+  padding: 2px;
+  align-content: center;
+}
+
+.imgAI::after,
+.imgFR::after,
+.imgJIMMY::after {
   display: block;
   content: "Foto ilustrativa, \Aretocada com auxílio \A de Inteligência Artificial";
   white-space: pre;
@@ -746,16 +758,31 @@ a:hover.gallery-item img {
   border-radius: 10px;
   text-align: left;
   background-color: hsl(var(--dark));
-  border: hsl(var(--washed)) solid 1px;  transition: all 1s;
+  border: hsl(var(--washed)) solid 1px;
+  transition: all 1s;
+}
+.imgFR::after {
+  content: "Foto Real!\aNenhuma alteração \a foi feita nesta foto.";
 }
 
-.imgAI:hover:after {
-  width: 52%;
+.imgJIMMY::after {
+  content: "Vão-se os bons...";
+}
+
+.imgAI:hover:after,
+.imgFR:hover:after,
+.imgJIMMY:hover:after {
+  width: fit-content;
   height: auto;
   padding: 5px 15px;
 }
 
-@media screen and (max-width: 600px) {.imgAI:hover:after {transform: translateY(calc(-100% - 35px));}}
+@media screen and (max-width: 600px) {
+  .imgAI:hover:after,
+  .imgFR:hover:after {
+    transform: translateY(calc(-100% - 35px));
+  }
+}
 
 /* === #BREAK_GAL_BOTTOM === */
 #break_gal_bottom {
