@@ -150,6 +150,22 @@ function initHighlightInteractions() {
 }
 
 /* --------------------------------------------------------------------------
+ * Tentativa de Masonry
+ * ----------------------------------------------------------------------- */
+
+function mobileMasonry(){
+  const masonry=document.querySelector("masonry-layout");
+  if (window.matchMedia(`(max-width: ${BREAKPOINT_MOBILE}px)`).matches) {
+    masonry.setAttribute("cols", 3);
+  } else {
+    masonry.removeAttribute("cols");    
+  };
+  masonry.layout();
+
+}
+
+
+/* --------------------------------------------------------------------------
  * Bootstrap
  * ----------------------------------------------------------------------- */
 function bootstrap() {
@@ -157,6 +173,7 @@ function bootstrap() {
 
   // itemslide precisa aguardar assets
   window.addEventListener("load", initCarousel);
+  window.addEventListener("resize", mobileMasonry)
 
   document.addEventListener("DOMContentLoaded", () => {
     adaptHighlightsForMobile();
