@@ -779,7 +779,8 @@ a:hover.gallery-item img {
 
 @media screen and (max-width: 600px) {
   .imgAI:hover:after,
-  .imgFR:hover:after {
+  .imgFR:hover:after,
+  .imgJIMMY:hover:after {
     transform: translateY(calc(-100% - 35px));
   }
 }
