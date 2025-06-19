@@ -94,7 +94,7 @@ section {
 }
 
 @media screen and (max-width: 600px) {
-  section > * {
+  section>* {
     padding-inline: 5dvw;
   }
 }
@@ -138,7 +138,7 @@ section {
   padding-block: 0;
 }
 
-#intro > div {
+#intro>div {
   flex: 0;
 }
 
@@ -253,13 +253,10 @@ section {
 }
 
 #creative {
-  background: linear-gradient(
-      hsl(var(--pop)) 0%,
+  background: linear-gradient(hsl(var(--pop)) 0%,
       hsl(var(--washed)) 20%,
       hsl(var(--washed)) 80%,
-      hsl(var(--pop))
-    )
-    100% hsl(var(--pop));
+      hsl(var(--pop))) 100% hsl(var(--pop));
   color: hsl(var(--dark));
 }
 
@@ -272,7 +269,8 @@ section {
 }
 
 #cr_lottie {
-  flex: 1;
+  flex: 0;
+  margin-inline: var(--margem);
 }
 
 #cr_lottie lottie-player {
@@ -329,7 +327,7 @@ section {
   align-items: flex-end;
 }
 
-#dest_tittle > * {
+#dest_tittle>* {
   display: flex;
   justify-content: flex-end;
 }
@@ -399,9 +397,11 @@ section {
   flex-direction: column;
   height: 100%;
 }
-.dest_item > * {
-    flex-basis: content;
+
+.dest_item>* {
+  flex-basis: content;
 }
+
 .dest h3,
 .destSwipe h3 {
   font-size: 1.2em;
@@ -428,6 +428,7 @@ section {
   /* max-height: 50%; */
   padding: 0%;
 }
+
 .dest.active .lottie_wrapper {
   max-height: 40%;
 }
@@ -441,6 +442,7 @@ section {
   padding-block: 0;
   margin-block: 0;
 }
+
 #destScroll .active {
   height: 80vh;
   max-width: calc(var(--largura) / 0.7);
@@ -448,6 +450,7 @@ section {
   border-width: 5px;
   transition-duration: 2s;
 }
+
 #destScroll .active p,
 .destSwipe p {
   display: block;
@@ -455,6 +458,7 @@ section {
   height: fit-content;
   padding-bottom: 10px;
 }
+
 .dest_mais {
   width: 70%;
   display: flex;
@@ -466,17 +470,19 @@ section {
   border-top: solid hsl(var(--dark)) 3px;
 }
 
-#destScroll .dest_mais a{
+#destScroll .dest_mais a {
   vertical-align: bottom;
 }
 
-#destScroll .active .dest_mais span, #destScroll .dest_mais a{
+#destScroll .active .dest_mais span,
+#destScroll .dest_mais a {
   height: 0;
   overflow: hidden;
   transition: all 0.75s;
 }
 
-#destScroll .active .dest_mais a, #destScroll .dest_mais span{
+#destScroll .active .dest_mais a,
+#destScroll .dest_mais span {
   height: fit-content;
   overflow: hidden;
 }
@@ -489,6 +495,7 @@ section {
     overflow: hidden;
     padding: 0;
   }
+
   #scrolling ul {
     -webkit-user-select: none;
     user-select: none;
@@ -498,6 +505,7 @@ section {
     list-style-type: none;
     transform-style: preserve-3d;
   }
+
   #scrolling ul li {
     height: 100%;
     min-width: 86vw;
@@ -509,6 +517,7 @@ section {
     border-radius: 30px;
     list-style-type: none;
   }
+
   #scrolling ul .itemslide-active {
     transform: scale(1);
   }
@@ -516,12 +525,14 @@ section {
   .dest_item span {
     display: none;
   }
+
   .dest_item a {
     font-size: 1.5rem;
     font-weight: 700;
   }
 
 }
+
 #break_gal {
   background-image: url("/src/assets/img/break_gal.svg");
 }
@@ -535,6 +546,11 @@ section {
 #proj_gal_tittle {
   padding-top: 10vh;
   align-items: flex-start;
+}
+
+#proj_gal_tittle * {
+  display: flex;
+  align-items: start;
 }
 
 #proj_gal_wrap {
@@ -552,9 +568,12 @@ section {
   
 } */
 
-#projetos-gallery {
-  align-items: flex-start;
+#projetos-galeria {
+  max-width: calc(var(--largura) - var(--margem)*2);
+  width: 100%;
+  margin-inline: auto;
 }
+
 masonry-layout .homenagem {
   display: none;
 }
@@ -567,6 +586,50 @@ masonry-layout img {
   max-width: 90dvw;
   width: 23%;
 } */
+
+a.gallery-item {
+  margin-bottom: 20px;
+}
+
+a.gallery-item {
+  padding: 10px;
+  padding-bottom: 5px;
+  background-color: hsl(var(--shade), 0.5);
+  border-radius: 20px;
+  transition: all 0.5S;
+}
+
+a.gallery-item img {
+  border-radius: 10px;
+  box-shadow: hsl(var(--dark), 0.75) 2px 2px 5px 2px;
+  transition: all 0.5S;
+}
+
+a:hover.gallery-item {
+  padding: 2px 18px 13px 2px;
+  background-color: hsl(var(--pop), 1);
+}
+
+a:hover.gallery-item img {
+  border-radius: 19px;
+  box-shadow: hsl(var(--dark), 1) 10px 10px 10px 10px;
+}
+
+.pswp__dynamic-caption--aside {
+  max-width: 300px;
+  padding: 20px 15px 20px 20px;
+  margin-top: 70px;
+}
+
+.pswp__dynamic-caption--below {
+  max-width: 700px;
+  padding: 15px 0 0;
+}
+
+.pswp__dynamic-caption--mobile {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
+}
 
 #break_gal_bottom {
   bottom: 0;

@@ -1,106 +1,167 @@
-import "itemslide"
+/* --------------------------------------------------------------------------
+ * Imports & assets
+ * ----------------------------------------------------------------------- */
+import "itemslide";
 import "@lottiefiles/lottie-player";
 import "@appnest/masonry-layout";
-import PhotoSwipeLightbox from 'photoswipe/lightbox';
-import 'photoswipe/style.css';
 
-let itemslide;
-let sliderIndex
+import PhotoSwipeLightbox from "photoswipe/lightbox";
+import PhotoSwipeDynamicCaption from "photoswipe-dynamic-caption-plugin";
 
-const lightbox = new PhotoSwipeLightbox({
-  gallery: '#projetos-galeria',
-  children: 'a',
-  pswpModule: () => import('photoswipe')
-});
-lightbox.init();
+import "photoswipe/style.css";
+import "photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css";
 
+/* --------------------------------------------------------------------------
+ * Configurações
+ * ----------------------------------------------------------------------- */
+const BREAKPOINT_MOBILE = 600;
+const BREAKPOINT_LIGHTBOX = 700;
 
-window.addEventListener("load", () => {
-  var element = document.querySelector("#scrolling ul");
-  itemslide = new Itemslide(element, {
-    disableClickToSlide : true
+const LIGHTBOX_PADDING = {
+  small: { top: 0, bottom: 0, left: 0, right: 0 },
+  large: { top: 30, bottom: 30, left: 0, right: 0 },
+};
+
+/* --------------------------------------------------------------------------
+ * Lightbox
+ * ----------------------------------------------------------------------- */
+function initLightbox() {
+  const lightbox = new PhotoSwipeLightbox({
+    gallerySelector: "#projetos-galeria",
+    childSelector: ".gallery-item",
+    paddingFn: ({ x }) =>
+      x < BREAKPOINT_LIGHTBOX ? LIGHTBOX_PADDING.small : LIGHTBOX_PADDING.large,
+    pswpModule: () => import("photoswipe"),
   });
-  element.addEventListener("carouselChangeActiveIndex", function () {
-    sliderIndex = itemslide.getActiveIndex();
-    let swipeLottie = document.querySelectorAll(".destSwipe")[sliderIndex].querySelector("lottie-player");
-      swipeLottie.stop();
-      swipeLottie.play();
-  });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-  let destaqueItem;
-  // Select all the .card elements
-  let destaques = document.querySelectorAll(".dest");
-  if (window.matchMedia("(max-width: 600px)").matches) {
-    document.getElementById("dest_blank").remove();
-    destaques.forEach(function (destaque){
-      destaque.classList.remove("dest");
-      destaque.classList.add("destSwipe");
-    });
-    document.getElementById("destScroll").setAttribute("id","scrolling");
-    document.getElementById("dest_wrap").setAttribute("id","destScrollWrap");
-    
-    // destaques = null;
-  };
-  destaques = null;
-  destaques = document.querySelectorAll(".dest");
-  // Function to be executed
-  
-  // document.getElementById("scrolling").carouselChangePos{console.log("swipe");};
-  //   console.log("swipe");
-  // };
-  
-  
-  // Add event listeners to each card
-  destaques.forEach(function (destaque) {
-    destaque.addEventListener("mouseenter", function () {
-      // Find the lottie-player element within the current card
-      let destaquePlayer = destaque.querySelector("lottie-player");
-      // Play the Lottie animation
-      if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
+  new PhotoSwipeDynamicCaption(lightbox, {
+    captionContent: ".pswp-caption-content",
+    mobileLayoutBreakpoint: BREAKPOINT_LIGHTBOX,
+    type: "auto",
+    mobileCaptionOverlapRatio: 1,
+  });
+
+  lightbox.init();
+}
+
+/* --------------------------------------------------------------------------
+ * Carrossel (Itemslide) + animação Lottie
+ * ----------------------------------------------------------------------- */
+function initCarousel() {
+  const list = document.querySelector("#scrolling ul");
+  if (!list) return;
+
+  const slider = new Itemslide(list, { disableClickToSlide: true });
+
+  list.addEventListener("carouselChangeActiveIndex", () => {
+    const index = slider.getActiveIndex();
+    const lottie = document
+      .querySelectorAll(".destSwipe")
+      [index]?.querySelector("lottie-player");
+
+    if (lottie) {
+      lottie.stop();
+      lottie.play();
+    }
+  });
+}
+
+/* --------------------------------------------------------------------------
+ * Ajustes de layout (mobile highlights)
+ * ----------------------------------------------------------------------- */
+function adaptHighlightsForMobile() {
+  if (!window.matchMedia(`(max-width: ${BREAKPOINT_MOBILE}px)`).matches) return;
+
+  // troca IDs para manter compatibilidade com o JS existente
+  const blank = document.getElementById("dest_blank");
+  blank?.remove();
+
+  document.querySelectorAll(".dest").forEach((el) => {
+    el.classList.replace("dest", "destSwipe");
+  });
+
+  document.getElementById("destScroll")?.setAttribute("id", "scrolling");
+  document.getElementById("dest_wrap")?.setAttribute("id", "destScrollWrap");
+}
+
+/* --------------------------------------------------------------------------
+ * Interações com os destaques
+ * ----------------------------------------------------------------------- */
+function initHighlightInteractions() {
+  let activeHighlightId = null;
+  const highlights = [...document.querySelectorAll(".dest, .destSwipe")];
+  const container = document.getElementById("destaques");
+
+  /* Lottie on hover (apenas quando visível) */
+  const intersectionObserver =
+    "IntersectionObserver" in window
+      ? new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            const lottie = entry.target;
             if (entry.isIntersecting) {
-              console.log(destaquePlayer);
-              destaquePlayer.stop();
-              destaquePlayer.play();
-              observer.disconnect();
-              
+              lottie.stop();
+              lottie.play();
+              intersectionObserver.unobserve(lottie);
             }
           });
-        });
-        observer.observe(destaquePlayer);
+        })
+      : null;
+
+  highlights.forEach((card) => {
+    // Hover → toca animação
+    card.addEventListener("mouseenter", () => {
+      const lottie = card.querySelector("lottie-player");
+      if (intersectionObserver) {
+        intersectionObserver.observe(lottie);
       } else {
-        destaquePlayer.play();
+        lottie.play();
       }
     });
-    destaque.addEventListener("click", function () {
-      destaques.forEach(function (destaque) {
-        destaque.classList.remove("active");
-      });
-      if (destaqueItem != destaque.getAttribute("id")) {
-        destaque.classList.add("active");
-        destaqueItem = destaque.getAttribute("id");
-      } else {
-        destaqueItem = null;
-      };
-      console.log(destaque.getAttribute("id"));
-      // setTimeout(() => {
-      //   destaque.scrollIntoView({behavior: "smooth", block: "center", inline: "middle"});
-      // }, 750);
+
+    // Clique → alterna “active”
+    card.addEventListener("click", () => {
+      const id = card.id;
+      const isSame = id === activeHighlightId;
+
+      highlights.forEach((h) => h.classList.remove("active"));
+      activeHighlightId = isSame ? null : id;
+      if (!isSame) card.classList.add("active");
     });
   });
-  const destaquesMain = document.getElementById("destaques");
-  destaquesMain.addEventListener("click", function (event) {
-    const parente = event.target.parentElement.getAttribute("id");
-    console.log(event.target.getAttribute("id"));
-    if (parente == "destaques" || parente == "dest_tittle"|| event.target.getAttribute("id") == "destaques"|| event.target.getAttribute("id") == "dest_blank" || event.target.getAttribute("id") == "dest_wrap") {
-      destaques.forEach(function (destaque) {
-        destaque.classList.remove("active");
-        destaqueItem = null;
-      });
-    };
+
+  /* Clique fora do card → remove active */
+  container?.addEventListener("click", (evt) => {
+    const clickedId = evt.target.id;
+    const parentId = evt.target.parentElement?.id;
+
+    // zonas de “limbo” onde cancelling faz sentido
+    const cancelZoneIds = [
+      "destaques",
+      "dest_tittle",
+      "dest_blank",
+      "dest_wrap",
+    ];
+
+    if (cancelZoneIds.includes(clickedId) || cancelZoneIds.includes(parentId)) {
+      highlights.forEach((h) => h.classList.remove("active"));
+      activeHighlightId = null;
+    }
   });
-  console.log(itemslide.carouselChangePos);
-});
+}
+
+/* --------------------------------------------------------------------------
+ * Bootstrap
+ * ----------------------------------------------------------------------- */
+function bootstrap() {
+  initLightbox();
+
+  // itemslide precisa aguardar assets
+  window.addEventListener("load", initCarousel);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    adaptHighlightsForMobile();
+    initHighlightInteractions();
+  });
+}
+
+bootstrap();
