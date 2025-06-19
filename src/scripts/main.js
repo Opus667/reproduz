@@ -1,6 +1,6 @@
 /* --------------------------------------------------------------------------
- * Imports & assets
- * ----------------------------------------------------------------------- */
+* Imports & assets
+* ----------------------------------------------------------------------- */
 import "itemslide";
 import "@lottiefiles/lottie-player";
 import "@appnest/masonry-layout";
@@ -12,10 +12,14 @@ import "photoswipe/style.css";
 import "photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css";
 
 /* --------------------------------------------------------------------------
- * Configurações
- * ----------------------------------------------------------------------- */
+* Configurações
+* ----------------------------------------------------------------------- */
 const BREAKPOINT_MOBILE = 600;
 const BREAKPOINT_LIGHTBOX = 700;
+
+let slider;          // referência global / de módulo
+let listenerRef;     // para remover o event listener depois
+
 
 const LIGHTBOX_PADDING = {
   small: { top: 0, bottom: 0, left: 0, right: 0 },
@@ -47,34 +51,71 @@ function initLightbox() {
 /* --------------------------------------------------------------------------
  * Carrossel (Itemslide) + animação Lottie
  * ----------------------------------------------------------------------- */
-function initCarousel() {
+// function initCarousel() {
+//   const list = document.querySelector("#scrolling ul");
+//   if (!list) return;
+
+//   const slider = new Itemslide(list, { disableClickToSlide: true });
+
+//   list.addEventListener("carouselChangeActiveIndex", () => {
+//     const index = slider.getActiveIndex();
+//     const lottie = document
+//       .querySelectorAll(".destSwipe")
+//       [index]?.querySelector("lottie-player");
+
+//     if (lottie) {
+//       lottie.stop();
+//       lottie.play();
+//     }
+//   });
+// }
+
+
+const initCarousel = () => {
   const list = document.querySelector("#scrolling ul");
-  if (!list) return;
-
-  const slider = new Itemslide(list, { disableClickToSlide: true });
-
-  list.addEventListener("carouselChangeActiveIndex", () => {
+  
+  slider = new Itemslide(list, { disableClickToSlide: true });
+  
+  listenerRef = () => {
+    /* … */
     const index = slider.getActiveIndex();
     const lottie = document
       .querySelectorAll(".destSwipe")
       [index]?.querySelector("lottie-player");
-
+    
     if (lottie) {
       lottie.stop();
       lottie.play();
     }
-  });
-}
+  };
+  list.addEventListener("carouselChangeActiveIndex", listenerRef);
+};
+
+// Cancela / desfaz tudo
+const destroyCarousel = () => {
+  if (slider) slider.destroy();           // método do Itemslide
+  const list = document.querySelector("#scrolling ul");
+  list?.removeEventListener("carouselChangeActiveIndex", listenerRef);
+};
 
 /* --------------------------------------------------------------------------
  * Ajustes de layout (mobile highlights)
  * ----------------------------------------------------------------------- */
 function adaptHighlightsForMobile() {
-  if (!window.matchMedia(`(max-width: ${BREAKPOINT_MOBILE}px)`).matches) return;
+
+  document.getElementById("dest_wrap")?.removeAttribute("style");
+  document.getElementById("destScrollWrap")?.removeAttribute("style");
+
+  if (!window.matchMedia(`(max-width: ${BREAKPOINT_MOBILE}px)`).matches) {
+  document.querySelectorAll(".destSwipe").forEach((el) => {
+    el.classList.replace("destSwipe", "dest");
+  });
+
+  document.getElementById("scrolling")?.setAttribute("id", "destScroll");
+  document.getElementById("destScrollWrap")?.setAttribute("id", "dest_wrap");    
+  } else {;
 
   // troca IDs para manter compatibilidade com o JS existente
-  const blank = document.getElementById("dest_blank");
-  blank?.remove();
 
   document.querySelectorAll(".dest").forEach((el) => {
     el.classList.replace("dest", "destSwipe");
@@ -82,7 +123,7 @@ function adaptHighlightsForMobile() {
 
   document.getElementById("destScroll")?.setAttribute("id", "scrolling");
   document.getElementById("dest_wrap")?.setAttribute("id", "destScrollWrap");
-}
+}}
 
 /* --------------------------------------------------------------------------
  * Interações com os destaques
@@ -157,8 +198,10 @@ function mobileMasonry(){
   const masonry=document.querySelector("masonry-layout");
   if (window.matchMedia(`(max-width: ${BREAKPOINT_MOBILE}px)`).matches) {
     masonry.setAttribute("cols", 3);
+    masonry.setAttribute("gap", 10);
   } else {
     masonry.removeAttribute("cols");    
+    masonry.setAttribute("gap", 20);
   };
   masonry.layout();
 
@@ -169,13 +212,21 @@ function mobileMasonry(){
  * Bootstrap
  * ----------------------------------------------------------------------- */
 function bootstrap() {
+  destroyCarousel();
   initLightbox();
-
+  
   // itemslide precisa aguardar assets
   window.addEventListener("load", initCarousel);
-  window.addEventListener("resize", mobileMasonry)
+  window.addEventListener("resize", () => {
+    mobileMasonry();
+    adaptHighlightsForMobile();
+    destroyCarousel();
+    initCarousel();
+  });
 
+  
   document.addEventListener("DOMContentLoaded", () => {
+    mobileMasonry();
     adaptHighlightsForMobile();
     initHighlightInteractions();
   });

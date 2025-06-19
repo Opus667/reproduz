@@ -1,0 +1,35 @@
+/* === ROOT === */
+:root {
+  /* --Paleta-- */
+  --dark: 76, 97%, 11%;
+  --shade: 76, 62%, 41%;
+  --dull: 76, 82%, 46%;
+  --pop: 76, 91%, 50%;
+  --washed: 76, 100%, 70%;
+  --bright: 76, 78%, 81%; /* --Dimensões-- */
+  --largura: calc(1800px * 0.9);
+  --margem: 5%;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  interpolate-size: allow-keywords;
+}
+
+/* === REMANESCENTE === */
+:root {
+  /* --Paleta-- */
+  --dark: 76, 97%, 11%;
+  --shade: 76, 62%, 41%;
+  --dull: 76, 82%, 46%;
+  --pop: 76, 91%, 50%;
+  --washed: 76, 100%, 70%;
+  --bright: 76, 78%, 81%; /* --Dimensões-- */
+  --largura: calc(1800px * 0.9);
+  --margem: 5%;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  interpolate-size: allow-keywords;
+}
