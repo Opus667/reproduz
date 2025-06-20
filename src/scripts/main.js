@@ -11,6 +11,8 @@ import PhotoSwipeDynamicCaption from "photoswipe-dynamic-caption-plugin";
 import "photoswipe/style.css";
 import "photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css";
 
+
+
 /* --------------------------------------------------------------------------
  * Configurações
  * ----------------------------------------------------------------------- */
