@@ -13,7 +13,7 @@ const bigImgs = import.meta.glob("../assets/gallery/*.{jpg,jpeg,png,webp,svg}", 
 
 // (b) Importa thumbnails dentro de thumb/:
 const thumbs = import.meta.glob(
-  "../assets/gallery/thumb/*.{jpg,jpeg,png,webp,svg}",
+  "../assets/gallery/thumbs/*.{jpg,jpeg,png,webp,svg}",
   { eager: true, import: "default" }
 );
 
