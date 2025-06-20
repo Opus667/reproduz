@@ -796,5 +796,13 @@ a:hover.gallery-item img {
 #contato {
   background: hsl(var(--dull));
   color: hsl(var(--dark));
-  padding-block: 0;
+}
+
+#contato_tittle {
+  flex-direction: column;
+}
+
+#contato_cards {
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
