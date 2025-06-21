@@ -1,6 +1,5 @@
 // vite.config.js
 import { defineConfig } from 'vite';
-import { createHtmlPlugin } from 'vite-plugin-html';
 import netlify from '@netlify/vite-plugin';
 /**
  * Exemplo de configuração básica para projetos
@@ -45,15 +44,6 @@ export default defineConfig({
   plugins: [
     // exemplo:
     netlify(),
-    createHtmlPlugin({
-      minify: true, // minifica HTML na build
-      inject: {
-        data: {
-          fullURL: 'http://reproduz.netlify.app/',
-          description: 'Este é um projeto Vite com JavaScript puro',
-        },
-      },
-    }),
   ],
 
   // ⑥ Variáveis de ambiente adicionais para o front
