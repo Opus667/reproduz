@@ -7,17 +7,17 @@
 
 // (a) Importa as imagens dos href (full-size):
 const bigImgs = import.meta.glob(
-  "../assets/gallery/*.{jpg,jpeg,png,webp,svg}",
+  '../assets/gallery/*.{jpg,jpeg,png,webp,svg}',
   {
     eager: true,
-    import: "default", // faz o Vite devolver a URL final (string)
+    import: 'default', // faz o Vite devolver a URL final (string)
   },
 );
 
 // (b) Importa thumbnails dentro de thumb/:
 const thumbs = import.meta.glob(
-  "../assets/gallery/thumbs/*.{jpg,jpeg,png,webp,svg}",
-  { eager: true, import: "default" },
+  '../assets/gallery/thumbs/*.{jpg,jpeg,png,webp,svg}',
+  { eager: true, import: 'default' },
 );
 
 // (c) Concatena ambos em um único mapa:
@@ -31,20 +31,24 @@ const urlMap = { ...bigImgs, ...thumbs };
  */
 function resolveHashedUrl(originalPath) {
   // Remove o prefixo "/src" (caso você use assim no HTML)
-  const clean = originalPath.replace(/^\/?src\//, "../");
+  const clean = originalPath.replace(/^\/?src\//, '../');
   return urlMap[clean];
 }
+document.querySelectorAll('meta[content]').forEach(el => {
+  el.setAttribute('teste', 'teste');
+  el.removeAttribute('property');
+});
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   // 1) <a class="gallery-item" href="…">
-  document.querySelectorAll("a.gallery-item").forEach((a) => {
-    const hashed = resolveHashedUrl(a.getAttribute("href"));
-    if (hashed) a.setAttribute("href", hashed);
+  document.querySelectorAll('a.gallery-item').forEach(a => {
+    const hashed = resolveHashedUrl(a.getAttribute('href'));
+    if (hashed) a.setAttribute('href', hashed);
   });
 
   // 2) <a class="gallery-item"><img src="…"></a>
-  document.querySelectorAll("a.gallery-item > img").forEach((img) => {
-    const hashed = resolveHashedUrl(img.getAttribute("src"));
-    if (hashed) img.setAttribute("src", hashed);
+  document.querySelectorAll('a.gallery-item > img').forEach(img => {
+    const hashed = resolveHashedUrl(img.getAttribute('src'));
+    if (hashed) img.setAttribute('src', hashed);
   });
 });
