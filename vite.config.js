@@ -1,6 +1,7 @@
 // vite.config.js
 import { defineConfig } from 'vite';
 import netlify from '@netlify/vite-plugin';
+
 /**
  * Exemplo de configuração básica para projetos
  * que usam apenas JavaScript puro (Vanilla JS).

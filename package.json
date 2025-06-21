@@ -6,10 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "deploy": "netlify deploy --prod",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@netlify/vite-plugin": "^2.3.1",
+    "@netlify/vite-plugin-netlify-edge": "^1.1.3",
     "globals": "^16.2.0",
     "prettier": "3.5.3",
     "vite": "^6.2.1"
@@ -17,6 +18,7 @@
   "dependencies": {
     "@appnest/masonry-layout": "^2.2.3",
     "@lottiefiles/lottie-player": "^2.0.12",
+    "@netlify/vite-plugin": "^2.3.1",
     "itemslide": "^2.0.1",
     "photoswipe": "^5.4.4",
     "photoswipe-dynamic-caption-plugin": "^1.2.7"

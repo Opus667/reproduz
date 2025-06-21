@@ -33,7 +33,7 @@ html {
 
 /* === BODY === */
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   line-height: normal;
   scroll-behavior: smooth;
@@ -54,7 +54,7 @@ main {
 H3 === */
 h2,
 h3 {
-  font-family: "Anton", sans-serif;
+  font-family: 'Anton', sans-serif;
   font-size: 2.5rem;
   font-style: normal;
   font-weight: 400;
@@ -137,7 +137,7 @@ section {
 #intro {
   background:
     radial-gradient(circle, hsl(var(--dark), 0.75), #000e),
-    url("/src/assets/img/intro/impressao.jpg");
+    url('/src/assets/img/intro/impressao.jpg');
   background-size: cover;
   color: hsl(var(--pop));
   display: flex;
@@ -215,7 +215,7 @@ section {
   border: solid red 6px;
   border-radius: 10px;
   cursor: pointer;
-  font-family: "Anton", sans-serif;
+  font-family: 'Anton', sans-serif;
   font-size: 1.6rem;
   margin-inline: 0.2em;
   padding: 0 0.75em;
@@ -271,7 +271,7 @@ section {
 
 /* === #INTRO_BREAK === */
 #intro_break {
-  background-image: url("/src/assets/img/break_intro.svg");
+  background-image: url('/src/assets/img/break_intro.svg');
   background-repeat: no-repeat;
   bottom: 0;
   position: sticky;
@@ -361,13 +361,13 @@ section {
 
 /* === #MAOS_BREAK_TOP === */
 #maos_break_top {
-  background-image: url("/src/assets/img/break_top.svg");
+  background-image: url('/src/assets/img/break_top.svg');
   top: 0;
 }
 
 /* === #MAOS_BREAK_BOTTOM === */
 #maos_break_bottom {
-  background-image: url("/src/assets/img/break_bottom.svg");
+  background-image: url('/src/assets/img/break_bottom.svg');
   bottom: 0px;
 }
 
@@ -483,7 +483,7 @@ section {
 .destSwipe h3::after {
   border-bottom: hsl(var(--dark)) solid 3px;
   bottom: 0;
-  content: "";
+  content: '';
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -619,7 +619,7 @@ section {
   /* === } #BREAK_GAL === */
 }
 #break_gal {
-  background-image: url("/src/assets/img/break_gal.svg");
+  background-image: url('/src/assets/img/break_gal.svg');
 }
 
 /* === #PROJ_GAL === */
@@ -747,18 +747,18 @@ a:hover.gallery-item img {
   align-content: center;
 }
 .imgJIMMY::before {
-  content: "Jimmy";
+  content: 'Jimmy';
 }
 .imgFR::before {
-  content: "FR";
+  content: 'FR';
 }
 .imgAI::before {
-  content: "IA";
+  content: 'IA';
 }
 
 .iconHasEdit::after {
   display: block;
-  content: "Foto ilustrativa, \Aretocada com auxílio \A de Inteligência Artificial";
+  content: 'Foto ilustrativa, \Aretocada com auxílio \A de Inteligência Artificial';
   white-space: pre;
   position: absolute;
   width: 0%;
@@ -772,11 +772,11 @@ a:hover.gallery-item img {
   transition: all 1s;
 }
 .imgFR::after {
-  content: "Foto Real!\aNenhuma alteração \a foi feita nesta foto.";
+  content: 'Foto Real!\aNenhuma alteração \a foi feita nesta foto.';
 }
 
 .imgJIMMY::after {
-  content: "Vão-se os bons...";
+  content: 'Vão-se os bons...';
 }
 
 .iconHasEdit:hover:after {
@@ -793,7 +793,7 @@ a:hover.gallery-item img {
 
 /* === #BREAK_GAL_BOTTOM === */
 #break_gal_bottom {
-  background-image: url("/src/assets/img/break_gal_bottom.svg");
+  background-image: url('/src/assets/img/break_gal_bottom.svg');
   bottom: 0;
 }
 
