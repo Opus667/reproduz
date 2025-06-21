@@ -6,15 +6,18 @@
  */
 
 // (a) Importa as imagens dos href (full-size):
-const bigImgs = import.meta.glob("../assets/gallery/*.{jpg,jpeg,png,webp,svg}", {
-  eager: true,
-  import: "default",        // faz o Vite devolver a URL final (string)
-});
+const bigImgs = import.meta.glob(
+  "../assets/gallery/*.{jpg,jpeg,png,webp,svg}",
+  {
+    eager: true,
+    import: "default", // faz o Vite devolver a URL final (string)
+  },
+);
 
 // (b) Importa thumbnails dentro de thumb/:
 const thumbs = import.meta.glob(
   "../assets/gallery/thumbs/*.{jpg,jpeg,png,webp,svg}",
-  { eager: true, import: "default" }
+  { eager: true, import: "default" },
 );
 
 // (c) Concatena ambos em um único mapa:
@@ -40,10 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // 2) <a class="gallery-item"><img src="…"></a>
-  document
-    .querySelectorAll("a.gallery-item > img")
-    .forEach((img) => {
-      const hashed = resolveHashedUrl(img.getAttribute("src"));
-      if (hashed) img.setAttribute("src", hashed);
-    });
+  document.querySelectorAll("a.gallery-item > img").forEach((img) => {
+    const hashed = resolveHashedUrl(img.getAttribute("src"));
+    if (hashed) img.setAttribute("src", hashed);
+  });
 });

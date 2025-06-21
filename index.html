@@ -1,500 +1,822 @@
 <!doctype html>
 <html lang="pr-BR">
-<head>
-	<meta charset="UTF-8" />
-	<title>Reproduz Com Vis</title>	<link rel="icon" href="/src/assets/img/favicon.svg" sizes="32x32" />
-<link rel="icon" href="/src/assets/img/favicon.svg" sizes="192x192" />
-<link rel="apple-touch-icon" href="/src/assets/img/favicon.svg" />
-<meta name="msapplication-TileImage" content="/src/assets/img/favicon.svg" />
-	<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, minimum-scale=1">
-	<meta name="description" content="Empresa de Comunicação Visual"/>
-	<meta http-equiv="X-UA-Compatible" content="" />
-	<meta property="og:site_name" content="Reproduz - Comunicação Visual"/>
-	<meta property="og:title" content="Reproduz Com Vis"/>
-	<meta property="og:type" content="website"/>
-	<meta property="og:url" content="https://reproduz.netlify.app/"/>
-	<meta property="og:description" content="Empresa de Comunicação Visual - Especializada em homenagens premios e produtos personalizado."/>
-				<meta property="og:image" content="/src/assets/img/logo.png" />
-			<meta property="og:image:url" content="/src/assets/img/logo.png"/>
-			<meta property="og:image:secure_url" content="/src/assets/img/logo.png"/>
-			<meta property="og:image:type" content="png"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap"
-    rel="stylesheet">
-  <link type="text/css" rel="stylesheet" href="css/lightgallery-bundle.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <title>Reproduz Com Vis</title>
+    <link rel="icon" href="/src/assets/img/favicon.svg" sizes="32x32" />
+    <link rel="icon" href="/src/assets/img/favicon.svg" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/src/assets/img/favicon.svg" />
+    <meta
+      name="msapplication-TileImage"
+      content="/src/assets/img/favicon.svg"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, maximum-scale=1, initial-scale=1, minimum-scale=1"
+    />
+    <meta
+      name="description"
+      content="Transformamos ideias em soluções visuais criativas. Veja nossos destaques!"
+    />
+    <meta http-equiv="X-UA-Compatible" content="" />
+    <meta property="og:site_name" content="Reproduz - Comunicação Visual" />
+    <meta property="og:title" content="Reproduz Com Vis" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://reproduz.netlify.app/" />
+    <meta
+      property="og:description"
+      content="Empresa de Comunicação Visual - Especializada em homenagens premios e produtos personalizado."
+    />
+    <meta property="og:image" content="/src/assets/img/logo.png" />
+    <meta property="og:image:url" content="/src/assets/img/logo.png" />
+    <meta property="og:image:secure_url" content="/src/assets/img/logo.png" />
+    <meta property="og:image:type" content="png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link type="text/css" rel="stylesheet" href="css/lightgallery-bundle.css" />
+  </head>
+  <title>Reproduz - ComVis</title>
+  <link rel="stylesheet" href="/src/styles/main.css" />
+  <link rel="stylesheet" href="photoswipe/dist/photoswipe.css" />
 
-</head>
-<title>Reproduz - ComVis</title>
-<link rel="stylesheet" href="/src/styles/main.css">
-<link rel="stylesheet" href="photoswipe/dist/photoswipe.css">
-
-<body>
-  <main>
-    <section id="intro">
-      <div id="intro_title" class="alinha_flex">
-        <span class="margem"></span>
-        <h1 id="repro">
-          <img src="/src/assets/img/reproduz.svg" alt="Reproduz - Comunicação visual">
-        </h1>
-      </div>
-      <div id="intro_main" class="alinha_flex">
-        <span class="margem"></span>
-        <span class="margem"></span>
-        <div>
-          <h2>Reproduzindo Ideias</h2>
-          <div class="alinha_flex">
-            <span class="margem"></span>
-            <p>
-              Com mais de 40 anos de trajetória, a Reproduz é referência em homenagens, tagueamento e sinalização. Mais
-              do que comunicação visual, entregamos propósito, emoção e identidade. Nosso trabalho vai além da estética:
-              criamos soluções que comunicam, conectam e valorizam histórias. Tudo com criatividade, qualidade e atenção
-              a cada detalhe.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div id="intro_cta">
-        <button id="cta_destqs" class="intro_cta" onclick="location.href='#destaques'">DESTAQUES</button>
-        <button id="cta_ctt" class="intro_cta" onclick="location.href='#contato'">CONTATO</button>
-      </div>
-      <span id="intro_break" class="break"><img src="/src/assets/img/mouse.gif" alt="Role a página para continuar"
-          id="intro_rato"></span>
-    </section>
-    <section id="creative">
-      <div id="cr_wrap" class="alinha_flex">
-        <div id="cr_txt">
-          <div class="alinha_flex">
-            <span class="margem"></span>
-            <h2>
-              Soluções Criativas
-            </h2>
-          </div>
-          <div class="alinha_flex">
-            <span class="margem"></span>
-            <span class="margem"></span>
-            <p>
-              Na Reproduz, oferecemos mais do que soluções visuais — entregamos experiências completas. Unimos
-              criatividade, funcionalidade e inovação para desenvolver materiais que comunicam com clareza e emocionam.
-              Seja em homenagens, sinalização ou projetos personalizados, fornecemos não só o visual, mas também
-              significado, impacto e presença.
-            </p>
-          </div>
-        </div>
-        <div id="cr_lottie">
-          <lottie-player autoplay loop src="/lottie/Ideias.json" style="min-width: 256px; width: 100%; height: 100%;">
-          </lottie-player>
+  <body>
+    <main>
+      <section id="intro">
+        <div id="intro_title" class="alinha_flex">
           <span class="margem"></span>
+          <h1 id="repro">
+            <img
+              src="/src/assets/img/reproduz.svg"
+              alt="Reproduz - Comunicação visual"
+            />
+          </h1>
         </div>
-      </div>
-    </section>
-    <section id="maos">
-      <span id="maos_break_top" class="break"></span>
-      <div id="maos_section" class="alinha_flex">
-        <h3 id="maos_txt">
-          Por trás de cada projeto,<br>
-          mãos que fazem a diferença
-        </h3>
-      </div>
-      <span id="maos_break_bottom" class="break"></span>
-    </section>
-    <section id="destaques">
-      <div id="dest_tittle" class="alinha_flex">
-
-        <h2>Os nossos destaques<span class="margem" style="float: right;"></span></h2>
-        <p>
-          Ao longo de nossa trajetória, acumulamos soluções que representam nossa expertise e versatilidade.
-          Confira alguns dos principais focos do nosso trabalho
-          Cada um com o compromisso de entregar valor, impacto e qualidade.
-          <span class="margem"></span><span class="margem"></span>
-        </p>
-      </div>
-      <div id="destScroll" class="alinha_flex">
-        <span class="margem"></span>
-        <ul id="dest_wrap" class="alinha_flex">
-          <li class="dest" id="homenagem">
-            <div class="dest_item">
-              <h3>Placas de Homenagens</h3>
-              <div class="lottie_wrapper">
-                <lottie-player autoplay delay="10000" src="/lottie/Homenagem.json" />
-              </div>
+        <div id="intro_main" class="alinha_flex">
+          <span class="margem"></span>
+          <span class="margem"></span>
+          <div>
+            <h2>Reproduzindo Ideias</h2>
+            <div class="alinha_flex">
+              <span class="margem"></span>
               <p>
-                Criada para valorizar momentos especiais, a placa de homenagem é personalizada e ideal para reconhecer
-                conquistas, marcos e pessoas com elegância e significado.
+                Com mais de 40 anos de trajetória, a Reproduz é referência em
+                homenagens, tagueamento e sinalização. Mais do que comunicação
+                visual, entregamos propósito, emoção e identidade. Nosso
+                trabalho vai além da estética: criamos soluções que comunicam,
+                conectam e valorizam histórias. Tudo com criatividade, qualidade
+                e atenção a cada detalhe.
               </p>
-              <div class="dest_mais"><span class="dest_mais_txt">Saiba mais</span></div>
             </div>
-          </li>
-          <li class="dest" id="trofeus">
-            <div class="dest_item">
-              <h3>Troféus</h3>
-              <div class="lottie_wrapper">
-                <lottie-player autoplay src="/lottie/Trofeus.json" />
-              </div>
+          </div>
+        </div>
+        <div id="intro_cta">
+          <button
+            id="cta_destqs"
+            class="intro_cta"
+            onclick="location.href='#destaques'"
+          >
+            DESTAQUES
+          </button>
+          <button
+            id="cta_ctt"
+            class="intro_cta"
+            onclick="location.href='#contato'"
+          >
+            CONTATO
+          </button>
+        </div>
+        <span id="intro_break" class="break"
+          ><img
+            src="/src/assets/img/mouse.gif"
+            alt="Role a página para continuar"
+            id="intro_rato"
+        /></span>
+      </section>
+      <section id="creative">
+        <div id="cr_wrap" class="alinha_flex">
+          <div id="cr_txt">
+            <div class="alinha_flex">
+              <span class="margem"></span>
+              <h2>Soluções Criativas</h2>
+            </div>
+            <div class="alinha_flex">
+              <span class="margem"></span>
+              <span class="margem"></span>
               <p>
-                Mais do que um prêmio, o troféu simboliza reconhecimento, superação e conquista. Com design
-                personalizado e
-                acabamento de qualidade, ele celebra momentos únicos de forma marcante e memorável.
+                Na Reproduz, oferecemos mais do que soluções visuais —
+                entregamos experiências completas. Unimos criatividade,
+                funcionalidade e inovação para desenvolver materiais que
+                comunicam com clareza e emocionam. Seja em homenagens,
+                sinalização ou projetos personalizados, fornecemos não só o
+                visual, mas também significado, impacto e presença.
               </p>
-              <div class="dest_mais"><span class="dest_mais_txt">Saiba mais</span></div>
             </div>
-          </li>
-          <li id="dest_blank"></li>
-          <li class="dest" id="sign">
-            <div class="dest_item">
-              <h3>Sinalização</h3>
-              <div class="lottie_wrapper">
-                <lottie-player autoplay src="/lottie/Sign.json" />
-              </div>
-              <p>
-                Funcionalidade e clareza em cada detalhe. As placas de sinalização organizam espaços, orientam o público
-                e
-                reforçam a identidade visual com eficiência, durabilidade e acabamento profissional.
-              </p>
-              <div class="dest_mais"><span class="dest_mais_txt">Saiba mais</span></div>
-            </div>
-          </li>
-          <li class="dest" id="tag">
-            <div class="dest_item">
-              <h3>Tagueamento</h3>
-              <div class="lottie_wrapper">
-                <lottie-player autoplay src="/lottie/Tag.json" />
-              </div>
-              <p>
-                Organização e identificação com eficiência. Oferecemos soluções de tagueamento personalizadas para
-                produtos,
-                equipamentos e processos, unindo funcionalidade, durabilidade e acabamento de qualidade. </p>
-              </p>
-              <div class="dest_mais"><span class="dest_mais_txt">Saiba mais</span></div>
-            </div>
-          </li>
-          <li class="dest" id="sticker">
-            <div class="dest_item">
-              <h3>Adesivos</h3>
-              <div class="lottie_wrapper">
-                <lottie-player autoplay src="/lottie/Adesivos.json" />
-              </div>
-              <p>
-                Versatilidade e impacto em qualquer formato. Produzimos adesivos personalizados, de centímetros a
-                metros,
-                com alta qualidade de impressão. Ideais para comunicação visual, decoração, identificação e campanhas
-                promocionais.
-              </p>
-              <div class="dest_mais"><span class="dest_mais_txt">Saiba mais</span></div>
-            </div>
-          </li>
-          <li class="dest" id="print">
-            <div class="dest_item">
-              <h3>Impressões</h3>
-              <div class="lottie_wrapper">
-                <lottie-player autoplay src="/lottie/Impressao.json" />
-              </div>
-              <p>
-                Alta qualidade em cada detalhe. Realizamos impressões digitais com cores vibrantes e precisão, em
-                diversos
-                materiais, para atender a projetos promocionais, comunicação visual e personalizações de todos os
-                tamanhos.
-              </p>
-              <div class="dest_mais"><span class="dest_mais_txt">Saiba mais</span></div>
-            </div>
-          </li>
-          <li class="dest" id="laser">
-            <div class="dest_item">
-              <h3>Laser</h3>
-              <div class="lottie_wrapper">
-                <lottie-player autoplay src="/lottie/Laser.json" />
-              </div>
-              <p>
-                Precisão e acabamento impecável. Oferecemos serviços de corte e gravação a laser em diversos materiais,
-                garantindo detalhes finos, personalização e alta qualidade em cada projeto.
-              </p>
-              <div class="dest_mais"><span class="dest_mais_txt">Saiba mais</span></div>
-            </div>
-          </li>
-          <li class="dest" id="cnc">
-            <div class="dest_item">
-              <h3>Router CNC</h3>
-              <div class="lottie_wrapper">
-                <lottie-player autoplay src="/lottie/CNC.json" />
-              </div>
-              <p>
-                Utilizando tecnologia de ponta, realizamos cortes e gravações de alta precisão em diversos materiais.
-                Ideal
-                para peças personalizadas, sinalização e projetos que exigem qualidade, detalhamento e acabamento
-                profissional.
-              </p>
-              <div class="dest_mais"><span class="dest_mais_txt">Saiba mais</span></div>
-            </div>
-          </li>
-
-        </ul>
-        <span class="margem"></span>
-      </div>
-    </section>
-    <section id="proj_gal">
-      <div id="break_gal" class="break"></div>
-      <div id="proj_gal_tittle" class="alinha_flex">
-        <span class="margem"></span>
-        <div class="alinha_flex flex_vert">
-          <h3>Nossos projetos em ação</h3>
-          <p><span class="margem"></span>
-            Veja como transformamos ideias em soluções criativas e impactantes.
+          </div>
+          <div id="cr_lottie">
+            <lottie-player
+              autoplay
+              loop
+              src="/lottie/Ideias.json"
+              style="min-width: 256px; width: 100%; height: 100%"
+            >
+            </lottie-player>
+            <span class="margem"></span>
+          </div>
+        </div>
+      </section>
+      <section id="maos">
+        <span id="maos_break_top" class="break"></span>
+        <div id="maos_section" class="alinha_flex">
+          <h3 id="maos_txt">
+            Por trás de cada projeto,<br />
+            mãos que fazem a diferença
+          </h3>
+        </div>
+        <span id="maos_break_bottom" class="break"></span>
+      </section>
+      <section id="destaques">
+        <div id="dest_tittle" class="alinha_flex">
+          <h2>
+            Os nossos destaques<span class="margem" style="float: right"></span>
+          </h2>
+          <p>
+            Ao longo de nossa trajetória, acumulamos soluções que representam
+            nossa expertise e versatilidade. Confira alguns dos principais focos
+            do nosso trabalho Cada um com o compromisso de entregar valor,
+            impacto e qualidade.
+            <span class="margem"></span><span class="margem"></span>
           </p>
         </div>
-      </div>
-      <!-- <div id="projetos-galeria"> -->
-      <masonry-layout gap="20" debounce="500" id="projetos-galeria" maxcolwidth="400">
-        <a data-pswp-width="1024" data-pswp-height="1508" class="gallery-item" href="/src/assets/gallery/dtf_01.jpg">
-          <img loading="lazy" class="img-responsive" src="/src/assets/gallery/thumbs/dtf_01.jpg" />
-          <span class="pswp-caption-content">
-            <h4>Título de marcação.</h4><br />
-            <p>Texto de marcação.</p>
-            <span class="iconHasEdit imgFR"></span>
-          </span>
-        </a>
-        <a data-pswp-width="2000" data-pswp-height="1760" class="gallery-item" href="/src/assets/gallery/saudoso_jimmy.jpg">
-          <img loading="lazy" class="img-responsive" src="/src/assets/gallery/thumbs/saudoso_jimmy.jpg" />
-          <span class="pswp-caption-content">
-            <h4>Saudoso Jimmy...</h4><br />De história a lenda,<br />uma referência eterna e inspiração.
-            <span class="iconHasEdit imgJIMMY"></span>
-          </span>
-        </a>
-        <a data-pswp-width="2048" data-pswp-height="2646" class="gallery-item" href="/src/assets/gallery/dtf_tanque.jpg">
-          <img loading="lazy" class="img-responsive" src="/src/assets/gallery/thumbs/dtf_tanque.jpg" />
-          <span class="pswp-caption-content">
-            <h4>Título de marcação.</h4><br />
-            <p>Texto de marcação.</p>
-            <span class="iconHasEdit imgFR"></span>
-          </span>
-        </a>
-        <a data-pswp-width="1024" data-pswp-height="1256" class="gallery-item" href="/src/assets/gallery/laser_gessi.jpg">
-          <img loading="lazy" class="img-responsive" src="/src/assets/gallery/thumbs/laser_gessi.jpg" />
-          <span class="pswp-caption-content">
-            <h4>Título de marcação.</h4><br />
-            <p>Texto de marcação.</p>
-            <span class="iconHasEdit imgAI"></span>
-          </span>
-        </a>
-        <a data-pswp-width="1536" data-pswp-height="934" class="gallery-item" href="/src/assets/gallery/laser_caneta.jpg">
-          <img loading="lazy" class="img-responsive" src="/src/assets/gallery/thumbs/laser_caneta.jpg" />
-          <span class="pswp-caption-content">
-            <h4>Título de marcação.</h4><br />
-            <p>Texto de marcação.</p>
-            <span class="iconHasEdit imgAI"></span>
-          </span>
-        </a>
-        <a data-pswp-width="1024" data-pswp-height="1312" class="gallery-item" href="/src/assets/gallery/adesivo_rotulo_01.jpg">
-          <img loading="lazy" class="img-responsive" src="/src/assets/gallery/thumbs/adesivo_rotulo_01.jpg" />
-          <span class="pswp-caption-content">
-            <h4>Título de marcação.</h4><br />
-            <p>Texto de marcação.</p>
-            <span class="iconHasEdit imgAI"></span>
-          </span>
-        </a>
-        <a data-pswp-width="1600" data-pswp-height="832" class="gallery-item" href="/src/assets/gallery/quadro_reproduz.jpg">
-          <img loading="lazy" class="img-responsive" src="/src/assets/gallery/thumbs/quadro_reproduz.jpg" />
-          <span class="pswp-caption-content">
-            <h4>Título de marcação.</h4><br />
-            <p>Texto de marcação.</p>
-            <span class="iconHasEdit imgAI"></span>
-          </span>
-        </a>
-        <a data-pswp-width="1024" data-pswp-height="1472" class="gallery-item" href="/src/assets/gallery/painel_uv_01.jpg">
-          <img loading="lazy" class="img-responsive" src="/src/assets/gallery/thumbs/painel_uv_01.jpg" />
-          <span class="pswp-caption-content">
-            <h4>Título de marcação.</h4><br />
-            <p>Texto de marcação.</p>
-            <span class="iconHasEdit imgAI"></span>
-          </span>
-        </a>
-        <a data-pswp-width="1536" data-pswp-height="952" class="gallery-item" href="/src/assets/gallery/uv_cliente_01.jpg">
-          <img loading="lazy" class="img-responsive" src="/src/assets/gallery/thumbs/uv_cliente_01.jpg" />
-          <span class="pswp-caption-content">
-            <h4>Título de marcação.</h4><br />
-            <p>Texto de marcação.</p>
-            <span class="iconHasEdit imgFR"></span>
-          </span>
-        </a>
-        <a data-pswp-width="1536" data-pswp-height="782" class="gallery-item" href="/src/assets/gallery/adesivos_dtf_print.jpg">
-          <img loading="lazy" class="img-responsive" src="/src/assets/gallery/thumbs/adesivos_dtf_print.jpg" />
-          <span class="pswp-caption-content">
-            <h4>Título de marcação.</h4><br />
-            <p>Texto de marcação.</p>
-            <span class="iconHasEdit imgFR"></span>
-          </span>
-        </a>
-        <a data-pswp-width="1024" data-pswp-height="1536" class="gallery-item" href="/src/assets/gallery/plqta_acril_02.jpg">
-          <img loading="lazy" class="img-responsive" src="/src/assets/gallery/thumbs/plqta_acril_02.jpg" />
-          <span class="pswp-caption-content">
-            <h4>Título de marcação.</h4><br />
-            <p>Texto de marcação.</p>
-            <span class="iconHasEdit imgAI"></span>
-          </span>
-        </a>
-        <a data-pswp-width="1814" data-pswp-height="1153" class="gallery-item" href="/src/assets/gallery/trof_poke.jpg">
-          <img loading="lazy" class="img-responsive" src="/src/assets/gallery/thumbs/trof_poke.jpg" />
-          <span class="pswp-caption-content">
-            <h4>Título de marcação.</h4><br />
-            <p>Texto de marcação.</p>
-            <span class="iconHasEdit imgFR"></span>
-          </span>
-        </a>
-        <a data-pswp-width="1024" data-pswp-height="1380" class="gallery-item" href="/src/assets/gallery/trof_poker.jpg">
-          <img loading="lazy" class="img-responsive" src="/src/assets/gallery/thumbs/trof_poker.jpg" />
-          <span class="pswp-caption-content">
-            <h4>Título de marcação.</h4><br />
-            <p>Texto de marcação.</p>
-            <span class="iconHasEdit imgAI"></span>
-          </span>
-        </a>
-        <a data-pswp-width="1024" data-pswp-height="1424" class="gallery-item" href="/src/assets/gallery/adesivo_porta.jpg">
-          <img loading="lazy" class="img-responsive" src="/src/assets/gallery/thumbs/adesivo_porta.jpg" />
-          <span class="pswp-caption-content">
-            <h4>Título de marcação.</h4><br />
-            <p>Texto de marcação.</p>
-            <span class="iconHasEdit imgFR"></span>
-          </span>
-        </a>
-        <a data-pswp-width="1024" data-pswp-height="928" class="gallery-item" href="/src/assets/gallery/tag_02.jpg">
-          <img loading="lazy" class="img-responsive" src="/src/assets/gallery/thumbs/tag_02.jpg" />
-          <span class="pswp-caption-content">
-            <h4>Título de marcação.</h4><br />
-            <p>Texto de marcação.</p>
-            <span class="iconHasEdit imgAI"></span>
-          </span>
-        </a>
-        <a data-pswp-width="1425" data-pswp-height="1024" class="gallery-item" href="/src/assets/gallery/painel_uv_02.jpg">
-          <img loading="lazy" class="img-responsive" src="/src/assets/gallery/thumbs/painel_uv_02.jpg" />
-          <span class="pswp-caption-content">
-            <h4>Título de marcação.</h4><br />
-            <p>Texto de marcação.</p>
-            <span class="iconHasEdit imgAI"></span>
-          </span>
-        </a>
-        <a data-pswp-width="1024" data-pswp-height="816" class="gallery-item" href="/src/assets/gallery/uv_printer.jpg">
-          <img loading="lazy" class="img-responsive" src="/src/assets/gallery/thumbs/uv_printer.jpg" />
-          <span class="pswp-caption-content">
-            <h4>Título de marcação.</h4><br />
-            <p>Texto de marcação.</p>
-            <span class="iconHasEdit imgAI"></span>
-          </span>
-        </a>
-        <a data-pswp-width="1024" data-pswp-height="890" class="gallery-item" href="/src/assets/gallery/trof_dome.jpg">
-          <img loading="lazy" class="img-responsive" src="/src/assets/gallery/thumbs/trof_dome.jpg" />
-          <span class="pswp-caption-content">
-            <h4>Título de marcação.</h4><br />
-            <p>Texto de marcação.</p>
-            <span class="iconHasEdit imgAI"></span>
-          </span>
-        </a>
-        <a data-pswp-width="1024" data-pswp-height="937" class="gallery-item" href="/src/assets/gallery/adesivos_penumbra.jpg">
-          <img loading="lazy" class="img-responsive" src="/src/assets/gallery/thumbs/adesivos_penumbra.jpg" />
-          <span class="pswp-caption-content">
-            <h4>Título de marcação.</h4><br />
-            <p>Texto de marcação.</p>
-            <span class="iconHasEdit imgFR"></span>
-          </span>
-        </a>
-        <a data-pswp-width="1024" data-pswp-height="852" class="gallery-item" href="/src/assets/gallery/chaveiro.jpg">
-          <img loading="lazy" class="img-responsive" src="/src/assets/gallery/thumbs/chaveiro.jpg" />
-          <span class="pswp-caption-content">
-            <h4>Título de marcação.</h4><br />
-            <p>Texto de marcação.</p>
-            <span class="iconHasEdit imgFR"></span>
-          </span>
-        </a>
-        <a data-pswp-width="1024" data-pswp-height="904" class="gallery-item" href="/src/assets/gallery/homenagem_01.jpg">
-          <img loading="lazy" class="img-responsive" src="/src/assets/gallery/thumbs/homenagem_01.jpg" />
-          <span class="pswp-caption-content">
-            <h4>Título de marcação.</h4><br />
-            <p>Texto de marcação.</p>
-            <span class="iconHasEdit imgAI"></span>
-          </span>
-        </a>
-        <a data-pswp-width="2766" data-pswp-height="1836" class="gallery-item" href="/src/assets/gallery/placa_personalizada.jpg">
-          <img loading="lazy" class="img-responsive" src="/src/assets/gallery/thumbs/placa_personalizada.jpg" />
-          <span class="pswp-caption-content">
-            <h4>Título de marcação.</h4><br />
-            <p>Texto de marcação.</p>
-            <span class="iconHasEdit imgFR"></span>
-          </span>
-        </a>
-        <a data-pswp-width="1024" data-pswp-height="1052" class="gallery-item" href="/src/assets/gallery/plqta_acril_01.jpg">
-          <img loading="lazy" class="img-responsive" src="/src/assets/gallery/thumbs/plqta_acril_01.jpg" />
-          <span class="pswp-caption-content">
-            <h4>Título de marcação.</h4><br />
-            <p>Texto de marcação.</p>
-            <span class="iconHasEdit imgAI"></span>
-          </span>
-        </a>
-        <a data-pswp-width="1024" data-pswp-height="1248" class="gallery-item" href="/src/assets/gallery/custom_01.jpg">
-          <img loading="lazy" class="img-responsive" src="/src/assets/gallery/thumbs/custom_01.jpg" />
-          <span class="pswp-caption-content">
-            <h4>Título de marcação.</h4><br />
-            <p>Texto de marcação.</p>
-            <span class="iconHasEdit imgAI"></span>
-          </span>
-        </a>
-        <a data-pswp-width="1536" data-pswp-height="877" class="gallery-item" href="/src/assets/gallery/adesivos_dtf_variados.jpg">
-          <img loading="lazy" class="img-responsive" src="/src/assets/gallery/thumbs/adesivos_dtf_variados.jpg" />
-          <span class="pswp-caption-content">
-            <h4>Título de marcação.</h4><br />
-            <p>Texto de marcação.</p>
-            <span class="iconHasEdit imgFR"></span>
-          </span>
-        </a>
-      </masonry-layout>
-      <!-- </div> -->
-      <div id="break_gal_bottom" class="break"></div>
-    </section>
-    <section id="contato">
-      <div id="contato_tittle" class="alinha_flex">
-        <h3>Entre em contato</h3>
-        <p>
-          Estamos prontos para transformar suas ideias em soluções criativas. <br>
-          Fale com a nossa equipe e descubra tudo o que podemos fazer por você!
-        </p>
-      </div>
-      <div id="contato_cards" class="alinha_flex">
-        <div id="ctt_phones">
-          <div id="ctt_phones_txt">
+        <div id="destScroll" class="alinha_flex">
+          <span class="margem"></span>
+          <ul id="dest_wrap" class="alinha_flex">
+            <li class="dest" id="homenagem">
+              <div class="dest_item">
+                <h3>Placas de Homenagens</h3>
+                <div class="lottie_wrapper">
+                  <lottie-player
+                    autoplay
+                    delay="10000"
+                    src="/lottie/Homenagem.json"
+                  />
+                </div>
+                <p>
+                  Criada para valorizar momentos especiais, a placa de homenagem
+                  é personalizada e ideal para reconhecer conquistas, marcos e
+                  pessoas com elegância e significado.
+                </p>
+                <div class="dest_mais">
+                  <span class="dest_mais_txt">Saiba mais</span>
+                </div>
+              </div>
+            </li>
+            <li class="dest" id="trofeus">
+              <div class="dest_item">
+                <h3>Troféus</h3>
+                <div class="lottie_wrapper">
+                  <lottie-player autoplay src="/lottie/Trofeus.json" />
+                </div>
+                <p>
+                  Mais do que um prêmio, o troféu simboliza reconhecimento,
+                  superação e conquista. Com design personalizado e acabamento
+                  de qualidade, ele celebra momentos únicos de forma marcante e
+                  memorável.
+                </p>
+                <div class="dest_mais">
+                  <span class="dest_mais_txt">Saiba mais</span>
+                </div>
+              </div>
+            </li>
+            <li id="dest_blank"></li>
+            <li class="dest" id="sign">
+              <div class="dest_item">
+                <h3>Sinalização</h3>
+                <div class="lottie_wrapper">
+                  <lottie-player autoplay src="/lottie/Sign.json" />
+                </div>
+                <p>
+                  Funcionalidade e clareza em cada detalhe. As placas de
+                  sinalização organizam espaços, orientam o público e reforçam a
+                  identidade visual com eficiência, durabilidade e acabamento
+                  profissional.
+                </p>
+                <div class="dest_mais">
+                  <span class="dest_mais_txt">Saiba mais</span>
+                </div>
+              </div>
+            </li>
+            <li class="dest" id="tag">
+              <div class="dest_item">
+                <h3>Tagueamento</h3>
+                <div class="lottie_wrapper">
+                  <lottie-player autoplay src="/lottie/Tag.json" />
+                </div>
+                <p>
+                  Organização e identificação com eficiência. Oferecemos
+                  soluções de tagueamento personalizadas para produtos,
+                  equipamentos e processos, unindo funcionalidade, durabilidade
+                  e acabamento de qualidade.
+                </p>
+                <div class="dest_mais">
+                  <span class="dest_mais_txt">Saiba mais</span>
+                </div>
+              </div>
+            </li>
+            <li class="dest" id="sticker">
+              <div class="dest_item">
+                <h3>Adesivos</h3>
+                <div class="lottie_wrapper">
+                  <lottie-player autoplay src="/lottie/Adesivos.json" />
+                </div>
+                <p>
+                  Versatilidade e impacto em qualquer formato. Produzimos
+                  adesivos personalizados, de centímetros a metros, com alta
+                  qualidade de impressão. Ideais para comunicação visual,
+                  decoração, identificação e campanhas promocionais.
+                </p>
+                <div class="dest_mais">
+                  <span class="dest_mais_txt">Saiba mais</span>
+                </div>
+              </div>
+            </li>
+            <li class="dest" id="print">
+              <div class="dest_item">
+                <h3>Impressões</h3>
+                <div class="lottie_wrapper">
+                  <lottie-player autoplay src="/lottie/Impressao.json" />
+                </div>
+                <p>
+                  Alta qualidade em cada detalhe. Realizamos impressões digitais
+                  com cores vibrantes e precisão, em diversos materiais, para
+                  atender a projetos promocionais, comunicação visual e
+                  personalizações de todos os tamanhos.
+                </p>
+                <div class="dest_mais">
+                  <span class="dest_mais_txt">Saiba mais</span>
+                </div>
+              </div>
+            </li>
+            <li class="dest" id="laser">
+              <div class="dest_item">
+                <h3>Laser</h3>
+                <div class="lottie_wrapper">
+                  <lottie-player autoplay src="/lottie/Laser.json" />
+                </div>
+                <p>
+                  Precisão e acabamento impecável. Oferecemos serviços de corte
+                  e gravação a laser em diversos materiais, garantindo detalhes
+                  finos, personalização e alta qualidade em cada projeto.
+                </p>
+                <div class="dest_mais">
+                  <span class="dest_mais_txt">Saiba mais</span>
+                </div>
+              </div>
+            </li>
+            <li class="dest" id="cnc">
+              <div class="dest_item">
+                <h3>Router CNC</h3>
+                <div class="lottie_wrapper">
+                  <lottie-player autoplay src="/lottie/CNC.json" />
+                </div>
+                <p>
+                  Utilizando tecnologia de ponta, realizamos cortes e gravações
+                  de alta precisão em diversos materiais. Ideal para peças
+                  personalizadas, sinalização e projetos que exigem qualidade,
+                  detalhamento e acabamento profissional.
+                </p>
+                <div class="dest_mais">
+                  <span class="dest_mais_txt">Saiba mais</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <span class="margem"></span>
+        </div>
+      </section>
+      <section id="proj_gal">
+        <div id="break_gal" class="break"></div>
+        <div id="proj_gal_tittle" class="alinha_flex">
+          <span class="margem"></span>
+          <div class="alinha_flex flex_vert">
+            <h3>Nossos projetos em ação</h3>
             <p>
-              +55 15 3418.3806 <br>
-              +55 15 98127-6594
+              <span class="margem"></span>
+              Veja como transformamos ideias em soluções criativas e
+              impactantes.
             </p>
           </div>
-          <div id="ctt_phones_buttons">
-            <div class="ctt_button" id="ctt_phone"></div>
-            <div class="ctt_button" id="ctt_zap"></div>
+        </div>
+        <!-- <div id="projetos-galeria"> -->
+        <masonry-layout
+          gap="20"
+          debounce="500"
+          id="projetos-galeria"
+          maxcolwidth="400"
+        >
+          <a
+            data-pswp-width="1024"
+            data-pswp-height="1508"
+            class="gallery-item"
+            href="/src/assets/gallery/dtf_01.jpg"
+          >
+            <img
+              loading="lazy"
+              class="img-responsive"
+              src="/src/assets/gallery/thumbs/dtf_01.jpg"
+            />
+            <span class="pswp-caption-content">
+              <h4>Título de marcação.</h4>
+              <br />
+              <p>Texto de marcação.</p>
+              <span class="iconHasEdit imgFR"></span>
+            </span>
+          </a>
+          <a
+            data-pswp-width="2000"
+            data-pswp-height="1760"
+            class="gallery-item"
+            href="/src/assets/gallery/saudoso_jimmy.jpg"
+          >
+            <img
+              loading="lazy"
+              class="img-responsive"
+              src="/src/assets/gallery/thumbs/saudoso_jimmy.jpg"
+            />
+            <span class="pswp-caption-content">
+              <h4>Saudoso Jimmy...</h4>
+              <br />De história a lenda,<br />uma referência eterna e
+              inspiração.
+              <span class="iconHasEdit imgJIMMY"></span>
+            </span>
+          </a>
+          <a
+            data-pswp-width="2048"
+            data-pswp-height="2646"
+            class="gallery-item"
+            href="/src/assets/gallery/dtf_tanque.jpg"
+          >
+            <img
+              loading="lazy"
+              class="img-responsive"
+              src="/src/assets/gallery/thumbs/dtf_tanque.jpg"
+            />
+            <span class="pswp-caption-content">
+              <h4>Título de marcação.</h4>
+              <br />
+              <p>Texto de marcação.</p>
+              <span class="iconHasEdit imgFR"></span>
+            </span>
+          </a>
+          <a
+            data-pswp-width="1024"
+            data-pswp-height="1256"
+            class="gallery-item"
+            href="/src/assets/gallery/laser_gessi.jpg"
+          >
+            <img
+              loading="lazy"
+              class="img-responsive"
+              src="/src/assets/gallery/thumbs/laser_gessi.jpg"
+            />
+            <span class="pswp-caption-content">
+              <h4>Título de marcação.</h4>
+              <br />
+              <p>Texto de marcação.</p>
+              <span class="iconHasEdit imgAI"></span>
+            </span>
+          </a>
+          <a
+            data-pswp-width="1536"
+            data-pswp-height="934"
+            class="gallery-item"
+            href="/src/assets/gallery/laser_caneta.jpg"
+          >
+            <img
+              loading="lazy"
+              class="img-responsive"
+              src="/src/assets/gallery/thumbs/laser_caneta.jpg"
+            />
+            <span class="pswp-caption-content">
+              <h4>Título de marcação.</h4>
+              <br />
+              <p>Texto de marcação.</p>
+              <span class="iconHasEdit imgAI"></span>
+            </span>
+          </a>
+          <a
+            data-pswp-width="1024"
+            data-pswp-height="1312"
+            class="gallery-item"
+            href="/src/assets/gallery/adesivo_rotulo_01.jpg"
+          >
+            <img
+              loading="lazy"
+              class="img-responsive"
+              src="/src/assets/gallery/thumbs/adesivo_rotulo_01.jpg"
+            />
+            <span class="pswp-caption-content">
+              <h4>Título de marcação.</h4>
+              <br />
+              <p>Texto de marcação.</p>
+              <span class="iconHasEdit imgAI"></span>
+            </span>
+          </a>
+          <a
+            data-pswp-width="1600"
+            data-pswp-height="832"
+            class="gallery-item"
+            href="/src/assets/gallery/quadro_reproduz.jpg"
+          >
+            <img
+              loading="lazy"
+              class="img-responsive"
+              src="/src/assets/gallery/thumbs/quadro_reproduz.jpg"
+            />
+            <span class="pswp-caption-content">
+              <h4>Título de marcação.</h4>
+              <br />
+              <p>Texto de marcação.</p>
+              <span class="iconHasEdit imgAI"></span>
+            </span>
+          </a>
+          <a
+            data-pswp-width="1024"
+            data-pswp-height="1472"
+            class="gallery-item"
+            href="/src/assets/gallery/painel_uv_01.jpg"
+          >
+            <img
+              loading="lazy"
+              class="img-responsive"
+              src="/src/assets/gallery/thumbs/painel_uv_01.jpg"
+            />
+            <span class="pswp-caption-content">
+              <h4>Título de marcação.</h4>
+              <br />
+              <p>Texto de marcação.</p>
+              <span class="iconHasEdit imgAI"></span>
+            </span>
+          </a>
+          <a
+            data-pswp-width="1536"
+            data-pswp-height="952"
+            class="gallery-item"
+            href="/src/assets/gallery/uv_cliente_01.jpg"
+          >
+            <img
+              loading="lazy"
+              class="img-responsive"
+              src="/src/assets/gallery/thumbs/uv_cliente_01.jpg"
+            />
+            <span class="pswp-caption-content">
+              <h4>Título de marcação.</h4>
+              <br />
+              <p>Texto de marcação.</p>
+              <span class="iconHasEdit imgFR"></span>
+            </span>
+          </a>
+          <a
+            data-pswp-width="1536"
+            data-pswp-height="782"
+            class="gallery-item"
+            href="/src/assets/gallery/adesivos_dtf_print.jpg"
+          >
+            <img
+              loading="lazy"
+              class="img-responsive"
+              src="/src/assets/gallery/thumbs/adesivos_dtf_print.jpg"
+            />
+            <span class="pswp-caption-content">
+              <h4>Título de marcação.</h4>
+              <br />
+              <p>Texto de marcação.</p>
+              <span class="iconHasEdit imgFR"></span>
+            </span>
+          </a>
+          <a
+            data-pswp-width="1024"
+            data-pswp-height="1536"
+            class="gallery-item"
+            href="/src/assets/gallery/plqta_acril_02.jpg"
+          >
+            <img
+              loading="lazy"
+              class="img-responsive"
+              src="/src/assets/gallery/thumbs/plqta_acril_02.jpg"
+            />
+            <span class="pswp-caption-content">
+              <h4>Título de marcação.</h4>
+              <br />
+              <p>Texto de marcação.</p>
+              <span class="iconHasEdit imgAI"></span>
+            </span>
+          </a>
+          <a
+            data-pswp-width="1814"
+            data-pswp-height="1153"
+            class="gallery-item"
+            href="/src/assets/gallery/trof_poke.jpg"
+          >
+            <img
+              loading="lazy"
+              class="img-responsive"
+              src="/src/assets/gallery/thumbs/trof_poke.jpg"
+            />
+            <span class="pswp-caption-content">
+              <h4>Título de marcação.</h4>
+              <br />
+              <p>Texto de marcação.</p>
+              <span class="iconHasEdit imgFR"></span>
+            </span>
+          </a>
+          <a
+            data-pswp-width="1024"
+            data-pswp-height="1380"
+            class="gallery-item"
+            href="/src/assets/gallery/trof_poker.jpg"
+          >
+            <img
+              loading="lazy"
+              class="img-responsive"
+              src="/src/assets/gallery/thumbs/trof_poker.jpg"
+            />
+            <span class="pswp-caption-content">
+              <h4>Título de marcação.</h4>
+              <br />
+              <p>Texto de marcação.</p>
+              <span class="iconHasEdit imgAI"></span>
+            </span>
+          </a>
+          <a
+            data-pswp-width="1024"
+            data-pswp-height="1424"
+            class="gallery-item"
+            href="/src/assets/gallery/adesivo_porta.jpg"
+          >
+            <img
+              loading="lazy"
+              class="img-responsive"
+              src="/src/assets/gallery/thumbs/adesivo_porta.jpg"
+            />
+            <span class="pswp-caption-content">
+              <h4>Título de marcação.</h4>
+              <br />
+              <p>Texto de marcação.</p>
+              <span class="iconHasEdit imgFR"></span>
+            </span>
+          </a>
+          <a
+            data-pswp-width="1024"
+            data-pswp-height="928"
+            class="gallery-item"
+            href="/src/assets/gallery/tag_02.jpg"
+          >
+            <img
+              loading="lazy"
+              class="img-responsive"
+              src="/src/assets/gallery/thumbs/tag_02.jpg"
+            />
+            <span class="pswp-caption-content">
+              <h4>Título de marcação.</h4>
+              <br />
+              <p>Texto de marcação.</p>
+              <span class="iconHasEdit imgAI"></span>
+            </span>
+          </a>
+          <a
+            data-pswp-width="1425"
+            data-pswp-height="1024"
+            class="gallery-item"
+            href="/src/assets/gallery/painel_uv_02.jpg"
+          >
+            <img
+              loading="lazy"
+              class="img-responsive"
+              src="/src/assets/gallery/thumbs/painel_uv_02.jpg"
+            />
+            <span class="pswp-caption-content">
+              <h4>Título de marcação.</h4>
+              <br />
+              <p>Texto de marcação.</p>
+              <span class="iconHasEdit imgAI"></span>
+            </span>
+          </a>
+          <a
+            data-pswp-width="1024"
+            data-pswp-height="816"
+            class="gallery-item"
+            href="/src/assets/gallery/uv_printer.jpg"
+          >
+            <img
+              loading="lazy"
+              class="img-responsive"
+              src="/src/assets/gallery/thumbs/uv_printer.jpg"
+            />
+            <span class="pswp-caption-content">
+              <h4>Título de marcação.</h4>
+              <br />
+              <p>Texto de marcação.</p>
+              <span class="iconHasEdit imgAI"></span>
+            </span>
+          </a>
+          <a
+            data-pswp-width="1024"
+            data-pswp-height="890"
+            class="gallery-item"
+            href="/src/assets/gallery/trof_dome.jpg"
+          >
+            <img
+              loading="lazy"
+              class="img-responsive"
+              src="/src/assets/gallery/thumbs/trof_dome.jpg"
+            />
+            <span class="pswp-caption-content">
+              <h4>Título de marcação.</h4>
+              <br />
+              <p>Texto de marcação.</p>
+              <span class="iconHasEdit imgAI"></span>
+            </span>
+          </a>
+          <a
+            data-pswp-width="1024"
+            data-pswp-height="937"
+            class="gallery-item"
+            href="/src/assets/gallery/adesivos_penumbra.jpg"
+          >
+            <img
+              loading="lazy"
+              class="img-responsive"
+              src="/src/assets/gallery/thumbs/adesivos_penumbra.jpg"
+            />
+            <span class="pswp-caption-content">
+              <h4>Título de marcação.</h4>
+              <br />
+              <p>Texto de marcação.</p>
+              <span class="iconHasEdit imgFR"></span>
+            </span>
+          </a>
+          <a
+            data-pswp-width="1024"
+            data-pswp-height="852"
+            class="gallery-item"
+            href="/src/assets/gallery/chaveiro.jpg"
+          >
+            <img
+              loading="lazy"
+              class="img-responsive"
+              src="/src/assets/gallery/thumbs/chaveiro.jpg"
+            />
+            <span class="pswp-caption-content">
+              <h4>Título de marcação.</h4>
+              <br />
+              <p>Texto de marcação.</p>
+              <span class="iconHasEdit imgFR"></span>
+            </span>
+          </a>
+          <a
+            data-pswp-width="1024"
+            data-pswp-height="904"
+            class="gallery-item"
+            href="/src/assets/gallery/homenagem_01.jpg"
+          >
+            <img
+              loading="lazy"
+              class="img-responsive"
+              src="/src/assets/gallery/thumbs/homenagem_01.jpg"
+            />
+            <span class="pswp-caption-content">
+              <h4>Título de marcação.</h4>
+              <br />
+              <p>Texto de marcação.</p>
+              <span class="iconHasEdit imgAI"></span>
+            </span>
+          </a>
+          <a
+            data-pswp-width="2766"
+            data-pswp-height="1836"
+            class="gallery-item"
+            href="/src/assets/gallery/placa_personalizada.jpg"
+          >
+            <img
+              loading="lazy"
+              class="img-responsive"
+              src="/src/assets/gallery/thumbs/placa_personalizada.jpg"
+            />
+            <span class="pswp-caption-content">
+              <h4>Título de marcação.</h4>
+              <br />
+              <p>Texto de marcação.</p>
+              <span class="iconHasEdit imgFR"></span>
+            </span>
+          </a>
+          <a
+            data-pswp-width="1024"
+            data-pswp-height="1052"
+            class="gallery-item"
+            href="/src/assets/gallery/plqta_acril_01.jpg"
+          >
+            <img
+              loading="lazy"
+              class="img-responsive"
+              src="/src/assets/gallery/thumbs/plqta_acril_01.jpg"
+            />
+            <span class="pswp-caption-content">
+              <h4>Título de marcação.</h4>
+              <br />
+              <p>Texto de marcação.</p>
+              <span class="iconHasEdit imgAI"></span>
+            </span>
+          </a>
+          <a
+            data-pswp-width="1024"
+            data-pswp-height="1248"
+            class="gallery-item"
+            href="/src/assets/gallery/custom_01.jpg"
+          >
+            <img
+              loading="lazy"
+              class="img-responsive"
+              src="/src/assets/gallery/thumbs/custom_01.jpg"
+            />
+            <span class="pswp-caption-content">
+              <h4>Título de marcação.</h4>
+              <br />
+              <p>Texto de marcação.</p>
+              <span class="iconHasEdit imgAI"></span>
+            </span>
+          </a>
+          <a
+            data-pswp-width="1536"
+            data-pswp-height="877"
+            class="gallery-item"
+            href="/src/assets/gallery/adesivos_dtf_variados.jpg"
+          >
+            <img
+              loading="lazy"
+              class="img-responsive"
+              src="/src/assets/gallery/thumbs/adesivos_dtf_variados.jpg"
+            />
+            <span class="pswp-caption-content">
+              <h4>Título de marcação.</h4>
+              <br />
+              <p>Texto de marcação.</p>
+              <span class="iconHasEdit imgFR"></span>
+            </span>
+          </a>
+        </masonry-layout>
+        <!-- </div> -->
+        <div id="break_gal_bottom" class="break"></div>
+      </section>
+      <section id="contato">
+        <div id="contato_tittle" class="alinha_flex">
+          <h3>Entre em contato</h3>
+          <p>
+            Estamos prontos para transformar suas ideias em soluções criativas.
+            <br />
+            Fale com a nossa equipe e descubra tudo o que podemos fazer por
+            você!
+          </p>
+        </div>
+        <div id="contato_cards" class="alinha_flex">
+          <div id="ctt_phones">
+            <div id="ctt_phones_txt">
+              <p>
+                +55 15 3418.3806 <br />
+                +55 15 98127-6594
+              </p>
+            </div>
+            <div id="ctt_phones_buttons">
+              <div class="ctt_button" id="ctt_phone"></div>
+              <div class="ctt_button" id="ctt_zap"></div>
+            </div>
+          </div>
+          <div id="ctt_email">
+            <div id="ctt_email_txt">
+              <p>contato@reproduz.com.br</p>
+            </div>
+            <div id="ctt_email_button">
+              <div class="ctt_button" id="ctt_mail"></div>
+            </div>
+          </div>
+          <div id="ctt_address">
+            <div id="ctt_address_txt">
+              <p>
+                Rua Benedito Ferreira telles, 625<br />
+                Jardim Simus -Sorocaba - SP
+              </p>
+            </div>
+            <div id="ctt_address_button">
+              <div class="ctt_button" id="ctt_local"></div>
+            </div>
           </div>
         </div>
-        <div id="ctt_email">
-          <div id="ctt_email_txt">
-            <p>
-              contato@reproduz.com.br
-            </p>
-          </div>
-          <div id="ctt_email_button">
-            <div class="ctt_button" id="ctt_mail"></div>
-          </div>
-        </div>
-        <div id="ctt_address">
-          <div id="ctt_address_txt">
-            <p>
-              Rua Benedito Ferreira telles, 625<br>
-              Jardim Simus -Sorocaba - SP
-            </p>
-          </div>
-          <div id="ctt_address_button">
-            <div class="ctt_button" id="ctt_local"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer>made by Pépa</footer>
-  <script type="module" src="/src/scripts/main.js"></script>
-</body>
-
+      </section>
+    </main>
+    <footer>made by Pépa</footer>
+    <script type="module" src="/src/scripts/main.js"></script>
+  </body>
 </html>

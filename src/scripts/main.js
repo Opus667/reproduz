@@ -8,12 +8,10 @@ import "@appnest/masonry-layout";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
 import PhotoSwipeDynamicCaption from "photoswipe-dynamic-caption-plugin";
 
-import "../scripts/updateGallery.js";   // só isso; não precisa exportar nada
+import "../scripts/updateGallery.js"; // só isso; não precisa exportar nada
 
 import "photoswipe/style.css";
 import "photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css";
-
-
 
 /* --------------------------------------------------------------------------
  * Configurações
@@ -157,33 +155,30 @@ function initHighlightInteractions() {
  * Tentativa de Masonry
  * ----------------------------------------------------------------------- */
 
-function mobileMasonry(){
-  const masonry=document.querySelector("masonry-layout");
+function mobileMasonry() {
+  const masonry = document.querySelector("masonry-layout");
   if (window.matchMedia(`(max-width: ${BREAKPOINT_MOBILE}px)`).matches) {
     masonry.setAttribute("cols", 3);
     masonry.setAttribute("gap", 10);
   } else {
-    masonry.removeAttribute("cols");    
+    masonry.removeAttribute("cols");
     masonry.setAttribute("gap", 20);
-  };
+  }
   masonry.layout();
-
 }
-
 
 /* --------------------------------------------------------------------------
  * Bootstrap
  * ----------------------------------------------------------------------- */
 function bootstrap() {
   initLightbox();
-  
+
   // itemslide precisa aguardar assets
   window.addEventListener("load", initCarousel);
   window.addEventListener("resize", () => {
     mobileMasonry();
   });
 
-  
   document.addEventListener("DOMContentLoaded", () => {
     mobileMasonry();
     adaptHighlightsForMobile();

@@ -135,7 +135,8 @@ section {
 
 /* === #INTRO === */
 #intro {
-  background: radial-gradient(circle, hsl(var(--dark), 0.75), #000e),
+  background:
+    radial-gradient(circle, hsl(var(--dark), 0.75), #000e),
     url("/src/assets/img/intro/impressao.jpg");
   background-size: cover;
   color: hsl(var(--pop));
@@ -246,7 +247,9 @@ section {
 /* === #CTA_DESTQS:HOVER === */
 #cta_destqs:hover {
   border-color: hsl(var(--shade));
-  box-shadow: hsl(var(--shade)) 9px 9px, hsl(var(--shade)) 5px 5px,
+  box-shadow:
+    hsl(var(--shade)) 9px 9px,
+    hsl(var(--shade)) 5px 5px,
     hsl(var(--shade)) 1px 1px;
 }
 
@@ -260,7 +263,9 @@ section {
 /* === #CTA_CTT:HOVER === */
 #cta_ctt:hover {
   border-color: hsl(var(--shade));
-  box-shadow: hsl(var(--shade)) 9px 9px, hsl(var(--shade)) 5px 5px,
+  box-shadow:
+    hsl(var(--shade)) 9px 9px,
+    hsl(var(--shade)) 5px 5px,
     hsl(var(--shade)) 1px 1px;
 }
 
@@ -746,10 +751,10 @@ a:hover.gallery-item img {
 }
 .imgFR::before {
   content: "FR";
-} 
+}
 .imgAI::before {
   content: "IA";
-} 
+}
 
 .iconHasEdit::after {
   display: block;
@@ -781,7 +786,7 @@ a:hover.gallery-item img {
 }
 
 @media screen and (max-width: 600px) {
-.iconHasEdit:hover:after {
+  .iconHasEdit:hover:after {
     transform: translateY(calc(-100% - 35px));
   }
 }
