@@ -20,6 +20,11 @@ const thumbs = import.meta.glob(
   { eager: true, import: 'default' },
 );
 
+const metaTag = import.meta.glob('../assets/img/*.{jpg,jpeg,png,webp,svg}', {
+  eager: true,
+  import: 'default',
+});
+
 // (c) Concatena ambos em um único mapa:
 const urlMap = { ...bigImgs, ...thumbs };
 //        chave:  "../assets/gallery/img1.jpg"
@@ -34,10 +39,21 @@ function resolveHashedUrl(originalPath) {
   const clean = originalPath.replace(/^\/?src\//, '../');
   return urlMap[clean];
 }
-document.querySelectorAll('meta[content]').forEach(el => {
-  el.setAttribute('teste', 'teste');
-  el.removeAttribute('property');
-});
+
+function resolveMetaTag(originalPath) {
+  // Remove o prefixo "/src" (caso você use assim no HTML)
+  const clean = originalPath.replace(
+    /^\/?src\//,
+    'https://reproduz.netlify.app/',
+  );
+  return metaTag[clean];
+}
+/**
+ * Substitui "/assets/" por "teste/" em todas as metas cujo
+ * atributo content começa com "/assets/".
+ */
+
+// Chame quando o DOM já estiver pronto
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1) <a class="gallery-item" href="…">
@@ -50,5 +66,11 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('a.gallery-item > img').forEach(img => {
     const hashed = resolveHashedUrl(img.getAttribute('src'));
     if (hashed) img.setAttribute('src', hashed);
+  });
+
+  document.getElementsByTagName('div').forEach(mt => {
+    mt.setAttribute('propery', 'vazio');
+    const hashed = resolveMetaTag(mt.getAttribute('content'));
+    if (hashed) mt.setAttribute('content', hashed);
   });
 });
