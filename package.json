@@ -16,7 +16,8 @@
     "eslint": "^9.29.0",
     "globals": "^16.2.0",
     "prettier": "3.5.3",
-    "vite": "^6.2.1"
+    "vite": "^6.2.1",
+    "vite-plugin-html": "^3.2.2"
   },
   "dependencies": {
     "@appnest/masonry-layout": "^2.2.3",

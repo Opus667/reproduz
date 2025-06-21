@@ -1,7 +1,7 @@
 // vite.config.js
 import { defineConfig } from 'vite';
 import netlify from '@netlify/vite-plugin';
-
+import { createHtmlPlugin } from 'vite-plugin-html';
 /**
  * Exemplo de configuração básica para projetos
  * que usam apenas JavaScript puro (Vanilla JS).
@@ -17,7 +17,7 @@ import netlify from '@netlify/vite-plugin';
 export default defineConfig({
   // ① Caminho base (útil se o site ficará em um subdiretório
   //   ou se você quer o domínio completo vindo de variável de ambiente)
-  base: process.env.BASE_URL || '/',
+  base: process.env.BASE_URL || '/aaa/',
 
   // ② Configurações específicas de build
   build: {
