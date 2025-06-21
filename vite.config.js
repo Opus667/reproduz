@@ -49,7 +49,7 @@ export default defineConfig({
       minify: true, // minifica HTML na build
       inject: {
         data: {
-          title: 'Meu Site Vanilla JS',
+          fullURL: 'http://reproduz.netlify.app/',
           description: 'Este é um projeto Vite com JavaScript puro',
         },
       },
