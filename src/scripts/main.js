@@ -10,7 +10,6 @@ import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import PhotoSwipeDynamicCaption from 'photoswipe-dynamic-caption-plugin';
 
 import '../scripts/updateGallery.js'; // só isso; não precisa exportar nada
-import '../scripts/resolveMetaImgs.js'; // só isso; não precisa exportar nada
 
 import 'photoswipe/style.css';
 import 'photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css';
