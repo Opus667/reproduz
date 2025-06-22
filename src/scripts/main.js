@@ -6,6 +6,8 @@ import 'itemslide';
 import '@lottiefiles/lottie-player';
 import '@appnest/masonry-layout';
 
+import '@aarsteinmedia/dotlottie-player';
+
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import PhotoSwipeDynamicCaption from 'photoswipe-dynamic-caption-plugin';
 
@@ -113,7 +115,7 @@ function initHighlightInteractions() {
   highlights.forEach(card => {
     // Hover → toca animação
     card.addEventListener('mouseenter', () => {
-      const lottie = card.querySelector('lottie-player');
+      const lottie = card.querySelector('dotlottie-player');
       if (intersectionObserver) {
         intersectionObserver.observe(lottie);
       } else {

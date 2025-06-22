@@ -16,6 +16,7 @@
     "vite": "^6.2.1"
   },
   "dependencies": {
+    "@aarsteinmedia/dotlottie-player": "^5.3.2",
     "@appnest/masonry-layout": "^2.2.3",
     "@lottiefiles/lottie-player": "^2.0.12",
     "@netlify/vite-plugin": "^2.3.1",

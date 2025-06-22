@@ -908,7 +908,6 @@ a.ctt_button {
   width: auto;
   height: auto;
   aspect-ratio: 1 / 1;
-  border: aliceblue solid 2px;
 }
 
 @media screen and (max-width: 1200px) {
