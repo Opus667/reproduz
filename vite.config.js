@@ -17,7 +17,7 @@ import netlify from '@netlify/vite-plugin';
 export default defineConfig({
   // ① Caminho base (útil se o site ficará em um subdiretório
   //   ou se você quer o domínio completo vindo de variável de ambiente)
-  base: process.env.BASE_URL || 'https://reproduz.netlify.app/',
+  base: process.env.BASE_URL || 'https://reproduz.com.br/',
 
   // ② Configurações específicas de build
   build: {
