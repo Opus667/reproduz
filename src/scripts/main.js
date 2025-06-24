@@ -3,7 +3,6 @@
  * Imports & assets
  * ----------------------------------------------------------------------- */
 import 'itemslide';
-import '@lottiefiles/lottie-player';
 import '@appnest/masonry-layout';
 
 import '@aarsteinmedia/dotlottie-player';
@@ -62,7 +61,7 @@ function initCarousel() {
     const index = slider.getActiveIndex();
     const lottie = document
       .querySelectorAll('.destSwipe')
-      [index]?.querySelector('lottie-player');
+      [index]?.querySelector('dotlottie-player');
 
     if (lottie) {
       lottie.stop();
@@ -94,8 +93,9 @@ function adaptHighlightsForMobile() {
  * ----------------------------------------------------------------------- */
 function initHighlightInteractions() {
   let activeHighlightId = null;
-  const highlights = [...document.querySelectorAll('.dest, .destSwipe')];
-  const cttLotties = [...document.querySelectorAll('.ctt_button')];
+  const highlights = [
+    ...document.querySelectorAll('.dest, .destSwipe, .ctt_button'),
+  ];
   const container = document.getElementById('destaques');
 
   /* Lottie on hover (apenas quando visível) */
@@ -130,27 +130,6 @@ function initHighlightInteractions() {
       const isSame = id === activeHighlightId;
 
       highlights.forEach(h => h.classList.remove('active'));
-      activeHighlightId = isSame ? null : id;
-      if (!isSame) card.classList.add('active');
-    });
-  });
-  cttLotties.forEach(card => {
-    // Hover → toca animação
-    card.addEventListener('mouseenter', () => {
-      const lottie = card.querySelector('dotlottie-player');
-      if (intersectionObserver) {
-        intersectionObserver.observe(lottie);
-      } else {
-        lottie.play();
-      }
-    });
-
-    // Clique → alterna “active”
-    card.addEventListener('click', () => {
-      const id = card.id;
-      const isSame = id === activeHighlightId;
-
-      cttLotties.forEach(h => h.classList.remove('active'));
       activeHighlightId = isSame ? null : id;
       if (!isSame) card.classList.add('active');
     });
