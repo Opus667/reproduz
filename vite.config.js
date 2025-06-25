@@ -1,6 +1,7 @@
 // vite.config.js
 import { defineConfig } from 'vite';
 import netlify from '@netlify/vite-plugin';
+import netlifyEdge from '@netlify/vite-plugin-netlify-edge';
 
 /**
  * Exemplo de configuração básica para projetos
@@ -45,6 +46,7 @@ export default defineConfig({
   plugins: [
     // exemplo:
     netlify(),
+    netlifyEdge(),
   ],
 
   // ⑥ Variáveis de ambiente adicionais para o front
