@@ -133,6 +133,9 @@ section {
   position: relative;
 }
 
+span.line {
+  display: inline-block;
+}
 /* === #INTRO === */
 #intro {
   background:
@@ -182,7 +185,6 @@ section {
 
 /* === #INTRO_MAIN P === */
 #intro_main p {
-  text-align: justify;
   width: 75%;
 }
 
@@ -882,6 +884,11 @@ a:hover.gallery-item img {
   border-bottom: hsl(var(--dark)) solid 2px;
 }
 
+a.ctt_button_link {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
 .ctt_button_wrap {
   display: flex;
   max-height: 70%;
@@ -901,6 +908,12 @@ a:hover.gallery-item img {
   aspect-ratio: 1 / 1;
 }
 
+a.ctt_button:hover {
+  box-shadow:
+    5px 5px,
+    8px 8px;
+  transform: translateX(-8px) translateY(-8px);
+}
 a.ctt_button {
   display: block;
   max-width: 50%;
@@ -908,13 +921,13 @@ a.ctt_button {
   width: auto;
   height: auto;
   aspect-ratio: 1 / 1;
+  border: hsl(var(--dark)) solid 2px;
+  border-radius: 10px;
+  box-shadow: 3px 3px;
+  transition-property: box-shadow, transform;
+  transition-duration: 0.25s;
 }
 
-@media screen and (max-width: 1200px) {
-  .ctt_card_title {
-    height: 50%;
-  }
-  .ctt_button_wrap {
-    height: 50%;
-  }
+#ctt_phone .ctt_button {
+  max-width: 45%;
 }
