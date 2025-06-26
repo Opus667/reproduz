@@ -2,6 +2,7 @@
 import { defineConfig } from 'vite';
 import netlify from '@netlify/vite-plugin';
 import netlifyEdge from '@netlify/vite-plugin-netlify-edge';
+import glob from 'fast-glob';
 
 /**
  * Exemplo de configuração básica para projetos
@@ -46,7 +47,11 @@ export default defineConfig({
   plugins: [
     // exemplo:
     netlify(),
-    netlifyEdge(),
+    netlifyEdge({
+      additionalStaticPaths: glob
+        .sync('**/*.{js,css}', { cwd: 'dist/client' })
+        .map(path => `/${encodeURI(path)}`),
+    }),
   ],
 
   // ⑥ Variáveis de ambiente adicionais para o front
