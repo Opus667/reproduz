@@ -1,3 +1,4 @@
+import { handleRequest } from 'vite';
 import staticFiles from '@static-manifest';
 
 export const handler = async (request, { next }) => {
@@ -7,8 +8,15 @@ export const handler = async (request, { next }) => {
 
   // If your framework generates client assets in a subdirectory, you can add these too
   if (staticFiles.includes(pathname) || pathname.startsWith('assets/')) {
-    return next();
+    return;
   }
 
-  return new Response('Hello World!');
+  // "handleRequest" is defined by your framework
+  try {
+    return await handleRequest(request);
+  } catch (err) {
+    return new Response(err.message || 'Internal Server Error', {
+      status: err.status || 500,
+    });
+  }
 };
