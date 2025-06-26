@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@netlify/vite-plugin-netlify-edge": "^1.1.3",
     "globals": "^16.2.0",
     "prettier": "3.5.3",
     "vite": "^6.2.1"

@@ -1,8 +1,6 @@
 // vite.config.js
 import { defineConfig } from 'vite';
 import netlify from '@netlify/vite-plugin';
-import netlifyEdge from '@netlify/vite-plugin-netlify-edge';
-import glob from 'fast-glob';
 
 /**
  * Exemplo de configuração básica para projetos
@@ -19,7 +17,7 @@ import glob from 'fast-glob';
 export default defineConfig({
   // ① Caminho base (útil se o site ficará em um subdiretório
   //   ou se você quer o domínio completo vindo de variável de ambiente)
-  base: process.env.BASE_URL || 'https://reproduz.com.br/',
+  base: process.env.BASE_URL || '/',
 
   // ② Configurações específicas de build
   build: {
@@ -47,7 +45,6 @@ export default defineConfig({
   plugins: [
     // exemplo:
     netlify(),
-    netlifyEdge(),
   ],
 
   // ⑥ Variáveis de ambiente adicionais para o front
