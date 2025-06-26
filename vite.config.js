@@ -47,11 +47,7 @@ export default defineConfig({
   plugins: [
     // exemplo:
     netlify(),
-    netlifyEdge({
-      additionalStaticPaths: glob
-        .sync('**/*.{js,css}', { cwd: 'dist/client' })
-        .map(path => `/${encodeURI(path)}`),
-    }),
+    netlifyEdge(),
   ],
 
   // ⑥ Variáveis de ambiente adicionais para o front
