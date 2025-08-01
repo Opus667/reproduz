@@ -337,8 +337,10 @@ span.line {
 /* === #MAOS === */
 #maos {
   background-attachment: fixed;
-  background-image: url(/src/assets/img/maos.jpg);
+  background-image: url(/src/assets/img/maos.webp);
   background-size: cover;
+  background-position-x: right;
+  background-position-y: center;
   color: hsl(var(--pop));
   display: flex;
   flex-direction: column;
