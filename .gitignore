@@ -23,5 +23,13 @@ dist-ssr
 *.sln
 *.sw?
 
+# macOS specific files
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+
+
 # Local Netlify folder
 .netlify
