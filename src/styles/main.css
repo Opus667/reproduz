@@ -304,24 +304,24 @@ span.line {
 
 /* === #CR_WRAP === */
 #cr_wrap {
-  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 /* === #CR_TXT === */
 #cr_txt {
-  flex: 2;
+  flex: 4;
 }
 
 /* === #CR_LOTTIE === */
 #cr_lottie {
-  flex: 0;
+  flex: 1;
   margin-inline: var(--margem);
 }
 
 /* === @MEDIA SCREEN AND (MAX-WIDTH: 600PX) === */
 @media screen and (max-width: 600px) {
-  #cr_lottie {
-    flex: 1;
+  #cr_wrap {
+    flex-direction: column;
   }
 
   /* === } #CR_LOTTIE LOTTIE-PLAYER === */
