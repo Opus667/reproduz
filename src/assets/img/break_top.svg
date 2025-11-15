@@ -1,14 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200"  preserveAspectRatio="none">
-      <style>
-        path {
-          stroke-width: 5px;
-          /* stroke: "#b6f40c"; */
-          stroke: red;
-        }
-      </style>
-
-    <path opacity=".6" d="M0 0v69.68l147.63 77.95L439.94 200 600 147.63V0H0z"          vector-effect="non-scaling-stroke" 
-/>
-    <path fill="#b6f40c" d="M0 0v59.68L159.74 7.01l278.62 181.18L600 59.15V0H0z"          vector-effect="non-scaling-stroke" 
-/>
+<svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg"  preserveAspectRatio="none">
+<path d="M0 0v69.68l147.63 77.95L439.94 200 600 147.63V0H0z" fill="none" stroke="#bf0" stroke-opacity=".6" vector-effect="non-scaling-stroke"/>
+<path d="M0 0v59.68L159.74 7.01l278.62 181.18L600 59.15V0H0z" fill="none" stroke="#bf0" vector-effect="non-scaling-stroke"/>
+<path d="M-5-4v60.949l162.402-53.79L440.666 188.19 605 56.407V-4H-5z" fill="#0e1503" fill-rule="nonzero" vector-effect="non-scaling-stroke"/>
 </svg>

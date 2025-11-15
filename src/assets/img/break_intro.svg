@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" preserveAspectRatio="none">
-<?xml-stylesheet type="text/css" href="/src/main.css" ?>
-  <polygon points="0 200 0 36 138 12 600 124 600 200 0 200" fill="#0009"/>
-  <polygon points="0 200 0 130.85 134.02 0 600 196.81 600 200 0 200" fill="#b6f40c"/>
+<svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" fill-rule="evenodd" clip-rule="evenodd" stroke-miterlimit="10">
+<path d="M0 200v-69.1L134 0l466 196.8v3.2H0z" vector-effect="non-scaling-stroke" fill="#0e1503" fill-rule="nonzero"/>
+<path d="M0 36l138-24 462 112v76" vector-effect="non-scaling-stroke" fill="none" stroke="#bf0" stroke-width="2"/>
+<path d="M0 130.9L134 0l466 196.8v3.2" vector-effect="non-scaling-stroke" fill="none" stroke="#b6f40c" stroke-width="2"/>
 </svg>

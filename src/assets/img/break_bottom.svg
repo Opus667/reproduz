@@ -1,4 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200"  preserveAspectRatio="none">
-    <path opacity=".6" d="M0 200v-79.2L579.93 0 600 119.75V200H0z"/>
-    <path fill="#d6ff67" d="M0 200L580.46 74.98 600 119.75V200H0z"/>
+<svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg"  preserveAspectRatio="none">
+    <style>
+        path {
+            stroke-width: 2px;
+        }
+    </style>
+<path d="M0 200L580.46 74.98 600 119.75V200H0z" fill="#0e1503" fill-rule="nonzero" vector-effect="non-scaling-stroke"/>
+<path d="M0 120.8L579.93 0 600 119.75M0 138.8L60.93 158 600 119.75" fill="none" stroke="#bf0" vector-effect="non-scaling-stroke"/>
+<path d="M0 200L580.46 74.98 600 119.75" fill="none" stroke="#bf0" vector-effect="non-scaling-stroke"/>
+<path d="M0 200L71.46 57.98 600 156.75" fill="none" stroke="#bf0" vector-effect="non-scaling-stroke"/>
 </svg>

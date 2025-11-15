@@ -2,10 +2,10 @@
 :root {
   --bright: 0, 0%, 80%;
   --dull: 0, 0%, 40%;
-  --pop: 76, 91%, 50%;
+  --pop: 76, 50%, 50%;
   --shade: 0, 0%, 40%;
   --washed: 0, 00%, 70%;
-  --dark: 0, 0%, 8%;
+  --dark: 78, 100%, 4%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   /* --Medidas-- */
@@ -141,14 +141,10 @@ path {
   stroke: 2px solid red;
 }
 
-dotlottie-player path {
-  stroke-width: 4px;
-}
-
 /* === #INTRO === */
 #intro {
   background:
-    radial-gradient(circle, hsl(var(--dark), 0.75), #000e),
+    radial-gradient(circle, hsl(var(--dark), 0.75), hsl(var(--dark))),
     url("/src/assets/img/intro/impressao.jpg");
   background-size: cover;
   color: hsl(var(--pop));
@@ -220,7 +216,9 @@ dotlottie-player path {
   /* === } .INTRO_CTA === */
 }
 .intro_cta {
-  border: solid red 6px;
+  border: solid hsl(var(--pop)) 1px;
+  color: hsl(var(--pop));
+  background: hsl(var(--dark));
   border-radius: 10px;
   cursor: pointer;
   font-family: "Anton", sans-serif;
@@ -233,6 +231,18 @@ dotlottie-player path {
   transition-property: transform, box-shadow;
 }
 
+#intro_cta span {
+  border: solid hsl(var(--pop)) 1px;
+  background: hsl(var(--pop));
+  transition-property: all;
+}
+
+#intro_cta span:hover {
+  border: solid hsl(var(--pop)) 1px;
+  background: hsl(var(--pop));
+  transition-property: all;
+}
+
 /* === @MEDIA SCREEN AND (MAX-WIDTH: 600PX) === */
 @media screen and (max-width: 600px) {
   #intro_cta {
@@ -242,39 +252,17 @@ dotlottie-player path {
 
   /* === } .INTRO_CTA:HOVER === */
 }
-.intro_cta:hover {
+
+#intro_cta span:hover .intro_cta {
+  box-shadow:
+    4px 4px 0 0 hsl(var(--pop)),
+    8px 8px 0 0 hsl(var(--pop));
+}
+#intro_cta span:hover .intro_cta {
   transform: translateX(-10px) translateY(-10px);
 }
-
-/* === #CTA_DESTQS === */
-#cta_destqs {
-  background-color: hsl(var(--bright));
-  border-color: hsl(var(--shade));
-}
-
-/* === #CTA_DESTQS:HOVER === */
-#cta_destqs:hover {
-  border-color: hsl(var(--shade));
-  box-shadow:
-    hsl(var(--shade)) 9px 9px,
-    hsl(var(--shade)) 5px 5px,
-    hsl(var(--shade)) 1px 1px;
-}
-
-/* === #CTA_CTT === */
-#cta_ctt {
-  background-color: hsl(var(--dark));
-  border-color: hsl(var(--shade));
-  color: hsl(var(--pop));
-}
-
-/* === #CTA_CTT:HOVER === */
-#cta_ctt:hover {
-  border-color: hsl(var(--shade));
-  box-shadow:
-    hsl(var(--shade)) 9px 9px,
-    hsl(var(--shade)) 5px 5px,
-    hsl(var(--shade)) 1px 1px;
+#intro_cta span .intro_cta:hover {
+  transform: translateX(-10px) translateY(-10px);
 }
 
 /* === #INTRO_BREAK === */
@@ -316,6 +304,11 @@ dotlottie-player path {
 #cr_lottie {
   flex: 1;
   margin-inline: var(--margem);
+}
+
+#cr_lottie img {
+  display: block;
+  width: 100%;
 }
 
 /* === @MEDIA SCREEN AND (MAX-WIDTH: 600PX) === */
@@ -377,8 +370,8 @@ dotlottie-player path {
 
 /* === #DESTAQUES === */
 #destaques {
-  background-color: hsl(var(--washed));
-  color: hsl(var(--dark));
+  background-color: hsl(var(--dark));
+  color: hsl(var(--pop));
 }
 
 /* === #DEST_TITTLE === */
@@ -415,7 +408,7 @@ dotlottie-player path {
 
 /* === .DEST === */
 .dest {
-  border: hsl(var(--dark)) solid 2px;
+  border: hsl(var(--pop)) solid 1px;
   border-radius: 30px;
   height: 40vh;
   list-style-type: none;
@@ -440,8 +433,8 @@ dotlottie-player path {
 
 /* === .DEST:HOVER === */
 .dest:hover {
-  border-width: 5px;
-  box-shadow: hsl(var(--dark)) 10px 10px;
+  border-width: 1px;
+  box-shadow: hsl(var(--pop)) 10px 10px;
   cursor: pointer;
   height: 50vh;
 }
@@ -485,7 +478,7 @@ dotlottie-player path {
 .DESTSWIPE H3::AFTER === */
 .dest h3::after,
 .destSwipe h3::after {
-  border-bottom: hsl(var(--dark)) solid 3px;
+  border-bottom: hsl(var(--pop)) solid 1px;
   bottom: 0;
   content: "";
   display: inline-block;
@@ -497,6 +490,13 @@ dotlottie-player path {
 }
 
 /* === .LOTTIE_WRAPPER === */
+
+.lottie_wrapper img {
+  display: block;
+  margin-inline: auto;
+  max-height: 100%;
+}
+
 .lottie_wrapper {
   height: 50%;
   padding: 0%;
@@ -521,8 +521,8 @@ dotlottie-player path {
 
 /* === #DESTSCROLL .ACTIVE === */
 #destScroll .active {
-  border-width: 5px;
-  box-shadow: hsl(var(--dark)) 10px 10px;
+  border-width: 1px;
+  box-shadow: hsl(var(--pop)) 10px 10px;
   height: 80vh;
   max-width: calc(var(--largura) / 0.7);
   transition-duration: 2s;
@@ -540,7 +540,7 @@ dotlottie-player path {
 
 /* === .DEST_MAIS === */
 .dest_mais {
-  border-top: solid hsl(var(--dark)) 3px;
+  border-top: solid hsl(var(--pop)) 1px;
   display: flex;
   flex-direction: column;
   margin-inline: auto;
@@ -670,7 +670,7 @@ masonry-layout img {
 
 /* === A.GALLERY-ITEM === */
 a.gallery-item {
-  background-color: hsl(var(--shade), 0.5);
+  border: 1px solid;
   border-radius: 20px;
   margin-bottom: 20px;
   padding: 10px;
@@ -681,7 +681,6 @@ a.gallery-item {
 /* === A.GALLERY-ITEM IMG === */
 a.gallery-item img {
   border-radius: 10px;
-  box-shadow: hsl(var(--dark), 0.75) 2px 2px 5px 2px;
   transition: all 0.5s;
 }
 
@@ -694,7 +693,15 @@ a:hover.gallery-item {
 /* === A:HOVER.GALLERY-ITEM IMG === */
 a:hover.gallery-item img {
   border-radius: 19px 10px 10px 10px;
-  box-shadow: hsl(var(--dark), 1) 20px 20px 25px 3px;
+  box-shadow:
+    hsl(var(--dark), 1) 3px 3px 0px 0px,
+    hsl(var(--dark), 1) 4px 4px 0px 0px,
+    hsl(var(--dark), 1) 5px 5px 0px 0px,
+    hsl(var(--dark), 1) 6px 6px 0px 0px,
+    hsl(var(--dark), 1) 7px 7px 0px 0px,
+    hsl(var(--dark), 1) 8px 8px 0px 0px,
+    hsl(var(--dark), 1) 9px 9px 0px 0px,
+    hsl(var(--dark), 1) 10px 10px 0px 0px;
 }
 
 /* === @MEDIA SCREEN AND (MAX-WIDTH: 600PX) === */
@@ -803,8 +810,8 @@ a:hover.gallery-item img {
 
 /* === #CONTATO === */
 #contato {
-  background: hsl(var(--dull));
-  color: hsl(var(--dark));
+  background: hsl(var(--dark));
+  color: hsl(var(--pop));
 }
 
 #ctt_title {
@@ -827,7 +834,7 @@ a:hover.gallery-item img {
   max-height: 40vh;
   width: calc(var(--largura) / 3);
   height: 50vh;
-  border: hsl(var(--dark)) solid 2px;
+  border: hsl(var(--pop)) solid 1px;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
@@ -923,7 +930,7 @@ a.ctt_button {
   width: auto;
   height: auto;
   aspect-ratio: 1 / 1;
-  border: hsl(var(--dark)) solid 2px;
+  border: hsl(var(--pop)) solid 1px;
   border-radius: 10px;
   box-shadow: 3px 3px;
   transition-property: box-shadow, transform;

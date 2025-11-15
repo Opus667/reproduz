@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200"  preserveAspectRatio="none">
-    <path opacity=".6" d="M0 0v149.77l34.29 37.4 547.75 2.63L600 108.69V0H0z"/>
-    <path fill="#d6ff67" d="M0 0l581.51 163.99L600 0H0z"/>
+<svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg"  preserveAspectRatio="none">
+<path d="M0 0v149.77l34.29 37.4 547.75 2.63L600 108.69V0H0z" fill="none" stroke="#bf0" vector-effect="non-scaling-stroke"/>
+<path d="M0 0l581.51 163.99L600 0H0z" fill="none" stroke="#bf0" vector-effect="non-scaling-stroke"/>
+<path d="M-3-2l587.325 165.99L603-2H-3z" fill="#0e1503" fill-rule="nonzero" vector-effect="non-scaling-stroke"/>
 </svg>
