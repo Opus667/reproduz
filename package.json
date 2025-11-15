@@ -19,7 +19,9 @@
     "@appnest/masonry-layout": "^2.2.3",
     "@lottiefiles/lottie-player": "^2.0.12",
     "@netlify/vite-plugin": "^2.3.1",
+    "adm-zip": "^0.5.16",
     "itemslide": "^2.0.1",
+    "jszip": "^3.10.1",
     "photoswipe": "^5.4.4",
     "photoswipe-dynamic-caption-plugin": "^1.2.7"
   }

@@ -77,40 +77,45 @@
             />
           </h1>
         </div>
+
         <div id="intro_main" class="alinha_flex">
-          <span class="margem"></span>
-          <span class="margem"></span>
-          <div>
-            <h2>Reproduzindo Ideias</h2>
-            <div class="alinha_flex">
-              <span class="margem"></span>
-              <p>
-                Com mais de 40 anos de trajetória, a Reproduz é referência em
-                homenagens, tagueamento e sinalização. Mais do que comunicação
-                visual, entregamos propósito, emoção e identidade. Nosso
-                trabalho vai além da estética: criamos soluções que comunicam,
-                conectam e valorizam histórias. Tudo com criatividade, qualidade
-                e atenção a cada detalhe.
-              </p>
+          <div id="intro_main_info">
+            <span class="margem"></span>
+            <span class="margem"></span>
+            <div>
+              <h2>Reproduzindo Ideias</h2>
+              <div class="alinha_flex">
+                <span class="margem"></span>
+                <p>
+                  Com mais de 40 anos de trajetória, a Reproduz é referência em
+                  homenagens, tagueamento e sinalização. Mais do que comunicação
+                  visual, entregamos propósito, emoção e identidade. Nosso
+                  trabalho vai além da estética: criamos soluções que comunicam,
+                  conectam e valorizam histórias. Tudo com criatividade,
+                  qualidade e atenção a cada detalhe.
+                </p>
+              </div>
             </div>
           </div>
+          <div id="intro_cta">
+            <button
+              id="cta_destqs"
+              class="intro_cta"
+              onclick="location.href='#destaques'"
+            >
+              DESTAQUES
+            </button>
+            <button
+              id="cta_ctt"
+              class="intro_cta"
+              onclick="location.href='#contato'"
+              >
+              CONTATO
+            </button>
+            </button>
+          </div>
         </div>
-        <div id="intro_cta">
-          <button
-            id="cta_destqs"
-            class="intro_cta"
-            onclick="location.href='#destaques'"
-          >
-            DESTAQUES
-          </button>
-          <button
-            id="cta_ctt"
-            class="intro_cta"
-            onclick="location.href='#contato'"
-          >
-            CONTATO
-          </button>
-        </div>
+        
         <span id="intro_break" class="break"
           ><img
             src="/src/assets/img/mouse.gif"
@@ -142,8 +147,9 @@
             <dotlottie-player
               autoplay
               loop
-              src="/lottie/Ideias.lottie"
+              src="/lottie/Ideias.json"
               style="min-width: 256px; width: 100%; height: 100%"
+              lottie-interactive s-width="200px"
             >
             </dotlottie-player>
             <span class="margem"></span>
@@ -183,7 +189,7 @@
                   <dotlottie-player
                     autoplay
                     delay="10000"
-                    src="/lottie/Homenagem.lottie"
+                    src="/lottie/Homenagem.json"
                   />
                 </div>
                 <p>
@@ -200,7 +206,7 @@
               <div class="dest_item">
                 <h3>Troféus</h3>
                 <div class="lottie_wrapper">
-                  <dotlottie-player autoplay src="/lottie/Trofeus.lottie" />
+                  <dotlottie-player autoplay src="/lottie/Trofeus.json" />
                 </div>
                 <p>
                   Mais do que um prêmio, o troféu simboliza reconhecimento,
@@ -218,7 +224,7 @@
               <div class="dest_item">
                 <h3>Sinalização</h3>
                 <div class="lottie_wrapper">
-                  <dotlottie-player autoplay src="/lottie/Sign.lottie" />
+                  <dotlottie-player autoplay src="/lottie/Sign.json" />
                 </div>
                 <p>
                   Funcionalidade e clareza em cada detalhe. As placas de
@@ -235,7 +241,7 @@
               <div class="dest_item">
                 <h3>Tagueamento</h3>
                 <div class="lottie_wrapper">
-                  <dotlottie-player autoplay src="/lottie/Tag.lottie" />
+                  <dotlottie-player autoplay src="/lottie/Tag.json" />
                 </div>
                 <p>
                   Organização e identificação com eficiência. Oferecemos
@@ -252,7 +258,7 @@
               <div class="dest_item">
                 <h3>Adesivos</h3>
                 <div class="lottie_wrapper">
-                  <dotlottie-player autoplay src="/lottie/Adesivos.lottie" />
+                  <dotlottie-player autoplay src="/lottie/Adesivos.json" />
                 </div>
                 <p>
                   Versatilidade e impacto em qualquer formato. Produzimos
@@ -269,7 +275,7 @@
               <div class="dest_item">
                 <h3>Impressões</h3>
                 <div class="lottie_wrapper">
-                  <dotlottie-player autoplay src="/lottie/Impressao.lottie" />
+                  <dotlottie-player autoplay src="/lottie/Impressao.json" />
                 </div>
                 <p>
                   Alta qualidade em cada detalhe. Realizamos impressões digitais
@@ -286,7 +292,7 @@
               <div class="dest_item">
                 <h3>Laser</h3>
                 <div class="lottie_wrapper">
-                  <dotlottie-player autoplay src="/lottie/Laser.lottie" />
+                  <dotlottie-player autoplay src="/lottie/Laser.json" />
                 </div>
                 <p>
                   Precisão e acabamento impecável. Oferecemos serviços de corte
@@ -302,7 +308,7 @@
               <div class="dest_item">
                 <h3>Router CNC</h3>
                 <div class="lottie_wrapper">
-                  <dotlottie-player autoplay src="/lottie/CNC2.lottie" />
+                  <dotlottie-player autoplay src="/lottie/CNC2.json" />
                 </div>
                 <p>
                   Utilizando tecnologia de ponta, realizamos cortes e gravações
@@ -916,10 +922,10 @@
             </div>
             <div class="ctt_button_wrap">
               <a href="tel:15-3418-3805" class="ctt_button">
-                <dotlottie-player autoplay loop src="/lottie/Phone.lottie" />
+                <dotlottie-player autoplay loop src="/lottie/Phone.json" />
               </a>
               <a href="https://wa.me/5515981276594" class="ctt_button">
-                <dotlottie-player autoplay loop src="/lottie/ZapZap.lottie" />
+                <dotlottie-player autoplay loop src="/lottie/ZapZap.json" />
               </a>
             </div>
           </div>
@@ -932,7 +938,7 @@
             </div>
             <div class="ctt_button_wrap">
               <a href="mailto:contato@reproduz.com.br" class="ctt_button">
-                <dotlottie-player autoplay loop src="/lottie/Mail.lottie" />
+                <dotlottie-player autoplay loop src="/lottie/Mail.json" />
               </a>
             </div>
           </div>
@@ -952,7 +958,7 @@
                 href="https://maps.app.goo.gl/46EW39VpoA23oWhr6"
                 class="ctt_button"
               >
-                <dotlottie-player autoplay loop src="/lottie/Maps.lottie" />
+                <dotlottie-player autoplay loop src="/lottie/Maps.json" />
               </a>
             </div>
           </div>

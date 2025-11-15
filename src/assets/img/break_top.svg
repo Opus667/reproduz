@@ -1,4 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200"  preserveAspectRatio="none">
-    <path opacity=".6" d="M0 0v69.68l147.63 77.95L439.94 200 600 147.63V0H0z"/>
-    <path fill="#b6f40c" d="M0 0v59.68L159.74 7.01l278.62 181.18L600 59.15V0H0z"/>
+      <style>
+        path {
+          stroke-width: 5px;
+          /* stroke: "#b6f40c"; */
+          stroke: red;
+        }
+      </style>
+
+    <path opacity=".6" d="M0 0v69.68l147.63 77.95L439.94 200 600 147.63V0H0z"          vector-effect="non-scaling-stroke" 
+/>
+    <path fill="#b6f40c" d="M0 0v59.68L159.74 7.01l278.62 181.18L600 59.15V0H0z"          vector-effect="non-scaling-stroke" 
+/>
 </svg>
